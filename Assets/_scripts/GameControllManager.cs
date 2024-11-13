@@ -22,10 +22,12 @@ public class GameControllManager : Singleton<GameControllManager>
 
         ChangeState(GameState.MainMenu);
         UIManager.Ins.OpenUI<MainMenu_UI>();
+
+        onstartfirsttime();
     }
     void Start()
     {
-
+        
     }
     void Update()
     {
@@ -87,13 +89,13 @@ public class GameControllManager : Singleton<GameControllManager>
     
 
     // coin
-    public float getcoin()
+    public int getcoin()
     {
-        return PlayerPrefs.GetFloat("coin");
+        return PlayerPrefs.GetInt("coin");
     }
-    public void setcoin(float nbr)
+    public void setcoin(int nbr)
     {
-        PlayerPrefs.SetFloat("coin", nbr);
+        PlayerPrefs.SetInt("coin", nbr);
     }
 
     public static void ChangeState(GameState state)

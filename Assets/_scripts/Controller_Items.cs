@@ -79,7 +79,7 @@ public class Controller_Items : MonoBehaviour
 
 
         //    //animate group
-        list_item[count_items].GetComponent<CupGroup>().animate_group_brush();
+        list_item[count_items].GetComponent<CupGroup>().animate_group_item();
     }
 
     public void decrease_item()

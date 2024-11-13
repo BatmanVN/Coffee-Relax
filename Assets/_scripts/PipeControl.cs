@@ -11,7 +11,9 @@ public class PipeControl : MonoBehaviour
         if (other.CompareTag(Const.cupTag))
         {
             Observer.Notify(ListAction.Vibrate);
-            Observer.Notify(ListAction.ShowCoffee);
+            CupGroup cupGroup = other.GetComponent<CupGroup>();
+            if (!cupGroup.iceCream.activeSelf || !cupGroup.lidCup.activeSelf)
+                cupGroup.coffee.SetActive(true);
         }
     }
 }

@@ -13,7 +13,6 @@ public class SellGate: MonoBehaviour
     public float duration;
     public Transform money_stash_pos;
     public GameObject money_stash;
-    //public float moneyIncrease;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +25,6 @@ public class SellGate: MonoBehaviour
         if (other.CompareTag(Const.cupTag))
         {
             Observer.Notify(ListAction.Vibrate);
-            //UiManager.instance._vibrate();
-            Observer.Notify(ListAction.IncreaseMoney,50);
-            //UiManager.instance.increase_money(50);
             GameObject gm = Instantiate(money_stash, money_stash_pos.position, money_stash.transform.rotation);
 
             Destroy(gm, 2f);
@@ -37,15 +33,24 @@ public class SellGate: MonoBehaviour
 
 
             CupGroup br = other.GetComponent<CupGroup>();
+            if (br != null && fb != null)
+            {
+                if (br.coffee != null && br.coffee.gameObject.activeSelf)
+                    fb.coffe.SetActive(true);
 
-            //if (br.has_mascara)
-            //{
-            //    fb.mascara.SetActive(true);
-            //}
-            //if (br.has_lipstick)
-            //{
-            //    fb.lipstick.SetActive(true);
-            //}
+                if (br.iceCream != null && br.iceCream.gameObject.activeSelf)
+                    fb.iceCream.SetActive(true);
+
+                if (br.lidCup != null && br.lidCup.gameObject.activeSelf)
+                    fb.lid.SetActive(true);
+            }
+
+            if (br.coffee.gameObject.activeSelf)
+                Observer.Notify(ListAction.IncreaseMoney, 50);
+            if (br.iceCream.gameObject.activeSelf)
+                Observer.Notify(ListAction.IncreaseMoney, 100);
+            if (br.lidCup.gameObject.activeSelf)
+                Observer.Notify(ListAction.IncreaseMoney, 50);
 
             fb.transform.DOPath(path, duration, path_type, path_mode, 10, Color.red)
                 .OnComplete(() => Destroy(fb.gameObject));

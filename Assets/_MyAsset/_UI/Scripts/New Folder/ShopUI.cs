@@ -27,7 +27,6 @@ public class ShopUI : UICanvas
     private void Start()
     {
         ChangeAnim("Character");
-        Debug.Log(animName);
         characterButton.onClick?.AddListener(CharacterButton);
         cupButton.onClick?.AddListener(CupButton);
         backButton.onClick?.AddListener(BackButton);

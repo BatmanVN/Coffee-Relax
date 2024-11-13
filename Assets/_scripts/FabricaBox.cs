@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FabricaBox : MonoBehaviour
 {
-    public GameObject cup;
+    public GameObject coffe;
+    public GameObject iceCream;
+    public GameObject lid;
 
     // Start is called before the first frame update
     void Start()

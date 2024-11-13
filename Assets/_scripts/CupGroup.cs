@@ -18,7 +18,7 @@ public class CupGroup : GameUnit
         Observer.AddObserver(ListAction.ShowIceCream, ShowIceCream);
         Observer.AddObserver(ListAction.ShowLidCup, ShowLidCup);
     }
-    public void animate_group_brush()
+    public void animate_group_item()
     {
         sequence = DOTween.Sequence();
         float pos_y_old = transform.localPosition.y;

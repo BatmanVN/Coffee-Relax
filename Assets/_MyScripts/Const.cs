@@ -5,12 +5,8 @@ using UnityEngine;
 public enum Item_type
 {
     Cup,
-    IceCream
-}
-public enum StatusCup_type
-{
-    Hot,
-    Ice
+    IceCream,
+    Lid
 }
 
 public enum ListAction

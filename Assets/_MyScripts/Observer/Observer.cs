@@ -16,7 +16,7 @@ public class Observer : MonoBehaviour
     }
     public static void RemoveObserver(Enum enumType, Action<object[]> callback)
     {
-        if (Listeners.ContainsKey(enumType)) return;
+        if (!Listeners.ContainsKey(enumType)) return;
         Listeners[enumType].Remove(callback);
     }
     public static void Notify(Enum enumType, params object[] datas)

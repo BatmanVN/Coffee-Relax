@@ -54,6 +54,12 @@ public class Obstacle : MonoBehaviour
             if (countDrop < 2)
             {
                 GameObject gm = Instantiate(item_pref, tmp, item_pref.transform.rotation);
+                //if (gm != null)
+                //{
+                //    gm.GetComponent<CupGroup>().coffee.SetActive(false);
+                //    gm.GetComponent<CupGroup>().iceCream.SetActive(false);
+                //    gm.GetComponent<CupGroup>().lidCup.SetActive(false);
+                //}
                 Vector3 shoot = new Vector3(0f, Random.Range(2, 5), Random.Range(2, 6));
                 gm.GetComponent<Rigidbody>().AddForce(shoot * power, ForceMode.Impulse);
             }

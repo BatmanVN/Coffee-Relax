@@ -13,8 +13,10 @@ public class InGame_UI : UICanvas
     public Button returnButton;
     public Button backButton;
     public GameObject pauseBar;
+    public GameObject upEffect;
     public Text txt_mmoney;
     public string nameScene;
+    private Coroutine effect;
     private void OnEnable()
     {
         Observer.AddObserver(ListAction.Vibrate,_vibrate);
@@ -45,14 +47,24 @@ public class InGame_UI : UICanvas
     {
         Time.timeScale = 0f;
         pauseBar.SetActive(true);
-        //UIManager.Ins.OpenUI<InGame_UI>();
     }
-
+    public void UpEffect(bool active)
+    {
+        upEffect.SetActive(active);
+    }
     public void increase_money(object[] datas)
     {
-        if (datas == null || datas.Length < 1 || !(datas[0] is float nbr)) return;
+        if (datas == null || datas.Length < 1 || !(datas[0] is int nbr)) return;
         GameControllManager.Ins.setcoin(GameControllManager.Ins.getcoin() + nbr);
         txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
+        UpEffect(true);
+        effect = StartCoroutine(TurnOffEffect());
+    }
+    public IEnumerator TurnOffEffect()
+    {
+        yield return new WaitForSeconds(1);
+        UpEffect(false);
+        StopCoroutine(effect);
     }
     public void _vibrate(object[] datas)
     {
