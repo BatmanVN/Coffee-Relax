@@ -18,7 +18,12 @@ public enum ListAction
     ChangeAnim,
     GameRun,
     SpawnObject,
-    FinishGame
+    FinishGame,
+    Vibrate,
+    IncreaseMoney,
+    ShowCoffee,
+    ShowIceCream,
+    ShowLidCup
 }
 
 public class Const

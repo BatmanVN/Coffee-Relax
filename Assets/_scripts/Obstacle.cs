@@ -38,8 +38,8 @@ public class Obstacle : MonoBehaviour
     {
         if (other.CompareTag(Const.cupTag) || other.CompareTag(Const.playerTag))
         {
-
-            UiManager.instance._vibrate();
+            Observer.Notify(ListAction.Vibrate);
+            //UiManager.instance._vibrate();
 
 
             Controller_Items.instance.decrease_item();

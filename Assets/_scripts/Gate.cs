@@ -18,9 +18,10 @@ public class Gate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("brush"))
+        if (other.CompareTag(Const.cupTag))
         {
-            UiManager.instance._vibrate();
+            Observer.Notify(ListAction.Vibrate);
+            //UiManager.instance._vibrate();
             //lipstick
             if (is_IceCream)
             {

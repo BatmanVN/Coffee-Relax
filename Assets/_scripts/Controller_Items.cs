@@ -44,7 +44,10 @@ public class Controller_Items : MonoBehaviour
     }
 
 
-
+    public void CheckCupCoffee()
+    {
+        
+    }
 
     void anim_items_position()
     {

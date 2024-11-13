@@ -13,6 +13,7 @@ public class SellGate: MonoBehaviour
     public float duration;
     public Transform money_stash_pos;
     public GameObject money_stash;
+    //public float moneyIncrease;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +23,12 @@ public class SellGate: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("brush"))
+        if (other.CompareTag(Const.cupTag))
         {
-            UiManager.instance._vibrate();
-            UiManager.instance.increase_money(50);
+            Observer.Notify(ListAction.Vibrate);
+            //UiManager.instance._vibrate();
+            Observer.Notify(ListAction.IncreaseMoney,50);
+            //UiManager.instance.increase_money(50);
             GameObject gm = Instantiate(money_stash, money_stash_pos.position, money_stash.transform.rotation);
 
             Destroy(gm, 2f);

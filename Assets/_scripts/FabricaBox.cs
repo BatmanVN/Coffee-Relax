@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FabricaBox : MonoBehaviour
 {
-    public GameObject brush, lipstick, mascara;
+    public GameObject cup;
 
     // Start is called before the first frame update
     void Start()

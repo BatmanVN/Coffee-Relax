@@ -2,34 +2,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum GameState
+{
+    MainMenu,
+    GamePlay,
+    Setting,
+    Win,
+    Lose,
+}
 public class GameControllManager : Singleton<GameControllManager>
 {
-    //public static GameControllManager instance;
 
     public GameObject[] levels;
+    private static GameState gameState = GameState.MainMenu;
+    protected override void Awake()
+    {
+        base.Awake();
+        Input.multiTouchEnabled = true;
 
-    // Start is called before the first frame update
+        ChangeState(GameState.MainMenu);
+        UIManager.Ins.OpenUI<MainMenu_UI>();
+    }
     void Start()
     {
 
     }
-
-    //private void Awake()
-    //{
-    //    if (instance != null)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //    else
-    //    {
-    //        instance = this;
-    //        DontDestroyOnLoad(gameObject);
-    //    }
-
-    //    onstartfirsttime();
-
-    //}
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.U))
@@ -98,5 +95,14 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         PlayerPrefs.SetFloat("coin", nbr);
     }
-    
+
+    public static void ChangeState(GameState state)
+    {
+        gameState = state;
+    }
+
+    public static bool IsState(GameState state)
+    {
+        return gameState == state;
+    }
 }
