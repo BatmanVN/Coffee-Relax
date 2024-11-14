@@ -11,7 +11,7 @@ public class HandTrap : MonoBehaviour
         {
             Observer.Notify(ListAction.Vibrate);
 
-            Controller_Items.instance.decrease_item();
+            Controller_Items.Ins.decrease_item();
 
             GameObject smoke = Instantiate(smoke_pref, hand.transform.position, hand.transform.rotation);
             Destroy(smoke, 1f);

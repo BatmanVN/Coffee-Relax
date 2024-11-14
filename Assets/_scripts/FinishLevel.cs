@@ -23,8 +23,8 @@ public class FinishLevel : MonoBehaviour
             Observer.Notify(ListAction.FinishGame, true);
             showWin = StartCoroutine(show_win_panel());
 
-            Controller_Items.instance.move_all_to_center_finish_level();
-            Observer.Notify(ListAction.FinishGame, Controller_Items.instance.total_items);
+            Controller_Items.Ins.move_all_to_center_finish_level();
+            Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
         }
         if (finish.CompareTag(Const.cupTag))
         {
@@ -34,21 +34,25 @@ public class FinishLevel : MonoBehaviour
             if (br != null)
             {
                 br.gameObject.SetActive(false);
-                if (br.coffee.gameObject.activeSelf)
-                    Observer.Notify(ListAction.IncreaseMoney, 50);
-                if (br.iceCream.gameObject.activeSelf)
-                    Observer.Notify(ListAction.IncreaseMoney, 100);
-                if (br.lidCup.gameObject.activeSelf)
-                    Observer.Notify(ListAction.IncreaseMoney, 50);
+                CupType cupType = br.cupTypes.Find(type => type != null && type.gameObject.activeSelf);
+                if (cupType != null)
+                {
+                    if (cupType.money > 0)
+                    {
+                        Controller_Items.Ins.total_items++;
+                        Observer.Notify(ListAction.IncreaseMoney, cupType.money);
+                    }
+                }
             }
         }
     }
+
     IEnumerator show_win_panel()
     {
         yield return new WaitForSeconds(3f);
 
         UIManager.Ins.OpenUI<Win_UI>();
-
+        Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
         Destroy(confe);
         StopCoroutine(showWin);
         //Advertisements.Instance.ShowInterstitial();

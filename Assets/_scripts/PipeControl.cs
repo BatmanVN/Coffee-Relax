@@ -14,10 +14,14 @@ public class PipeControl : MonoBehaviour
             CupGroup cupGroup = other.GetComponent<CupGroup>();
             if (cupGroup != null)
             {
-                if (!cupGroup.iceCream.activeSelf || !cupGroup.lidCup.activeSelf)
+                if (cupGroup.item_Type != Item_type.IceCream && 
+                    cupGroup.item_Type != Item_type.ice7Color && 
+                    cupGroup.item_Type != Item_type.Lid)
                 {
-                    cupGroup.coffee.SetActive(true);
-                }    
+                    CupType cupType = cupGroup.cupTypes.Find(type => type.item_Type == Item_type.Cup);
+                    if (cupType != null)
+                        cupType.gameObject.SetActive(true);
+                }
             }
         }
     }

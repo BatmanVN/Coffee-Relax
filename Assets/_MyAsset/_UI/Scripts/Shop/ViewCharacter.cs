@@ -47,6 +47,7 @@ public class ViewCharacter : MonoBehaviour
         Destroy(currentSkin);
         currentSkin = character;
         textPrice.text = skinsData.skinDatas[currentID].price.ToString();
+        buttonDown.SetActive(true);
     }
     private void DestroySkin(object[] datas)
     {

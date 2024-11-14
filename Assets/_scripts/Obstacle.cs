@@ -28,7 +28,6 @@ public class Obstacle : MonoBehaviour
         //            .Append(transform.DOLocalMoveY(pos_y_old, time).SetEase(ease_bounce));
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Rotate(Vector3.back * Time.smoothDeltaTime * 250);
@@ -39,11 +38,8 @@ public class Obstacle : MonoBehaviour
         if (other.CompareTag(Const.cupTag) || other.CompareTag(Const.playerTag))
         {
             Observer.Notify(ListAction.Vibrate);
-            //UiManager.instance._vibrate();
 
-
-            Controller_Items.instance.decrease_item();
-            //other.GetComponent<BrushGroup>().clean_brush();
+            Controller_Items.Ins.decrease_item();
 
             Vector3 tmp = transform.position;
             tmp.z += 4f;
@@ -54,12 +50,6 @@ public class Obstacle : MonoBehaviour
             if (countDrop < 2)
             {
                 GameObject gm = Instantiate(item_pref, tmp, item_pref.transform.rotation);
-                //if (gm != null)
-                //{
-                //    gm.GetComponent<CupGroup>().coffee.SetActive(false);
-                //    gm.GetComponent<CupGroup>().iceCream.SetActive(false);
-                //    gm.GetComponent<CupGroup>().lidCup.SetActive(false);
-                //}
                 Vector3 shoot = new Vector3(0f, Random.Range(2, 5), Random.Range(2, 6));
                 gm.GetComponent<Rigidbody>().AddForce(shoot * power, ForceMode.Impulse);
             }

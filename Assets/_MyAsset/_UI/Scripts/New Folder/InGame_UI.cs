@@ -19,11 +19,13 @@ public class InGame_UI : UICanvas
     private Coroutine effect;
     private void OnEnable()
     {
+        
         Observer.AddObserver(ListAction.Vibrate,_vibrate);
         Observer.AddObserver(ListAction.IncreaseMoney, increase_money);
     }
     private void Start()
     {
+        txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
         setting.onClick?.AddListener(OpenSetting);
         returnButton.onClick?.AddListener(ReturnButton);
         backButton.onClick?.AddListener(BackButton);

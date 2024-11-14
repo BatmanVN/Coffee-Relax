@@ -31,52 +31,42 @@ public class SellGate: MonoBehaviour
 
             FabricaBox fb = Instantiate(fabrica_pref , path[0] , fabrica_pref.transform.rotation).GetComponent<FabricaBox>();
 
-
             CupGroup br = other.GetComponent<CupGroup>();
+
             if (br != null && fb != null)
             {
-                if (br.coffee != null && br.coffee.gameObject.activeSelf)
+                CupType cupInsType = br.cupTypes.Find(type => type != null && type.gameObject.activeSelf);
+                if (cupInsType != null)
                 {
-                    fb.coffe.SetActive(true);
-                    br.coffee.SetActive(false);
+                    GetGameObjectValue(cupInsType.item_Type, fb);
+                    if (cupInsType.money > 0)
+                    {
+                        Observer.Notify(ListAction.IncreaseMoney, cupInsType.money);
+                    }
                 }
-
-                if (br.iceCream != null && br.iceCream.gameObject.activeSelf)
-                {
-                    fb.iceCream.SetActive(true);
-                    br.iceCream.SetActive(false);
-                }
-
-
-                if (br.lidCup != null && br.lidCup.gameObject.activeSelf)
-                {
-                    fb.lid.SetActive(true);
-                    br.lidCup.SetActive(false);
-                }
-
             }
-
-            if (fb.coffe.gameObject.activeSelf)
-                Observer.Notify(ListAction.IncreaseMoney, 50);
-            if (fb.iceCream.gameObject.activeSelf)
-                Observer.Notify(ListAction.IncreaseMoney, 100);
-            if (fb.lid.gameObject.activeSelf)
-                Observer.Notify(ListAction.IncreaseMoney, 50);
-
             fb.transform.DOPath(path, duration, path_type, path_mode, 10, Color.red)
                 .OnComplete(() => Destroy(fb.gameObject));
 
-            Controller_Items.instance.decrease_item();
+            Controller_Items.Ins.decrease_item();
         }
     }
-
+    private void GetGameObjectValue(Item_type cupType, FabricaBox fb)
+    {
+        if (fb != null && fb.cupTypes != null)
+        {
+            CupType typeFb = fb.cupTypes.Find(cupfb => cupfb.item_Type == cupType);
+            if (typeFb != null)
+                typeFb.gameObject.SetActive(true);
+        }
+    }
     void convert_transform_to_vectors()
     {
         path = new Vector3[positions.Length];
 
         for (int i = 0; i < positions.Length; i++)
         {
-            path[i] = positions[i].position;
+            path[i] = new Vector3(positions[i].position.x, positions[i].position.y, positions[i].position.z + 0.5f);
         }
     }
 }

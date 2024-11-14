@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Controller_Items : MonoBehaviour
+public class Controller_Items : Singleton<Controller_Items>
 {
-    public static Controller_Items instance;
     public int count_items, total_items;
     // list cup
     public List<Transform> list_item;
@@ -13,10 +12,6 @@ public class Controller_Items : MonoBehaviour
 
     public float smooth_speed, correct_smooth;
 
-    private void Awake()
-    {
-        instance = this;
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -38,12 +33,6 @@ public class Controller_Items : MonoBehaviour
 
     void FixedUpdate()
     {
-        //player_movements();
-    }
-
-
-    public void CheckCupCoffee()
-    {
         
     }
 
@@ -60,10 +49,13 @@ public class Controller_Items : MonoBehaviour
     public void Increase_item()
     {
         count_items++;
-        total_items++;
+        //total_items++;
         if (count_items >= list_item.Count) return;
         list_item[count_items].gameObject.SetActive(true);
-        
+        foreach (CupType cupType in list_item[count_items].GetComponent<CupGroup>().cupTypes)
+        {
+            cupType.gameObject.SetActive(false);
+        }
         //    //animate group
         list_item[count_items].GetComponent<CupGroup>().animate_group_item();
     }
@@ -75,9 +67,12 @@ public class Controller_Items : MonoBehaviour
             list_item[count_items].gameObject.SetActive(false);
             count_items--;
         }
-        total_items--;
+        //total_items--;
     }
-
+    public int GetTotalCup()
+    {
+        return total_items;
+    }
     public void move_forward_in_make_up()
     {
         //Vector3 tmp = transform.position;

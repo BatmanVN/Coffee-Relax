@@ -6,7 +6,8 @@ public enum Item_type
 {
     Cup,
     IceCream,
-    Lid
+    Lid,
+    ice7Color
 }
 
 public enum ListAction
@@ -20,6 +21,7 @@ public enum ListAction
     ShowCoffee,
     ShowIceCream,
     ShowLidCup,
+    ShowIce7,
     SpawnPlayer
 }
 public enum UiAction

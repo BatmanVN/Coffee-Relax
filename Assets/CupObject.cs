@@ -14,9 +14,17 @@ public class CupObject : MonoBehaviour
         if (collision.CompareTag(Const.playerTag) || collision.CompareTag(Const.cupTag))
         {
             Observer.Notify(ListAction.Vibrate);
-            //UiManager.instance._vibrate();
             Destroy(gameObject);
-            Controller_Items.instance.Increase_item();
+            Controller_Items.Ins.Increase_item();
+            //CupGroup cupGroup = collision.GetComponent<CupGroup>();
+            //if (cupGroup != null)
+            //{
+            //    foreach (CupType type in cupGroup.cupTypes)
+            //    {
+            //        if(!type.gameObject.activeSelf)
+            //            type.gameObject.SetActive(false);
+            //    }
+            //}
         }
     }
 

@@ -17,6 +17,7 @@ public class ShopUI : UICanvas
 
     [SerializeField] Animator anim;
     private string animName = "Character";
+    public GameObject buttonManager;
 
     private Coroutine effect;
     public GameObject upEffect;
@@ -74,7 +75,7 @@ public class ShopUI : UICanvas
         content.content = viewPort[0];
         viewPort[0].gameObject.SetActive(true);
         viewPort[1].gameObject.SetActive(false);
-
+        buttonManager.SetActive(false);
     }
     public void CupButton()
     {
@@ -83,6 +84,7 @@ public class ShopUI : UICanvas
         content.content = viewPort[1];
         viewPort[0].gameObject.SetActive(false);
         viewPort[1].gameObject.SetActive(true);
+        buttonManager.SetActive(false);
         Observer.Notify(UiAction.DestroySkin);
     }
 }

@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925c124bedd816144ab9201091716cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
   count_items: 0
   total_items: 0
   list_item: []
@@ -1421,6 +1422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cup_Inst (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 728578499170400907, guid: 57ce2e19e2ad450d950b9eae43f70049,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

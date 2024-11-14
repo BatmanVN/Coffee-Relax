@@ -23,7 +23,6 @@ public class Win_UI : UICanvas
         nextButton.onClick?.AddListener(btn_next);
         adsButton.onClick?.AddListener(AdsButton);
         coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
-        //level_nbr_win_panel.text = level_nbr_txt.text = "LEVEL " + (GameControllManager.instance.getlevel() + 1);
     }
 
     public void AdsButton()
@@ -38,7 +37,8 @@ public class Win_UI : UICanvas
         // sound
         //SoundManager.instance.Play("click");
 
-        GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
+        //GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
+        Observer.Notify(ListAction.SpawnPlayer);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Close(0);
