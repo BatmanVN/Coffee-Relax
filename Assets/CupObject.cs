@@ -9,16 +9,14 @@ public class CupObject : MonoBehaviour
 
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.CompareTag(Const.playerTag) || collision.collider.CompareTag(Const.cupTag))
+        if (collision.CompareTag(Const.playerTag) || collision.CompareTag(Const.cupTag))
         {
             Observer.Notify(ListAction.Vibrate);
             //UiManager.instance._vibrate();
             Destroy(gameObject);
             Controller_Items.instance.Increase_item();
-
-            //print("add brush");
         }
     }
 

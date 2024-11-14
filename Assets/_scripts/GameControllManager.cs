@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,8 +14,12 @@ public enum GameState
 public class GameControllManager : Singleton<GameControllManager>
 {
 
-    public GameObject[] levels;
+    //public GameObject[] levels;
     private static GameState gameState = GameState.MainMenu;
+
+    public int levelCurrent;
+    public int coinCurrent;
+
     protected override void Awake()
     {
         base.Awake();
@@ -23,11 +28,12 @@ public class GameControllManager : Singleton<GameControllManager>
         ChangeState(GameState.MainMenu);
         UIManager.Ins.OpenUI<MainMenu_UI>();
 
-        onstartfirsttime();
+        //onstartfirsttime();
     }
     void Start()
     {
-        
+        levelCurrent = getlevel();
+        coinCurrent = getcoin();
     }
     void Update()
     {
@@ -53,20 +59,6 @@ public class GameControllManager : Singleton<GameControllManager>
         }
     }
 
-    public void onstartfirsttime()
-    {
-        if (!PlayerPrefs.HasKey("firsttime_genaral"))
-        {
-            PlayerPrefs.SetInt("level_general", 0);
-            PlayerPrefs.SetInt("firsttime_genaral", 0);
-            PlayerPrefs.SetFloat("coin", 0);
-
-            for (int i = 1; i < 6; i++)
-            {
-                PlayerPrefs.SetInt("skin" + i, 0);
-            }
-        }
-    }
 
     //level
     public void setLevel(int lv)
@@ -97,7 +89,14 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         PlayerPrefs.SetInt("coin", nbr);
     }
-
+    public int GetSkinIndex()
+    {
+        return PlayerPrefs.GetInt("SkinsID");
+    }
+    public void SetSkin(int idSkin)
+    {
+        PlayerPrefs.SetInt("SkinsID",idSkin);
+    }
     public static void ChangeState(GameState state)
     {
         gameState = state;

@@ -12,8 +12,13 @@ public class PipeControl : MonoBehaviour
         {
             Observer.Notify(ListAction.Vibrate);
             CupGroup cupGroup = other.GetComponent<CupGroup>();
-            if (!cupGroup.iceCream.activeSelf || !cupGroup.lidCup.activeSelf)
-                cupGroup.coffee.SetActive(true);
+            if (cupGroup != null)
+            {
+                if (!cupGroup.iceCream.activeSelf || !cupGroup.lidCup.activeSelf)
+                {
+                    cupGroup.coffee.SetActive(true);
+                }    
+            }
         }
     }
 }

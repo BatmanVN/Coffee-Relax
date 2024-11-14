@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class Win_UI : UICanvas
 {
     public Text txt_multi;
+    public Text coinTextConner;
     public Button nextButton;
     public Button adsButton;
     private void OnEnable()
@@ -21,6 +22,7 @@ public class Win_UI : UICanvas
     {
         nextButton.onClick?.AddListener(btn_next);
         adsButton.onClick?.AddListener(AdsButton);
+        coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
         //level_nbr_win_panel.text = level_nbr_txt.text = "LEVEL " + (GameControllManager.instance.getlevel() + 1);
     }
 

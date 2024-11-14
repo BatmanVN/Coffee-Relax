@@ -13,8 +13,13 @@ public class ShopUI : UICanvas
     public Button useButton;
     public Button buyButton;
     public Button adsButton;
+    public Text coinTextConner;
+
     [SerializeField] Animator anim;
     private string animName = "Character";
+
+    private Coroutine effect;
+    public GameObject upEffect;
 
     private void OnEnable()
     {
@@ -30,8 +35,8 @@ public class ShopUI : UICanvas
         characterButton.onClick?.AddListener(CharacterButton);
         cupButton.onClick?.AddListener(CupButton);
         backButton.onClick?.AddListener(BackButton);
-
-        //Observer.AddObserver("ChangeAnimButtonShop", ShopButton_2);
+        buyButton.onClick?.AddListener(BuyButton);
+        coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
     }
     public void ChangeAnim(string animName)
     {
@@ -43,6 +48,20 @@ public class ShopUI : UICanvas
         }
     }
 
+    public void BuyButton()
+    {
+        effect = StartCoroutine(TurnOffEffect());
+    }
+    public void UpEffect(bool active)
+    {
+        upEffect.SetActive(active);
+    }
+    public IEnumerator TurnOffEffect()
+    {
+        yield return new WaitForSeconds(1);
+        UpEffect(false);
+        StopCoroutine(effect);
+    }
     public void BackButton()
     {
         Close(0);
@@ -64,5 +83,6 @@ public class ShopUI : UICanvas
         content.content = viewPort[1];
         viewPort[0].gameObject.SetActive(false);
         viewPort[1].gameObject.SetActive(true);
+        Observer.Notify(UiAction.DestroySkin);
     }
 }

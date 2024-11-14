@@ -19,7 +19,12 @@ public enum ListAction
     IncreaseMoney,
     ShowCoffee,
     ShowIceCream,
-    ShowLidCup
+    ShowLidCup,
+    SpawnPlayer
+}
+public enum UiAction
+{
+    DestroySkin
 }
 
 public class Const

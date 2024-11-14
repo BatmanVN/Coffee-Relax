@@ -12,9 +12,13 @@ public class CamFollow : MonoBehaviour
     public bool is_active;
 
 
+    private void OnEnable()
+    {
+        Observer.AddObserver(ListAction.SpawnPlayer, start_follow);
+    }
     void Start()
     {
-        start_follow();
+        
     }
 
     //private void FixedUpdate()
@@ -34,25 +38,33 @@ public class CamFollow : MonoBehaviour
         if (!is_active) return;
 
         //if (targetLastPos == target.position) return;
+        if (target != null)
+        {
+            Vector3 distance = target.position + ofsset;
+            //distance.x = 0;
 
-        Vector3 distance = target.position + ofsset;
-        //distance.x = 0;
-
-        tween.ChangeEndValue(distance, true).Restart();
-        //targetLastPos = distance;
+            tween.ChangeEndValue(distance, true).Restart();
+            //targetLastPos = distance;
+        }
     }
 
-    public void start_follow()
+    public void start_follow(object[] datas)
     {
+        if (target != null)
+        {
+            ofsset = transform.position - target.position;
 
-        ofsset = transform.position - target.position;
+            Vector3 distance = target.position + ofsset;
+            //distance.x = 0;
 
-        Vector3 distance = target.position + ofsset;
-        //distance.x = 0;
+            tween = transform.DOMove(distance, speed_cam).SetEase(ease).SetAutoKill(false);
+            //targetLastPos = distance;
 
-        tween = transform.DOMove(distance, speed_cam).SetEase(ease).SetAutoKill(false);
-        //targetLastPos = distance;
-
-        is_active = true;
+            is_active = true;
+        }
+    }
+    private void OnDestroy()
+    {
+        Observer.RemoveObserver(ListAction.SpawnPlayer, start_follow);
     }
 }

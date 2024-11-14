@@ -36,20 +36,31 @@ public class SellGate: MonoBehaviour
             if (br != null && fb != null)
             {
                 if (br.coffee != null && br.coffee.gameObject.activeSelf)
+                {
                     fb.coffe.SetActive(true);
+                    br.coffee.SetActive(false);
+                }
 
                 if (br.iceCream != null && br.iceCream.gameObject.activeSelf)
+                {
                     fb.iceCream.SetActive(true);
+                    br.iceCream.SetActive(false);
+                }
+
 
                 if (br.lidCup != null && br.lidCup.gameObject.activeSelf)
+                {
                     fb.lid.SetActive(true);
+                    br.lidCup.SetActive(false);
+                }
+
             }
 
-            if (br.coffee.gameObject.activeSelf)
+            if (fb.coffe.gameObject.activeSelf)
                 Observer.Notify(ListAction.IncreaseMoney, 50);
-            if (br.iceCream.gameObject.activeSelf)
+            if (fb.iceCream.gameObject.activeSelf)
                 Observer.Notify(ListAction.IncreaseMoney, 100);
-            if (br.lidCup.gameObject.activeSelf)
+            if (fb.lid.gameObject.activeSelf)
                 Observer.Notify(ListAction.IncreaseMoney, 50);
 
             fb.transform.DOPath(path, duration, path_type, path_mode, 10, Color.red)

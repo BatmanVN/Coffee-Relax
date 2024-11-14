@@ -13,7 +13,7 @@ public class CharacterController : MonoBehaviour
 
 
     public string animName = Const.runAnim;
-    private void OnValidate() => anim = GetComponent<Animator>();
+    private void OnValidate() => anim = GetComponentInChildren<Animator>();
     private void OnEnable()
     {
         Observer.AddObserver(ListAction.ChangeAnim, ChangeStatusAnim);

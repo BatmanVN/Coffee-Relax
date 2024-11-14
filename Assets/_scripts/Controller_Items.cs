@@ -7,8 +7,6 @@ public class Controller_Items : MonoBehaviour
 {
     public static Controller_Items instance;
     public int count_items, total_items;
-    // boolean : maskara , lipstick
-    //public bool mascara_, lipstick_;
     // list cup
     public List<Transform> list_item;
     protected Vector3 velocity = Vector3.zero;
@@ -65,19 +63,7 @@ public class Controller_Items : MonoBehaviour
         total_items++;
         if (count_items >= list_item.Count) return;
         list_item[count_items].gameObject.SetActive(true);
-        //if (mascara_)
-        //{
-        //    list_brushes[count_brushes].GetChild(1).gameObject.SetActive(true);
-        //    //list_brushes[count_brushes].GetComponent<BrushGroup>().has_mascara = true;
-        //}
-
-        //if (lipstick_)
-        //{
-        //    list_brushes[count_brushes].GetChild(2).gameObject.SetActive(true);
-        //    //list_brushes[count_brushes].GetComponent<BrushGroup>().has_lipstick = true;
-        //}
-
-
+        
         //    //animate group
         list_item[count_items].GetComponent<CupGroup>().animate_group_item();
     }
@@ -86,21 +72,10 @@ public class Controller_Items : MonoBehaviour
     {
         if (count_items > 0)
         {
-
             list_item[count_items].gameObject.SetActive(false);
-
-            //reset to simple
-            //list_brushes[count_brushes].GetComponent<BrushGroup>().upgrate_to_simple();
-
-            //reset brush
-            //list_item[count_items].GetChild(1).gameObject.SetActive(false);
-            //list_brushes[count_brushes].GetComponent<BrushGroup>().has_mascara = false;
-
-            //list_item[count_items].GetChild(2).gameObject.SetActive(false);
-            //list_brushes[count_brushes].GetComponent<BrushGroup>().has_lipstick = false;
             count_items--;
         }
-        //count_items--;
+        total_items--;
     }
 
     public void move_forward_in_make_up()

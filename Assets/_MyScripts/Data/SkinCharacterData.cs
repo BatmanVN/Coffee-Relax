@@ -21,6 +21,10 @@ public class SkinCharacterItemData
 
     [VerticalGroup("Split/Right")]
     [LabelWidth(100)]
+    public string NameCharacter;
+
+    [VerticalGroup("Split/Right")]
+    [LabelWidth(100)]
     public int id;
 
     [VerticalGroup("Split/Right")]
