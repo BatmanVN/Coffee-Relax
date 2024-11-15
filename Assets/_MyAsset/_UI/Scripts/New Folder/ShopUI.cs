@@ -10,9 +10,7 @@ public class ShopUI : UICanvas
     public Button backButton;
     public Button characterButton;
     public Button cupButton;
-    //public Button useButton;
-    //public Button buyButton;
-    //public Button adsButton;
+ 
     public Text coinTextConner;
     [SerializeField] Animator anim;
     private string animName = "Character";
@@ -71,6 +69,7 @@ public class ShopUI : UICanvas
     {
         Close(0);
         UIManager.Ins.OpenUI<MainMenu_UI>();
+        Observer.Notify(UiAction.SpawnModel);
     }
     public void CharacterButton()
     {

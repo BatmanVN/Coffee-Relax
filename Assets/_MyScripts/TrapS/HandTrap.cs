@@ -9,14 +9,16 @@ public class HandTrap : MonoBehaviour
     public GameObject smoke_pref;
     private bool isDecreased;
     public float speed;
+    public float minHeight;
     private void Start()
     {
         MoveHand();
     }
     public void MoveHand()
     {
-        this.gameObject.transform.DOLocalMoveY(-13f, speed).SetLoops(-1, LoopType.Yoyo);
+            this.gameObject.transform.DOLocalMoveY(-minHeight, speed).SetLoops(-1, LoopType.Yoyo);
     }
+
     private void OnTriggerEnter(Collider hand)
     {
         if (hand.CompareTag(Const.cupTag) || hand.CompareTag(Const.playerTag))

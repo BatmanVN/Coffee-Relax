@@ -55,6 +55,7 @@ public class FinishLevel : MonoBehaviour
         Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
         Destroy(confe);
         StopCoroutine(showWin);
+        Observer.Notify(UiAction.DestroyModel);
         //Advertisements.Instance.ShowInterstitial();
     }
 }

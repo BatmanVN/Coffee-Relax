@@ -14,7 +14,7 @@ public class CamFollow : MonoBehaviour
 
     private void OnEnable()
     {
-        Observer.AddObserver(ListAction.SpawnPlayer, start_follow);
+        Observer.AddObserver(ListAction.SetCamFollow, start_follow);
     }
     void Start()
     {
@@ -50,6 +50,8 @@ public class CamFollow : MonoBehaviour
 
     public void start_follow(object[] datas)
     {
+        if(datas == null || datas.Length <1 || !(datas[0] is Transform player)) return;
+        target = player;
         if (target != null)
         {
             ofsset = transform.position - target.position;
@@ -65,6 +67,6 @@ public class CamFollow : MonoBehaviour
     }
     private void OnDestroy()
     {
-        Observer.RemoveObserver(ListAction.SpawnPlayer, start_follow);
+        Observer.RemoveObserver(ListAction.SetCamFollow, start_follow);
     }
 }

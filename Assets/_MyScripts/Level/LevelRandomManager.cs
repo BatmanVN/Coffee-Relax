@@ -10,7 +10,7 @@ public class LevelRandomManager : MonoBehaviour
     public int levelIndex;
     private void OnEnable()
     {
-        Observer.AddObserver(ListAction.SpawnPlayer,SelectLevel);
+        Observer.AddObserver(ListAction.NextLevel, SelectLevel);
         listLevel = Resources.LoadAll<GameObject>("Levels").ToList();
         //listLevel.AddRange(levels);
         // Sắp xếp danh sách theo số thứ tự trong tên
@@ -52,6 +52,6 @@ public class LevelRandomManager : MonoBehaviour
     }
     private void OnDestroy()
     {
-        Observer.RemoveObserver(ListAction.SpawnPlayer,SelectLevel);
+        Observer.RemoveObserver(ListAction.NextLevel, SelectLevel);
     }
 }

@@ -1220,11 +1220,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 7344548819719819811}
   skinId: 0
+  skinName: 
 --- !u!114 &243957032948709303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2596,11 +2604,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 4558020701070465766}
   skinId: 0
+  skinName: 
 --- !u!114 &4697407331639617069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2736,11 +2752,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 3934252164299498979}
   skinId: 0
+  skinName: 
 --- !u!114 &5149104982383890586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3993,11 +4017,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 8435672437965495324}
   skinId: 0
+  skinName: 
 --- !u!114 &5259780449593892486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4484,7 +4516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -126, y: -76}
+  m_AnchoredPosition: {x: -131.9, y: -117.5}
   m_SizeDelta: {x: 510, y: 143.62555}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2385591245649255173
@@ -4661,11 +4693,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 1314106383656077178}
   skinId: 0
+  skinName: 
 --- !u!114 &4654446784769735311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4952,11 +4992,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 1
   isUse: 1
   used: {fileID: 1196458107953481437}
   skinId: 0
+  skinName: 
 --- !u!114 &8241256449157315530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5086,6 +5134,7 @@ MonoBehaviour:
   buyButton: {fileID: 3775296525000416517}
   adsButton: {fileID: 8185735033199531763}
   idSkin: 0
+  currentCoin: 0
 --- !u!1 &5121658850739483672
 GameObject:
   m_ObjectHideFlags: 0
@@ -6171,7 +6220,6 @@ GameObject:
   - component: {fileID: 2877237643526512129}
   - component: {fileID: 7835092241046576446}
   - component: {fileID: 7952431477139998369}
-  - component: {fileID: 8256329610439221211}
   m_Layer: 5
   m_Name: Viewport Character
   m_TagString: Untagged
@@ -6305,20 +6353,6 @@ MonoBehaviour:
   useButton: {fileID: 5940989420390122960}
   buyButton: {fileID: 8615846376695737536}
   textNoti: {fileID: 5113098382503732308}
---- !u!114 &8256329610439221211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6091506257732680208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4716879de7915e24785d1af4f6c00a61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
-  skinsStatus: []
 --- !u!1 &6253185926095255947
 GameObject:
   m_ObjectHideFlags: 0
@@ -6380,11 +6414,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 2557411177953183081}
   skinId: 0
+  skinName: 
 --- !u!114 &6238325899254430378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7034,11 +7076,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 6808507790061302569}
   skinId: 0
+  skinName: 
 --- !u!114 &5946995284826946334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8679,11 +8729,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 3184394276342151948}
   skinId: 0
+  skinName: 
 --- !u!114 &815778352259166725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8819,11 +8877,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData:
+    sprite: {fileID: 0}
+    NameCharacter: 
+    id: 0
+    character_pref: {fileID: 0}
+    price: 0
+    anim: {fileID: 0}
   buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 19658672001445101}
   skinId: 0
+  skinName: 
 --- !u!114 &1342525990729197273
 MonoBehaviour:
   m_ObjectHideFlags: 0

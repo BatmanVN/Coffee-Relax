@@ -37,8 +37,8 @@ public class Win_UI : UICanvas
         // sound
         //SoundManager.instance.Play("click");
 
-        //GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
-        Observer.Notify(ListAction.SpawnPlayer);
+        GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
+        Observer.Notify(ListAction.NextLevel);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Close(0);

@@ -25,11 +25,14 @@ public class MainMenu_UI : UICanvas
         Close(0);
         UIManager.Ins.OpenUI<Swipe_UI>();
         Observer.Notify(ListAction.SpawnPlayer);
+        Observer.Notify(ListAction.NextLevel);
+        Observer.Notify(UiAction.DestroyModel);
     }
     public void ShopButton()
     {
         Close(0);
         UIManager.Ins.OpenUI<ShopUI>();
+        Observer.Notify(UiAction.DestroyModel);
     }
 
 }

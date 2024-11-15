@@ -88,10 +88,13 @@ public class CharacterController : MonoBehaviour
     public void ChangeStatusAnim(object[] datas)
     {
         if(datas == null || datas.Length < 1 || !(datas[0] is string animChange)) return;
-        if(animChange != animName)
-            anim.ResetTrigger(animName);
-        animName = animChange;
-        anim.SetTrigger(animName);
+        if (anim != null)
+        {
+            if (animChange != animName)
+                anim.ResetTrigger(animName);
+            animName = animChange;
+            anim.SetTrigger(animName);
+        }
     }
 
     public void StatusGame(object[] datas)

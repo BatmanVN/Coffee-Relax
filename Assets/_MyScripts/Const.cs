@@ -23,7 +23,9 @@ public enum ListAction
     ShowIceCream,
     ShowLidCup,
     ShowIce7,
-    SpawnPlayer
+    SpawnPlayer,
+    SetCamFollow,
+    NextLevel
 }
 public enum UiAction
 {
@@ -31,7 +33,10 @@ public enum UiAction
     GetIdSkin,
     ChangeTextCoin,
     StatusUsed,
-    StatusBuy
+    StatusBuy,
+    UpdateUsedObject,
+    DestroyModel,
+    SpawnModel
 }
 
 public class Const
@@ -43,4 +48,5 @@ public class Const
     //String Tag
     public const string playerTag = "Player";
     public const string cupTag = "Cup";
+    public const string groundTag = "Ground";
 }

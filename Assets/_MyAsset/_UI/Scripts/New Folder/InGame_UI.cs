@@ -36,6 +36,7 @@ public class InGame_UI : UICanvas
         Close(0);
         Time.timeScale = 1.0f;
         UIManager.Ins.OpenUI<MainMenu_UI>();
+        Observer.Notify(UiAction.SpawnModel);
         SceneManager.LoadSceneAsync(nameScene);
     }
 

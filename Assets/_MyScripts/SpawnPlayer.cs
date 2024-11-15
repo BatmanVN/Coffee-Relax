@@ -6,30 +6,38 @@ public class SpawnPlayer : MonoBehaviour
 {
     public GameObject character;
     public SkinCharacterData characterData;
-    private int id;
+    public int skinID;
     private void OnEnable()
     {
         Observer.AddObserver(ListAction.SpawnPlayer, PlayerSpawn);
     }
-    protected void PlayerSpawn(object[] datas)
+    private void Start()
     {
-        for (int i = 0; i < ViewCharacter.Ins.baseSkins.Count; i++)
+        
+    }
+    public void PlayerSpawn(object[] datas)
+    {
+        var listSkinDatas = GameControllManager.Ins.characterData.skinDatas;
+        for (int i = 0; i < listSkinDatas.Count; i++)
         {
-            id = GameControllManager.Ins.GetPlayerByID();
-            if (ViewCharacter.Ins.baseSkins[i].isUse)
+            if (GameControllManager.Ins.GetStatusUseSkin(listSkinDatas[i].NameCharacter))
             {
-                character = Instantiate(characterData.skinDatas[i].character_pref, this.transform.position, this.transform.rotation);
-                Observer.Notify(ListAction.SetAimmator, characterData.skinDatas[i].anim);
-                character.transform.SetParent(this.transform);
-                CamFollow camFollow = GameObject.FindGameObjectWithTag("Cam").GetComponent<CamFollow>();
-                if (camFollow != null)
-                    camFollow.target = character.transform;
+                skinID = i;
+                character = Instantiate(listSkinDatas[skinID].character_pref, transform.position, transform.rotation);
+                character.transform.SetParent(transform);
+                Observer.Notify(ListAction.SetCamFollow, character.transform);
+                Observer.Notify(ListAction.SetAimmator,character.GetComponent<Animator>());
             }
         }
-
+    }
+    private void DestroyModel(object[] datas)
+    {
+        if (character != null)
+            Destroy(character);
     }
     private void OnDestroy()
     {
+        Observer.RemoveObserver(UiAction.DestroyModel, DestroyModel);
         Observer.RemoveObserver(ListAction.SpawnPlayer, PlayerSpawn);
     }
 }
