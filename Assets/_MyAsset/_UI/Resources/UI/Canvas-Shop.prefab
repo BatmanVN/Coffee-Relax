@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6974188392837828014}
   - component: {fileID: 6991078140838236187}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TextUse (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1220,9 +1220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 7344548819719819811}
+  skinId: 0
 --- !u!114 &243957032948709303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,7 +1467,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &6539949367694075819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,9 +1505,6 @@ MonoBehaviour:
   backButton: {fileID: 518674973824509358}
   characterButton: {fileID: 8614723725340148431}
   cupButton: {fileID: 2959239028579463774}
-  useButton: {fileID: 9166193863520697284}
-  buyButton: {fileID: 3775296525000416517}
-  adsButton: {fileID: 8185735033199531763}
   coinTextConner: {fileID: 6712003189633828915}
   anim: {fileID: 103561787452250269}
   buttonManager: {fileID: 5065975723050874191}
@@ -1811,6 +1810,123 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1647966322141776397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8739608275729112157}
+  - component: {fileID: 9105958464853946398}
+  - component: {fileID: 5113098382503732308}
+  - component: {fileID: 9147900983982363898}
+  - component: {fileID: 4778702421617827922}
+  m_Layer: 5
+  m_Name: TextNotify
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &8739608275729112157
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647966322141776397}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2833745402764273939}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 74}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &9105958464853946398
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647966322141776397}
+  m_CullTransparentMesh: 1
+--- !u!114 &5113098382503732308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647966322141776397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.44805026, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 2195558141cad6f438ddc3aa85a1499d, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: YOU DON'T HAVE ENOUGH MONEY
+--- !u!114 &9147900983982363898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647966322141776397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!95 &4778702421617827922
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647966322141776397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b97112377df84aa4389fece25081d89d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1685933759977557584
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +2111,7 @@ RectTransform:
   m_Children:
   - {fileID: 4183249660112864434}
   - {fileID: 912467866524795841}
+  - {fileID: 8739608275729112157}
   m_Father: {fileID: 6276917065157083979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2479,9 +2596,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 4558020701070465766}
+  skinId: 0
 --- !u!114 &4697407331639617069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2617,9 +2736,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 3934252164299498979}
+  skinId: 0
 --- !u!114 &5149104982383890586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3219,7 +3340,7 @@ GameObject:
   - component: {fileID: 3715542731144635077}
   - component: {fileID: 932084528373862482}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TextBuy (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3872,9 +3993,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 8435672437965495324}
+  skinId: 0
 --- !u!114 &5259780449593892486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4538,9 +4661,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 1314106383656077178}
+  skinId: 0
 --- !u!114 &4654446784769735311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4827,9 +4952,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 1
   isUse: 1
   used: {fileID: 1196458107953481437}
+  skinId: 0
 --- !u!114 &8241256449157315530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4913,6 +5040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7840354554698817661}
+  - component: {fileID: 8508128990765704678}
   m_Layer: 5
   m_Name: ButtonManager
   m_TagString: Untagged
@@ -4942,6 +5070,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8508128990765704678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065975723050874191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72d7d549fabed746910344b4bc082e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useButton: {fileID: 9166193863520697284}
+  buyButton: {fileID: 3775296525000416517}
+  adsButton: {fileID: 8185735033199531763}
+  idSkin: 0
 --- !u!1 &5121658850739483672
 GameObject:
   m_ObjectHideFlags: 0
@@ -6151,12 +6295,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7b66065ad79524f86886d6445680cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons: []
+  dontDestroyOnLoad: 0
+  baseSkins: []
   skinsData: {fileID: 11400000, guid: 8be73664e05fa1c439846e3bcb967582, type: 2}
   buttonDown: {fileID: 5065975723050874191}
   spawnPoint: {fileID: 7226549972496791900}
   currentSkin: {fileID: 0}
-  textPrice: {fileID: 6991078140838236187}
+  textPrice: {fileID: 932084528373862482}
+  useButton: {fileID: 5940989420390122960}
+  buyButton: {fileID: 8615846376695737536}
+  textNoti: {fileID: 5113098382503732308}
 --- !u!114 &8256329610439221211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6232,9 +6380,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 2557411177953183081}
+  skinId: 0
 --- !u!114 &6238325899254430378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6884,9 +7034,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 6808507790061302569}
+  skinId: 0
 --- !u!114 &5946995284826946334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8527,9 +8679,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 3184394276342151948}
+  skinId: 0
 --- !u!114 &815778352259166725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8665,9 +8819,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78d737d78ccbe42a8a8bc932105b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: {fileID: 0}
   isBuy: 0
   isUse: 0
   used: {fileID: 19658672001445101}
+  skinId: 0
 --- !u!114 &1342525990729197273
 MonoBehaviour:
   m_ObjectHideFlags: 0

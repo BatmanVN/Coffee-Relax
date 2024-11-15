@@ -55,6 +55,7 @@ public class Controller_Items : Singleton<Controller_Items>
         foreach (CupType cupType in list_item[count_items].GetComponent<CupGroup>().cupTypes)
         {
             cupType.gameObject.SetActive(false);
+            list_item[count_items].GetComponent<CupGroup>().item_Type = Item_type.Cup;
         }
         //    //animate group
         list_item[count_items].GetComponent<CupGroup>().animate_group_item();

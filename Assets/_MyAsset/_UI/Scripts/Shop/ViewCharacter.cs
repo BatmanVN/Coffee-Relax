@@ -4,32 +4,35 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ViewCharacter : MonoBehaviour
+public class ViewCharacter : Singleton<ViewCharacter>
 {
-    public List<Button> buttons;
+    public List<BaseSkin> baseSkins;
     public SkinCharacterData skinsData;
     public GameObject buttonDown;
     public Transform spawnPoint;
     public GameObject currentSkin;
     [Header("Price")]
-    [SerializeField] TextMeshProUGUI textPrice;
-    //[Header("Buy/NotBuy")]
-    //[SerializeField] Text textOwnStatus;
+    [SerializeField] public TextMeshProUGUI textPrice;
+    [SerializeField] public GameObject useButton;
+    [SerializeField] public GameObject buyButton;
+    [Header("Text Notify")]
+    [SerializeField] public Text textNoti;
+
     private void OnEnable()
     {
         SetData();
         Observer.AddObserver(UiAction.DestroySkin,DestroySkin);
-        foreach (Transform button in transform)
+        foreach (Transform skin in transform)
         {
-            buttons.Add(button.GetComponent<Button>());
+            baseSkins.Add(skin.GetComponent<BaseSkin>());
+
         }
     }
     private void Start()
     {
-        for (int i = 0; i < buttons.Count; i++)
+        for (int i = 0; i < baseSkins.Count; i++)
         {
-            int index = i;
-            buttons[i].onClick?.AddListener(() => InsCharacter(index));
+            baseSkins[i].skinId = skinsData.skinDatas[i].id;
         }
     }
     private void SetData()
@@ -37,18 +40,16 @@ public class ViewCharacter : MonoBehaviour
         GameObject character = Instantiate(skinsData.skinDatas[0].character_pref, spawnPoint.position, spawnPoint.rotation);
         character.transform.SetParent(spawnPoint.transform);
         currentSkin = character;
-        textPrice.text = skinsData.skinDatas[0].price.ToString();
-        //textOwnStatus.text = skinsData.skinDatas[0].price.ToString();
+        useButton.SetActive(true);
+        buyButton.SetActive(false);
     }
-    private void InsCharacter(int currentID)
+
+    public void SetStatusTextNoti(bool active, string text)
     {
-        GameObject character = Instantiate(skinsData.skinDatas[currentID].character_pref, spawnPoint.position, spawnPoint.rotation);
-        character.transform.SetParent(spawnPoint.transform);
-        Destroy(currentSkin);
-        currentSkin = character;
-        textPrice.text = skinsData.skinDatas[currentID].price.ToString();
-        buttonDown.SetActive(true);
+        textNoti.gameObject.SetActive(active);
+        textNoti.text = text;
     }
+
     private void DestroySkin(object[] datas)
     {
         if(currentSkin != null)

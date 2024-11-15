@@ -14,6 +14,7 @@ public class Swipe_UI : UICanvas
 
     public void hide_swipe_panel()
     {
+        Observer.Notify(ListAction.SetAimmator);
         Observer.Notify(ListAction.ChangeAnim, Const.runAnim);
         Observer.Notify(ListAction.GameRun, true);
         Observer.Notify(ListAction.SpawnObject);

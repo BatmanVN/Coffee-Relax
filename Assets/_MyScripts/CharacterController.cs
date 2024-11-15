@@ -13,9 +13,9 @@ public class CharacterController : MonoBehaviour
 
 
     public string animName = Const.runAnim;
-    private void OnValidate() => anim = GetComponentInChildren<Animator>();
     private void OnEnable()
     {
+        Observer.AddObserver(ListAction.SetAimmator, SetAnimator);
         Observer.AddObserver(ListAction.ChangeAnim, ChangeStatusAnim);
         Observer.AddObserver(ListAction.GameRun, StatusGame);
         Observer.AddObserver(ListAction.FinishGame,EndRoad);
@@ -30,6 +30,12 @@ public class CharacterController : MonoBehaviour
     private void Update()
     {
         player_movements();
+    }
+
+    public void SetAnimator(object[] datas)
+    {
+        if(datas == null || datas.Length < 1 || !(datas[0] is Animator animPlayer)) return;
+        anim = animPlayer;
     }
     void player_movements()
     {
@@ -100,6 +106,7 @@ public class CharacterController : MonoBehaviour
     }
     public void OnDestroy()
     {
+        Observer.RemoveObserver(ListAction.SetAimmator, SetAnimator);
         Observer.RemoveObserver(ListAction.ChangeAnim,ChangeStatusAnim);
         Observer.RemoveObserver(ListAction.GameRun,StatusGame);
         Observer.RemoveObserver(ListAction.GameRun, EndRoad);

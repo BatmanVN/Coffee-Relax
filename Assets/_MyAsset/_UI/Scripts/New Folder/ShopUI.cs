@@ -10,11 +10,10 @@ public class ShopUI : UICanvas
     public Button backButton;
     public Button characterButton;
     public Button cupButton;
-    public Button useButton;
-    public Button buyButton;
-    public Button adsButton;
+    //public Button useButton;
+    //public Button buyButton;
+    //public Button adsButton;
     public Text coinTextConner;
-
     [SerializeField] Animator anim;
     private string animName = "Character";
     public GameObject buttonManager;
@@ -29,6 +28,7 @@ public class ShopUI : UICanvas
         content.content = viewPort[0];
         viewPort[0].gameObject.SetActive(true);
         viewPort[1].gameObject.SetActive(false);
+        Observer.AddObserver(UiAction.ChangeTextCoin,ChangeTextCoin);
     }
     private void Start()
     {
@@ -36,7 +36,7 @@ public class ShopUI : UICanvas
         characterButton.onClick?.AddListener(CharacterButton);
         cupButton.onClick?.AddListener(CupButton);
         backButton.onClick?.AddListener(BackButton);
-        buyButton.onClick?.AddListener(BuyButton);
+        //buyButton.onClick?.AddListener(BuyButton);
         coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
     }
     public void ChangeAnim(string animName)
@@ -48,7 +48,11 @@ public class ShopUI : UICanvas
             anim.SetTrigger(this.animName);
         }
     }
-
+    public void ChangeTextCoin(object[] datas)
+    {
+        if(datas == null ||datas.Length < 1 || !(datas[0] is int coin)) return;
+        coinTextConner.text = coin.ToString();
+    }
     public void BuyButton()
     {
         effect = StartCoroutine(TurnOffEffect());
@@ -86,5 +90,9 @@ public class ShopUI : UICanvas
         viewPort[1].gameObject.SetActive(true);
         buttonManager.SetActive(false);
         Observer.Notify(UiAction.DestroySkin);
+    }
+    private void OnDestroy()
+    {
+        Observer.RemoveObserver(UiAction.ChangeTextCoin,ChangeTextCoin);
     }
 }

@@ -12,6 +12,8 @@ public class SkinsManager : Singleton<SkinsManager>
         {
             skinsStatus.Add(child.GetComponent<BaseSkin>());
         }
+        skinsStatus[0].isBuy = true;
+        skinsStatus[0].isUse = true;
     }
     public void StatusSkin()
     {
@@ -22,6 +24,6 @@ public class SkinsManager : Singleton<SkinsManager>
     }
     private void Update()
     {
-        StatusSkin();
+        //StatusSkin();
     }
 }

@@ -6,7 +6,7 @@ public class TrapSpawn : MonoBehaviour
 {
     [SerializeField] public List<Transform> spawnsTransform;
     [SerializeField] protected GameObject trapPrefab;
-    public int randomSpawn;
+    public int randomSpawn, spawnCount;
     private void Awake()
     {
         foreach (Transform cupSpawn in transform)
@@ -24,7 +24,7 @@ public class TrapSpawn : MonoBehaviour
     }
     public void SpawnMachine(object[] datas)
     {
-        for (int i = spawnsTransform.Count - 1; i >= 2; i--)
+        for (int i = spawnsTransform.Count - 1; i >= spawnCount; i--)
         {
             randomSpawn = Random.Range(0, spawnsTransform.Count);
             GameObject cup = Instantiate(trapPrefab, spawnsTransform[randomSpawn].position, Quaternion.identity);

@@ -12,6 +12,7 @@ public enum Item_type
 
 public enum ListAction
 {
+    SetAimmator,
     ChangeAnim,
     GameRun,
     SpawnObject,
@@ -26,7 +27,11 @@ public enum ListAction
 }
 public enum UiAction
 {
-    DestroySkin
+    DestroySkin,
+    GetIdSkin,
+    ChangeTextCoin,
+    StatusUsed,
+    StatusBuy
 }
 
 public class Const

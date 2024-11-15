@@ -34,4 +34,8 @@ public class SkinCharacterItemData
     [VerticalGroup("Split/Right")]
     [LabelWidth(100)]
     public int price;
+
+    [VerticalGroup("Split/Right")]
+    [LabelWidth(100)]
+    public Animator anim;
 }

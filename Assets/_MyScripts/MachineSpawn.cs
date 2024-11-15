@@ -7,6 +7,7 @@ public class MachineSpawn : MonoBehaviour
     [SerializeField] public List<Transform> spawnsTransform;
     [SerializeField] protected GameObject machinePrefab;
     public int randomSpawn;
+    public int spawnCount;
     private void Awake()
     {
         foreach (Transform cupSpawn in transform)
@@ -24,7 +25,7 @@ public class MachineSpawn : MonoBehaviour
     }
     public void SpawnMachine(object[] datas)
     {
-        for (int i = spawnsTransform.Count - 1; i >= 2; i--)
+        for (int i = spawnsTransform.Count - 1; i >= spawnCount; i--)
         {
             randomSpawn = Random.Range(0, spawnsTransform.Count);
             GameObject cup = Instantiate(machinePrefab, spawnsTransform[randomSpawn].position, spawnsTransform[randomSpawn].rotation);

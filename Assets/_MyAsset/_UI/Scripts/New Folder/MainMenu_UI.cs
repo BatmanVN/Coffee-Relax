@@ -13,7 +13,7 @@ public class MainMenu_UI : UICanvas
     public SkinCharacterData skinDatas;
     private void Awake()
     {
-        onstartfirsttime();
+        
     }
     private void Start()
     {
@@ -31,30 +31,5 @@ public class MainMenu_UI : UICanvas
         Close(0);
         UIManager.Ins.OpenUI<ShopUI>();
     }
-    public void onstartfirsttime()
-    {
-        if (!PlayerPrefs.HasKey("firsttime_genaral"))
-        {
-            PlayerPrefs.SetInt("level_general", 0);
-            PlayerPrefs.SetInt("firsttime_genaral", 0);
-            PlayerPrefs.SetFloat("coin", 0);
 
-            
-            for (int i = 0; i < skinDatas.skinDatas.Count; i++)
-            {
-                PlayerPrefs.SetInt( skinDatas.skinDatas[i].NameCharacter, 0);
-            }
-        }
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            for (int i = 0; i < skinDatas.skinDatas.Count; i++)
-            {
-                PlayerPrefs.DeleteKey(skinDatas.skinDatas[i].NameCharacter);
-                PlayerPrefs.DeleteKey("firsttime_genaral");
-            }
-        }
-    }
 }
