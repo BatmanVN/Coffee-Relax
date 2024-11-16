@@ -77,6 +77,7 @@ public class BuySkinButton : MonoBehaviour
             // Nếu chưa mua skin, hiển thị thông báo yêu cầu mua skin trước
             ShowNotification("YOU NEED TO PURCHASE THE SKIN FIRST");
         }
+        turnOff = StartCoroutine(TurnOffText());
     }
 
 

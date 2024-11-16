@@ -70,7 +70,7 @@ public class ShopUI : UICanvas
     {
         Close(0);
         UIManager.Ins.OpenUI<MainMenu_UI>();
-        //Observer.Notify(UiAction.SpawnModel);
+        
     }
     public void CharacterButton()
     {
