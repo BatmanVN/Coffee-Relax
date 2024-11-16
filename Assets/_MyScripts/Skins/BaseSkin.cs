@@ -41,11 +41,9 @@ public class BaseSkin : MonoBehaviour
         //instance prefab character tương ứng để hiển thị và tắt character trước
         GameObject character = Instantiate(characterData.character_pref, ViewCharacter.Ins.spawnPoint.position, ViewCharacter.Ins.spawnPoint.rotation);
         character.transform.SetParent(ViewCharacter.Ins.spawnPoint.transform);
-        Destroy(ViewCharacter.Ins.currentSkin);
-
+        Observer.Notify(UiAction.DestroySkin, ViewCharacter.Ins.currentSkin);
         ViewCharacter.Ins.buttonDown.SetActive(true);
         ViewCharacter.Ins.currentSkin = character;
-
         UpdateBuyStatusUI(currentID);
     }
 

@@ -36,7 +36,8 @@ public enum UiAction
     StatusBuy,
     UpdateUsedObject,
     DestroyModel,
-    SpawnModel
+    SpawnModel,
+    SetSkinEnable
 }
 
 public class Const

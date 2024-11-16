@@ -89,6 +89,7 @@ public class ShopUI : UICanvas
         viewPort[1].gameObject.SetActive(true);
         buttonManager.SetActive(false);
         Observer.Notify(UiAction.DestroySkin);
+        Observer.Notify(UiAction.SetSkinEnable);
     }
     private void OnDestroy()
     {

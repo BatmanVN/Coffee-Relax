@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ViewCharacter : Singleton<ViewCharacter>
 {
     public List<BaseSkin> baseSkins;
-    //private Dictionary<int, Skin> baseSkinsDict = new Dictionary<int, Skin>();
+    //public List<GameObject > gameObjects;
     public SkinCharacterData skinsData;
     public GameObject buttonDown;
     public Transform spawnPoint;
@@ -18,7 +18,7 @@ public class ViewCharacter : Singleton<ViewCharacter>
     [SerializeField] public GameObject buyButton;
     [Header("Text Notify")]
     [SerializeField] public Text textNoti;
-
+    //public GameObject firstSpawn;
     private void OnEnable()
     {
         Observer.AddObserver(UiAction.DestroySkin,DestroySkin);
@@ -29,18 +29,24 @@ public class ViewCharacter : Singleton<ViewCharacter>
             baseSkins.Add(skin.GetComponent<BaseSkin>());
         }
         SetSkinID();
+        SetUIOnEnable();
     }
 
     private void Start()
+    {
+        //SetUIOnEnable();
+    }
+
+    public void SetUIOnEnable()
     {
         for (int i = 0; i < baseSkins.Count; i++)
         {
             Observer.Notify(UiAction.UpdateUsedObject, baseSkins[i].skinName);
             if (baseSkins[i].isUse)
             {
-                GameObject character = Instantiate(skinsData.skinDatas[i].character_pref, spawnPoint.position, spawnPoint.rotation);
-                character.transform.SetParent(spawnPoint.transform);
-                currentSkin = character;
+                currentSkin = Instantiate(skinsData.skinDatas[i].character_pref, spawnPoint.position, spawnPoint.rotation);
+                currentSkin.transform.SetParent(spawnPoint.transform);
+                //currentSkin = firstSpawn;
                 useButton.SetActive(true);
                 buyButton.SetActive(false);
             }
@@ -71,12 +77,18 @@ public class ViewCharacter : Singleton<ViewCharacter>
     }
     private void DestroySkin(object[] datas)
     {
-        if(currentSkin != null)
-            Destroy(currentSkin);
+        if(datas == null || datas.Length < 1 || !(datas[0] is GameObject current)) return;
+        if (current != null)
+        {
+            Destroy(current);
+            
+        }
     }
+
     private void OnDisable()
     {
         baseSkins.Clear();
+        Destroy(currentSkin);
     }
     private void OnDestroy()
     {
