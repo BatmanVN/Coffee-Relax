@@ -16,7 +16,7 @@ public class HandTrap : MonoBehaviour
     }
     public void MoveHand()
     {
-            this.gameObject.transform.DOLocalMoveY(-minHeight, speed).SetLoops(-1, LoopType.Yoyo);
+            this.gameObject.transform.DOLocalMoveY(minHeight, speed).SetLoops(-1, LoopType.Yoyo);
     }
 
     private void OnTriggerEnter(Collider hand)
