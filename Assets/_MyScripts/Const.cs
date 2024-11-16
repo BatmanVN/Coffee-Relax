@@ -35,9 +35,15 @@ public enum UiAction
     StatusUsed,
     StatusBuy,
     UpdateUsedObject,
-    DestroyModel,
+    //DestroyModel,
     SpawnModel,
     SetSkinEnable
+}
+
+public enum ActionInGame
+{
+    SpawnRoad,
+    DisableRoad
 }
 
 public class Const

@@ -17,12 +17,12 @@ public class Win_UI : UICanvas
     private void OnEnable()
     {
         Observer.AddObserver(ListAction.FinishGame,show_multiplication);
+        coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
     }
     public void Start()
     {
         nextButton.onClick?.AddListener(btn_next);
         adsButton.onClick?.AddListener(AdsButton);
-        coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
     }
 
     public void AdsButton()
@@ -39,7 +39,8 @@ public class Win_UI : UICanvas
 
         GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
         Observer.Notify(ListAction.NextLevel);
-
+        //Observer.Notify(UiAction.SpawnModel);
+        Observer.Notify(ActionInGame.DisableRoad);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Close(0);
         UIManager.Ins.OpenUI<Swipe_UI>();

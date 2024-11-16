@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,51 +27,36 @@ public class CharacterController : MonoBehaviour
 #endif
         rb = GetComponent<Rigidbody>();
     }
+    // Thêm biến để điều chỉnh độ nhạy
+    [SerializeField] private float sensitivity = 0.5f;
     private void Update()
     {
         player_movements();
     }
-
-    public void SetAnimator(object[] datas)
-    {
-        if(datas == null || datas.Length < 1 || !(datas[0] is Animator animPlayer)) return;
-        anim = animPlayer;
-    }
     void player_movements()
     {
-        if (/*!do_makeUp &&*/ game_run)
+        if (game_run)
         {
-            //player move forward
+            // Player move forward
             transform.Translate(transform.forward * speed_player * Time.deltaTime);
 
-            // player move right & left
+            // Player move right & left
             if (Input.GetMouseButtonDown(0))
             {
                 presspos = Input.mousePosition;
             }
 
-            if (Input.GetMouseButton(0)/* && is_tap*/)
+            if (Input.GetMouseButton(0))
             {
-                //actualpos = Input.mousePosition;
-
-                //mvm = new Vector3(Input.GetAxis("Mouse X"), 0f, 0f) * Time.smoothDeltaTime * horizontal_speed;
-                //Vector3 tmp = list_brushes[0].position;
-
-                //tmp.x += mvm.x;
-                //tmp.x = Mathf.Clamp(tmp.x, -3, 3);
-                //list_brushes[0].position = tmp;
-
-                //presspos = actualpos;
-
                 actualpos = Input.mousePosition;
 
-                //mvm = new Vector3(Input.GetAxis("Mouse X"), 0f, 0f) * Time.smoothDeltaTime * horizontal_speed;
                 Vector3 tmp = transform.position;
 
-                float xdiff = (actualpos.x - presspos.x) * Time.smoothDeltaTime * horizontal_speed;
+                // Tính toán độ chênh lệch x
+                float xdiff = (actualpos.x - presspos.x) * Time.smoothDeltaTime * horizontal_speed * sensitivity;
 
                 tmp.x += xdiff;
-                tmp.x = Mathf.Clamp(tmp.x, -3, 3);
+                tmp.x = Mathf.Clamp(tmp.x, -2.5f, 2.5f); // Giảm khoảng giới hạn nếu cần
                 transform.position = tmp;
 
                 presspos = actualpos;
@@ -81,10 +66,16 @@ public class CharacterController : MonoBehaviour
             {
                 mvm = Vector3.zero;
             }
-
         }
-
     }
+
+
+    public void SetAnimator(object[] datas)
+    {
+        if (datas == null || datas.Length < 1 || !(datas[0] is Animator animPlayer)) return;
+        anim = animPlayer;
+    }
+
     public void ChangeStatusAnim(object[] datas)
     {
         if(datas == null || datas.Length < 1 || !(datas[0] is string animChange)) return;

@@ -15,8 +15,13 @@ public class MainMenu_UI : UICanvas
     {
         
     }
+    private void OnEnable()
+    {
+        Observer.Notify(UiAction.SpawnModel);
+    }
     private void Start()
     {
+
         playButton.onClick?.AddListener(PlayButton);  
         shopButton.onClick?.AddListener(ShopButton);
     }
@@ -26,13 +31,12 @@ public class MainMenu_UI : UICanvas
         UIManager.Ins.OpenUI<Swipe_UI>();
         Observer.Notify(ListAction.SpawnPlayer);
         Observer.Notify(ListAction.NextLevel);
-        Observer.Notify(UiAction.DestroyModel);
+        Observer.Notify(ActionInGame.SpawnRoad);
     }
     public void ShopButton()
     {
         Close(0);
         UIManager.Ins.OpenUI<ShopUI>();
-        Observer.Notify(UiAction.DestroyModel);
     }
 
 }

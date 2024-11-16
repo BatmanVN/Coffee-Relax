@@ -33,7 +33,7 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         levelCurrent = getlevel();
         coinCurrent = getcoin();
-        Observer.Notify(UiAction.SpawnModel);
+        //Observer.Notify(UiAction.SpawnModel);
     }
     void Update()
     {
@@ -106,7 +106,7 @@ public class GameControllManager : Singleton<GameControllManager>
         {
             PlayerPrefs.SetInt("level_general", 0);
             PlayerPrefs.SetInt("firsttime_genaral", 0);
-            PlayerPrefs.SetInt("coin", 0);
+            PlayerPrefs.SetInt("coin", 100000);
 
 
             for (int i = 0; i < characterData.skinDatas.Count; i++)

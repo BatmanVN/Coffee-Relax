@@ -22,10 +22,10 @@ public class InGame_UI : UICanvas
         
         Observer.AddObserver(ListAction.Vibrate,_vibrate);
         Observer.AddObserver(ListAction.IncreaseMoney, increase_money);
+        txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
     }
     private void Start()
     {
-        txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
         setting.onClick?.AddListener(OpenSetting);
         returnButton.onClick?.AddListener(ReturnButton);
         backButton.onClick?.AddListener(BackButton);
@@ -36,7 +36,7 @@ public class InGame_UI : UICanvas
         Close(0);
         Time.timeScale = 1.0f;
         UIManager.Ins.OpenUI<MainMenu_UI>();
-        Observer.Notify(UiAction.SpawnModel);
+        //Observer.Notify(UiAction.SpawnModel);
         SceneManager.LoadSceneAsync(nameScene);
     }
 

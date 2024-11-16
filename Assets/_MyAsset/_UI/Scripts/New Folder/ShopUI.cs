@@ -27,6 +27,7 @@ public class ShopUI : UICanvas
         viewPort[0].gameObject.SetActive(true);
         viewPort[1].gameObject.SetActive(false);
         Observer.AddObserver(UiAction.ChangeTextCoin,ChangeTextCoin);
+        coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
     }
     private void Start()
     {
@@ -35,7 +36,7 @@ public class ShopUI : UICanvas
         cupButton.onClick?.AddListener(CupButton);
         backButton.onClick?.AddListener(BackButton);
         //buyButton.onClick?.AddListener(BuyButton);
-        coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
+        //coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
     }
     public void ChangeAnim(string animName)
     {
@@ -69,7 +70,7 @@ public class ShopUI : UICanvas
     {
         Close(0);
         UIManager.Ins.OpenUI<MainMenu_UI>();
-        Observer.Notify(UiAction.SpawnModel);
+        //Observer.Notify(UiAction.SpawnModel);
     }
     public void CharacterButton()
     {

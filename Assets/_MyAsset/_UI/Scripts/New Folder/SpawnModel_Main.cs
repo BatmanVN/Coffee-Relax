@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPlayer_Main : MonoBehaviour
+public class SpawnModel_Main : MonoBehaviour
 {
     public GameObject model;
     public int skinID;
     private void OnEnable()
     {
-        Observer.AddObserver(UiAction.DestroyModel, DestroyModel);
-        Observer.AddObserver(UiAction.SpawnModel, SpawnModel);
+        SpawnModel();
+        //Observer.AddObserver(UiAction.DestroyModel, DestroyModel);
+        //Observer.AddObserver(UiAction.SpawnModel, SpawnModel);
     }
     private void Start()
     {
         //SpawnModel();
     }
-    public void SpawnModel(object[] datas)
+    public void SpawnModel(/*object[] datas*/)
     {
         var listSkinDatas = GameControllManager.Ins.characterData.skinDatas;
         for (int i = 0; i < listSkinDatas.Count; i++)
@@ -28,14 +29,15 @@ public class SpawnPlayer_Main : MonoBehaviour
             }
         }
     }
-    private void DestroyModel(object[] datas)
+    
+    private void OnDisable()
     {
         if(model != null)
             Destroy(model);
     }
     private void OnDestroy()
     {
-        Observer.RemoveObserver(UiAction.DestroyModel, DestroyModel);
-        Observer.RemoveObserver(UiAction.SpawnModel, SpawnModel);
+        //Observer.RemoveObserver(UiAction.DestroyModel, DestroyModel);
+        //Observer.RemoveObserver(UiAction.SpawnModel, SpawnModel);
     }
 }
