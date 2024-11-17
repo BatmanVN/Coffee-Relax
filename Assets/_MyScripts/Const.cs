@@ -25,7 +25,8 @@ public enum ListAction
     ShowIce7,
     SpawnPlayer,
     SetCamFollow,
-    NextLevel
+    NextLevel,
+    EndRoad
 }
 public enum UiAction
 {
@@ -56,4 +57,5 @@ public class Const
     public const string playerTag = "Player";
     public const string cupTag = "Cup";
     public const string groundTag = "Ground";
+    public const string bonusStage = "Bonus Stage";
 }

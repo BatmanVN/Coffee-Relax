@@ -518,7 +518,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: -4.0247413e+30, z: 8.67e-43, w: -6.158933e+29}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -531,13 +531,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.40509224, y: -0.04199063, z: -0.0027086728, w: 0.9133071}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 47.708, y: -6.733, z: -3.32}
 --- !u!1 &770947077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,7 +1467,7 @@ PrefabInstance:
     - target: {fileID: 4287729799346925910, guid: 81484f33715f57a49b7af7b84b9539f3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9051877358927671409, guid: 81484f33715f57a49b7af7b84b9539f3,
         type: 3}
@@ -4220,12 +4220,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  sensitivity: 0.5
   game_run: 0
   is_finish: 0
-  speed_player: 6
-  horizontal_speed: 0.35
+  speed_player: 15
+  horizontal_speed: 15
+  time: 1
   animName: Run
-  sensitivity: 0.5
 --- !u!1001 &7889683527334798857
 PrefabInstance:
   m_ObjectHideFlags: 0

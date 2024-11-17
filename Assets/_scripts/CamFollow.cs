@@ -21,18 +21,6 @@ public class CamFollow : MonoBehaviour
         
     }
 
-    //private void FixedUpdate()
-    //{
-    //    if (!is_active) return;
-
-    //    //if (targetLastPos == target.position) return;
-
-    //    Vector3 distance = target.position + ofsset;
-    //    //distance.x = 0;
-
-    //    tween.ChangeEndValue(distance, true).Restart();
-
-    //}
     void Update()
     {
         if (!is_active) return;

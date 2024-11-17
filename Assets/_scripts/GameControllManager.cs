@@ -37,43 +37,43 @@ public class GameControllManager : Singleton<GameControllManager>
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            setcoin(5000);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        //if (Input.GetKeyDown(KeyCode.U))
+        //{
+        //    setcoin(5000);
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            resetall();
-        }
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    resetall();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            //setLevel(getlevel() + 1);
-            //if (levels.Length <= getlevel() + 1)
-            //    return;
-            setLevel(getlevel() + 1);
+        //if (Input.GetKeyDown(KeyCode.N))
+        //{
+        //    //setLevel(getlevel() + 1);
+        //    //if (levels.Length <= getlevel() + 1)
+        //    //    return;
+        //    setLevel(getlevel() + 1);
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            for (int i = 0; i < characterData.skinDatas.Count; i++)
-            {
-                if (i == 0)
-                {
-                    SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
-                    SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
-                }
-                else
-                {
-                    SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
-                    SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
-                }
-            }
-            Debug.Log("Delete Key Skin"); 
-        }
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //}
+        //if (Input.GetKeyDown(KeyCode.V))
+        //{
+        //    for (int i = 0; i < characterData.skinDatas.Count; i++)
+        //    {
+        //        if (i == 0)
+        //        {
+        //            SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
+        //            SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
+        //        }
+        //        else
+        //        {
+        //            SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
+        //            SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
+        //        }
+        //    }
+        //    Debug.Log("Delete Key Skin"); 
+        //}
     }
 
 
