@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ViewCharacter : Singleton<ViewCharacter>
 {
-    public List<BaseSkin> baseSkins;
+    public List<BaseSkin> baseSkins = new List<BaseSkin>();
     public SkinCharacterData skinsData;
     public GameObject buttonDown;
     public Transform spawnPoint;

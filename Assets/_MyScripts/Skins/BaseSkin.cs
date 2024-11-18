@@ -13,12 +13,14 @@ public class BaseSkin : MonoBehaviour
     public GameObject used;
     public int skinId;
     public string skinName;
+    public int iDUsed;
     private void Awake()
     {
         characterData = ViewCharacter.Ins.skinsData.skinDatas.Find(data => data.id == skinId);
         skinName = characterData.NameCharacter;
         isBuy = GameControllManager.Ins.GetStatusBuySkin(characterData.NameCharacter);
         isUse = GameControllManager.Ins.GetStatusUseSkin(characterData.NameCharacter);
+        iDUsed = GameControllManager.Ins.GetIDSkinUse();
     }
     private void OnEnable()
     {
@@ -37,22 +39,21 @@ public class BaseSkin : MonoBehaviour
     }
     protected void SetStatusUiSkin()
     {
-        if (isUse)
+        if (skinId == iDUsed)
         {
             ViewCharacter.Ins.currentSkin = Instantiate(characterData.character_pref, ViewCharacter.Ins.spawnPoint.position, ViewCharacter.Ins.spawnPoint.rotation);
             ViewCharacter.Ins.currentSkin.transform.SetParent(ViewCharacter.Ins.spawnPoint.transform);
-            ViewCharacter.Ins.useButton.SetActive(true);
-            ViewCharacter.Ins.buyButton.SetActive(false);
-            used.SetActive(true);
+            ViewCharacter.Ins.useButton.SetActive(skinId == iDUsed);
+            ViewCharacter.Ins.buyButton.SetActive(skinId != iDUsed);
         }
-        else 
-            used.SetActive(false);
+        used.SetActive(skinId == iDUsed);
     }
     private void InsCharacter(int currentID)
     {
         // Kiểm tra trạng thái mua skin từ PlayerPrefs
         isBuy = GameControllManager.Ins.GetStatusBuySkin(characterData.NameCharacter);
-        isUse = GameControllManager.Ins.GetStatusUseSkin(characterData.NameCharacter);
+        //isUse = GameControllManager.Ins.GetStatusUseSkin(characterData.NameCharacter);
+        iDUsed = GameControllManager.Ins.GetIDSkinUse();
         Observer.Notify(UiAction.GetIdSkin, skinId);
 
         //instance prefab character tương ứng để hiển thị và tắt character trước
@@ -84,8 +85,6 @@ public class BaseSkin : MonoBehaviour
         if (datas == null || datas.Length < 1 || !(datas[0] is string nameSkin)) return;
         if (nameSkin == skinName)
         {
-            Debug.Log("out " + nameSkin);
-            Debug.Log("data" +skinName);
             if (!isUse)
                 used.SetActive(false);
             else used.SetActive(true);

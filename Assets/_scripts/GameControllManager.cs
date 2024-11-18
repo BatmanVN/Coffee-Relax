@@ -64,12 +64,12 @@ public class GameControllManager : Singleton<GameControllManager>
                 if (i == 0)
                 {
                     SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
-                    SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
+                    //SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
                 }
                 else
                 {
                     SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
-                    SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
+                    //SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
                 }
             }
             Debug.Log("Delete Key Skin");
@@ -114,12 +114,13 @@ public class GameControllManager : Singleton<GameControllManager>
                 if (i == 0)
                 {
                     SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
-                    SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
+                    //SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
+                    SetIDSkinUse(0);
                 }
                 else
                 {
                     SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
-                    SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
+                    //SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
                 }
             }
         }
@@ -128,9 +129,17 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         PlayerPrefs.SetInt(nameSkin + "Purchased", isBuy ? 1 : 0);
     }
-    public void SetStatusUseSkin(string nameSkin, bool isActive)
+    //public void SetStatusUseSkin(string nameSkin, bool isActive)
+    //{
+    //    PlayerPrefs.SetInt(nameSkin + "Active", isActive ? 1 : 0);
+    //}
+    public void SetIDSkinUse(int skinID)
     {
-        PlayerPrefs.SetInt(nameSkin + "Active", isActive ? 1 : 0);
+        PlayerPrefs.SetInt("SkinID_Used", skinID);
+    }
+    public int GetIDSkinUse()
+    {
+        return PlayerPrefs.GetInt("SkinID_Used");
     }
     public bool GetStatusBuySkin(string nameSkin)
     {

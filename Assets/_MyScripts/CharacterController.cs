@@ -6,7 +6,7 @@ using DG.Tweening;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField] private Animator anim;
-    [SerializeField] private float sensitivity = 0.5f;
+    [SerializeField] private float sensitivity = 0.3f;
     protected Rigidbody rb;
     public bool game_run, is_finish;
     public float speed_player, horizontal_speed;

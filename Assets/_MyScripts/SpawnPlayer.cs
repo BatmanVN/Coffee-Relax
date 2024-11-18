@@ -20,7 +20,7 @@ public class SpawnPlayer : MonoBehaviour
         var listSkinDatas = GameControllManager.Ins.characterData.skinDatas;
         for (int i = 0; i < listSkinDatas.Count; i++)
         {
-            if (GameControllManager.Ins.GetStatusUseSkin(listSkinDatas[i].NameCharacter))
+            if (listSkinDatas[i].id == GameControllManager.Ins.GetIDSkinUse())
             {
                 skinID = i;
                 character = Instantiate(listSkinDatas[skinID].character_pref, transform.position, transform.rotation);

@@ -38,7 +38,6 @@ public enum UiAction
     StatusUsed,
     StatusBuy,
     UpdateUsedObject,
-    //DestroyModel,
     SpawnModel,
     SetSkinEnable
 }
