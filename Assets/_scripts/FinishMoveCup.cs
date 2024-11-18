@@ -11,6 +11,5 @@ public class FinishMoveCup : MonoBehaviour
             Controller_Items.Ins.move_all_to_center_finish_level();
             Observer.Notify(ListAction.FinishMove);
         }
-
     }
 }
