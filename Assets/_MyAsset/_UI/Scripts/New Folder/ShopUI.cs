@@ -8,8 +8,8 @@ public class ShopUI : UICanvas
     public ScrollRect content;
     public RectTransform[] viewPort;
     public Button backButton;
-    public Button characterButton;
-    public Button cupButton;
+    public Toggle characterToggle;
+    public Toggle cupToggle;
  
     public Text coinTextConner;
     [SerializeField] Animator anim;
@@ -32,8 +32,8 @@ public class ShopUI : UICanvas
     private void Start()
     {
         ChangeAnim("Character");
-        characterButton.onClick?.AddListener(CharacterButton);
-        cupButton.onClick?.AddListener(CupButton);
+        characterToggle.onValueChanged?.AddListener(CharacterButton);
+        cupToggle.onValueChanged?.AddListener(CupButton);
         backButton.onClick?.AddListener(BackButton);
         //buyButton.onClick?.AddListener(BuyButton);
         //coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
@@ -72,25 +72,32 @@ public class ShopUI : UICanvas
         UIManager.Ins.OpenUI<MainMenu_UI>();
         
     }
-    public void CharacterButton()
+    public void CharacterButton(bool active)
     {
-        ChangeAnim("Idle");
-        ChangeAnim("Character");
-        content.content = viewPort[0];
-        viewPort[0].gameObject.SetActive(true);
-        viewPort[1].gameObject.SetActive(false);
-        buttonManager.SetActive(false);
+        if (active)
+        {
+            ChangeAnim("Idle");
+            ChangeAnim("Character");
+            content.content = viewPort[0];
+            viewPort[0].gameObject.SetActive(true);
+            viewPort[1].gameObject.SetActive(false);
+            buttonManager.SetActive(false);
+        }
+        return;
     }
-    public void CupButton()
+    public void CupButton(bool active)
     {
-        ChangeAnim("Idle");
-        ChangeAnim("Cup");
-        content.content = viewPort[1];
-        viewPort[0].gameObject.SetActive(false);
-        viewPort[1].gameObject.SetActive(true);
-        buttonManager.SetActive(false);
-        Observer.Notify(UiAction.DestroySkin);
-        Observer.Notify(UiAction.SetSkinEnable);
+        if (active)
+        {
+            ChangeAnim("Idle");
+            ChangeAnim("Cup");
+            content.content = viewPort[1];
+            viewPort[0].gameObject.SetActive(false);
+            viewPort[1].gameObject.SetActive(true);
+            buttonManager.SetActive(false);
+            Observer.Notify(UiAction.DestroySkin);
+            Observer.Notify(UiAction.SetSkinEnable);
+        }
     }
     private void OnDestroy()
     {

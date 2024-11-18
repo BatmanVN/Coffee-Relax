@@ -10,6 +10,7 @@ public enum Item_type
     Lid,
     ice7Color,
     Milk
+    //LidCream
 }
 
 public enum ListAction

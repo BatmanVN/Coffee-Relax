@@ -150,7 +150,6 @@ Transform:
   - {fileID: 3230716780946567388}
   - {fileID: 814876917202602172}
   - {fileID: 2092204860623189714}
-  - {fileID: 6695671691514118758}
   - {fileID: 3549759135419169022}
   - {fileID: 8156703096941988667}
   m_Father: {fileID: 4842476211052625905}
@@ -189,6 +188,7 @@ Transform:
   - {fileID: 3283063990651324235}
   - {fileID: 5416907078982429029}
   - {fileID: 4215615588428816677}
+  - {fileID: 3287743302705824219}
   m_Father: {fileID: 4842476211052625905}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &15434365923400272
@@ -1301,79 +1301,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4857853361800463096}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5136290548559870575
+--- !u!1001 &5508269517434225659
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8521719820292539462}
+    m_TransformParent: {fileID: 5561319827581110155}
     m_Modifications:
-    - target: {fileID: 1218180042236732083, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice-Cream 7color (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8988827
+      value: 1.52
       objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2870998
+      value: 3.56
       objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 118.20349
+      value: -82.48
       objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+    - target: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681720673991170202, guid: 8018f9a9145b8c34b985986e96184743,
+        type: 3}
+      propertyPath: m_Name
+      value: Cleaner_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2017a4d6df7a34b40b2b4466ac93a90a, type: 3}
---- !u!4 &6695671691514118758 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 8018f9a9145b8c34b985986e96184743, type: 3}
+--- !u!4 &3287743302705824219 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1993978526659639305, guid: 2017a4d6df7a34b40b2b4466ac93a90a,
+  m_CorrespondingSourceObject: {fileID: 7048455489984971296, guid: 8018f9a9145b8c34b985986e96184743,
     type: 3}
-  m_PrefabInstance: {fileID: 5136290548559870575}
+  m_PrefabInstance: {fileID: 5508269517434225659}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5556831812955535967
 PrefabInstance:

@@ -18,7 +18,7 @@ public class Gate : BaseMachine
             Observer.Notify(ListAction.Vibrate);
             //Check gatetype
             CupGroup cupGroup = other.GetComponent<CupGroup>();
-            if (cupGroup != null/* && (item_Type == Item_type.IceCream || item_Type == Item_type.ice7Color)*/)
+            if (cupGroup != null)
             {
                 cupGroup.item_Type = machineType;
                 Observer.Notify(ListAction.SetUpCupTypes);

@@ -7,7 +7,7 @@ public class MachineSpawn : MonoBehaviour
     [SerializeField] public List<Transform> spawnsTransform;
     [SerializeField] protected GameObject machinePrefab;
     public int randomSpawn;
-    public int spawnCount;
+    //public int spawnCount;
     private void Awake()
     {
         foreach (Transform cupSpawn in transform)
@@ -25,13 +25,13 @@ public class MachineSpawn : MonoBehaviour
     }
     public void SpawnMachine(object[] datas)
     {
-        for (int i = spawnsTransform.Count - 1; i >= spawnCount; i--)
+        for (int i = spawnsTransform.Count - 1; i >= 0; i--)
         {
-            randomSpawn = Random.Range(0, spawnsTransform.Count);
-            GameObject cup = Instantiate(machinePrefab, spawnsTransform[randomSpawn].position, spawnsTransform[randomSpawn].rotation);
-            cup.transform.SetParent(spawnsTransform[randomSpawn].gameObject.transform);
-            spawnsTransform[randomSpawn].gameObject.SetActive(true);
-            spawnsTransform.RemoveAt(randomSpawn);
+            //randomSpawn = Random.Range(0, spawnsTransform.Count);
+            GameObject cup = Instantiate(machinePrefab, spawnsTransform[i].position, spawnsTransform[i].rotation);
+            cup.transform.SetParent(spawnsTransform[i].gameObject.transform);
+            spawnsTransform[i].gameObject.SetActive(true);
+            spawnsTransform.RemoveAt(i);
         }
     }
     private void OnDestroy()

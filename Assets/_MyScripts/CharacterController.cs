@@ -35,7 +35,7 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
-        player_movements2();
+        player_movements1();
     }
     protected void player_movements1()
     {
