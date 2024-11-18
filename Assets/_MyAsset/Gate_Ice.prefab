@@ -1065,7 +1065,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1586895, y: -8.589453, z: -119.007996}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6641111125922184934}
@@ -1086,21 +1086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cece5e1e0eb36b340bb602d5ca9b5bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockglass_broken:
-  - {fileID: 1355927789323679375}
-  - {fileID: 6407464119839115925}
-  - {fileID: 5906841075681650424}
-  - {fileID: 2169495815683374354}
-  - {fileID: 3784670692366167254}
-  - {fileID: 1211136940569850302}
-  - {fileID: 6383986301062399097}
-  - {fileID: 3392103438048368876}
-  - {fileID: 5282833202933723889}
-  - {fileID: 841537546662011279}
-  locked_glass: {fileID: 1317663169626238216}
-  unlock_glass: {fileID: 6839134855584351593}
-  power_break: 1
-  item_Type: 1
+  machineType: 2
 --- !u!65 &2417151455882542214
 BoxCollider:
   m_ObjectHideFlags: 0

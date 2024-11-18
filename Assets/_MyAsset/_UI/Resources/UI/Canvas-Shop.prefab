@@ -319,8 +319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5071, y: 0.0000078082085}
-  m_SizeDelta: {x: 107.101, y: 98.9855}
+  m_AnchoredPosition: {x: -0.5071, y: 0.5}
+  m_SizeDelta: {x: 135, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3281666767269245839
 CanvasRenderer:
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4614de14fafbeb429dbc2f90c994405, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c92331d55a505f84eb9a9d67722eee25, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -799,8 +799,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7365, y: -1.7243}
-  m_SizeDelta: {x: 100, y: 91.4008}
+  m_AnchoredPosition: {x: 2.6, y: -0.4}
+  m_SizeDelta: {x: 120, y: 97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2517664838544627484
 CanvasRenderer:
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c76fde7174bde8548995d226a9f2b28f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da45c497209b53d46b493d419434a704, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1173,7 +1173,7 @@ GameObject:
   - component: {fileID: 243957032948709303}
   - component: {fileID: 5154630804082802898}
   m_Layer: 5
-  m_Name: SkinsSolider
+  m_Name: SkinsHoshi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1417,10 +1417,11 @@ RectTransform:
   m_Children:
   - {fileID: 8679655106762688960}
   - {fileID: 265816826939531244}
+  - {fileID: 4124240904699052544}
+  - {fileID: 2461636938038392234}
   - {fileID: 2456522625043759127}
   - {fileID: 7226549972496791900}
   - {fileID: 7967775170294536809}
-  - {fileID: 4124240904699052544}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1775,8 +1776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5211, y: 3.4609}
-  m_SizeDelta: {x: 111.9567, y: 103.0433}
+  m_AnchoredPosition: {x: 0.5, y: -0.7}
+  m_SizeDelta: {x: 140, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1144227747066113410
 CanvasRenderer:
@@ -1806,7 +1807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5e15f5c638d2ed745ba3e76e42f59677, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1aa7980fab8b5e84d989ec26519d9d3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2042,8 +2043,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.8192, y: 0.8275}
-  m_SizeDelta: {x: 111.36, y: 98.3451}
+  m_AnchoredPosition: {x: 1.1, y: 2.1}
+  m_SizeDelta: {x: 180, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3756452167962322385
 CanvasRenderer:
@@ -2073,7 +2074,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 159e20e0ecaf15c4294b6cd4e90185b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d82eaaf73798a4a4fbeb094fa4ead47d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2554,8 +2555,9 @@ GameObject:
   - component: {fileID: 4578390632982312316}
   - component: {fileID: 4697407331639617069}
   - component: {fileID: 164136196757064089}
+  - component: {fileID: 5989581890938032173}
   m_Layer: 5
-  m_Name: SkinsSniper
+  m_Name: SkinsRiko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2689,6 +2691,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5989581890938032173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2295007365020228790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &2319535880083705850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2703,7 +2718,7 @@ GameObject:
   - component: {fileID: 5149104982383890586}
   - component: {fileID: 3074990174891979283}
   m_Layer: 5
-  m_Name: SkinsKnight
+  m_Name: SkinsEmika
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2872,7 +2887,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.7365, y: -0.1207}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 130, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1840127793582418755
 CanvasRenderer:
@@ -2902,7 +2917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5093f7d2ea07a345b09a932ecd48933, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0aba8910d0f02147821dec93d0d4385, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3141,11 +3156,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7840354554698817661}
-  m_Father: {fileID: 4124240904699052544}
+  m_Father: {fileID: 6276917065157083979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -891.82434}
+  m_AnchoredPosition: {x: 0, y: -569.82434}
   m_SizeDelta: {x: 2972, y: 264.349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2519695162843571495
@@ -3837,8 +3852,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000035167, y: 2.6}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 2.7, y: 1.5}
+  m_SizeDelta: {x: 140, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5248894855184054946
 CanvasRenderer:
@@ -3868,7 +3883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10a0ba0ba60657d43b205762b2f415b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13f482dc54f0bbb41b04c41899cb2c66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3968,7 +3983,7 @@ GameObject:
   - component: {fileID: 5259780449593892486}
   - component: {fileID: 5316588968109516696}
   m_Layer: 5
-  m_Name: SkinsBandit
+  m_Name: Ai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4644,7 +4659,7 @@ GameObject:
   - component: {fileID: 4654446784769735311}
   - component: {fileID: 6709399512326354275}
   m_Layer: 5
-  m_Name: SkinsSamurai
+  m_Name: SkinsFumiko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4959,7 +4974,6 @@ RectTransform:
   m_Children:
   - {fileID: 2833745402764273939}
   - {fileID: 2378802669907891931}
-  - {fileID: 2461636938038392234}
   m_Father: {fileID: 6276917065157083979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4981,7 +4995,7 @@ GameObject:
   - component: {fileID: 8241256449157315530}
   - component: {fileID: 2330751797236335083}
   m_Layer: 5
-  m_Name: SkinsAssasin
+  m_Name: SkinsNaoko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5355,8 +5369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7365, y: -0.1207}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 1.6, y: -0.2}
+  m_SizeDelta: {x: 120, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8814057606001322791
 CanvasRenderer:
@@ -5386,7 +5400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04d256b4271e2ef4a91ccaee6a0e5b82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e30980925b051e241bcecd03e3b71395, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5714,8 +5728,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1264, y: 5.8251}
-  m_SizeDelta: {x: 106.1015, y: 103.35}
+  m_AnchoredPosition: {x: -0.1264, y: 3.3}
+  m_SizeDelta: {x: 135, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8176920889407970224
 CanvasRenderer:
@@ -5745,7 +5759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c24362ea4b2e71438c77728e342a6e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2ab28eddb232994fadc29e7baeeb25c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6289,7 +6303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: -0.00039672852}
   m_SizeDelta: {x: 0, y: 650.00006}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &8277235209224943840
@@ -6403,7 +6417,7 @@ GameObject:
   - component: {fileID: 6238325899254430378}
   - component: {fileID: 1803484389234193784}
   m_Layer: 5
-  m_Name: SkinsMage
+  m_Name: SkinsEri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7065,7 +7079,7 @@ GameObject:
   - component: {fileID: 5946995284826946334}
   - component: {fileID: 8652837582898378494}
   m_Layer: 5
-  m_Name: SkinsSuperGirl
+  m_Name: SkinsKaoru
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7963,8 +7977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.8735, y: -2.3294}
-  m_SizeDelta: {x: 90.1001, y: 90.6824}
+  m_AnchoredPosition: {x: 3, y: -0.2}
+  m_SizeDelta: {x: 130, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2169691403089785805
 CanvasRenderer:
@@ -7994,7 +8008,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5179943ed6923fa428f9ff0c5321808d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78795d862183bc245a490481f5521687, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8718,7 +8732,7 @@ GameObject:
   - component: {fileID: 815778352259166725}
   - component: {fileID: 1755179233093253984}
   m_Layer: 5
-  m_Name: SkinsBunisses
+  m_Name: SkinsAiki
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8865,8 +8879,9 @@ GameObject:
   - component: {fileID: 8032504745730186323}
   - component: {fileID: 1342525990729197273}
   - component: {fileID: 4393799806469944264}
+  - component: {fileID: 2618880305078663245}
   m_Layer: 5
-  m_Name: SkinsViking
+  m_Name: SkinsMasa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9000,6 +9015,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2618880305078663245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921118498376679475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &9222580365195071421
 GameObject:
   m_ObjectHideFlags: 0
@@ -9034,8 +9062,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7365, y: -0.1207}
-  m_SizeDelta: {x: 100, y: 95.5868}
+  m_AnchoredPosition: {x: -0.7365, y: 4.3}
+  m_SizeDelta: {x: 128, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5688043148198960988
 CanvasRenderer:
@@ -9065,7 +9093,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 73d25fe2a3e32f4409f90040120e4b0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7d5c5b0a12970c409d457ac809aa956, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

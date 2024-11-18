@@ -3085,6 +3085,7 @@ GameObject:
   - component: {fileID: 1791593771969094071}
   - component: {fileID: 1791593772992513247}
   - component: {fileID: 1791593772807963435}
+  - component: {fileID: 2724205138879323820}
   m_Layer: 0
   m_Name: LidMachine
   m_TagString: 
@@ -3162,6 +3163,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2724205138879323820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791593771918751976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cece5e1e0eb36b340bb602d5ca9b5bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Type: 3
 --- !u!1 &1791593771918752461
 GameObject:
   m_ObjectHideFlags: 0

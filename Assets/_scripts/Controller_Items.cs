@@ -74,25 +74,6 @@ public class Controller_Items : Singleton<Controller_Items>
     {
         return total_items;
     }
-    public void move_forward_in_make_up()
-    {
-        //Vector3 tmp = transform.position;
-        //transform.position += Vector3.forward;
-        Vector3 tmp = transform.position;
-        tmp.z += 1f;
-
-        transform.DOMoveZ(tmp.z, .5f);
-    }
-
-    public void move_horizontal_in_makeUp(Vector3 new_pos)
-    {
-        //Vector3 tmp = list_brushes[0].position;
-        //tmp.x = new_pos.x;
-
-        list_item[0].DOMoveX(new_pos.x, .3f);
-
-        //list_brushes[0].position = tmp;
-    }
 
     public void move_all_to_center_finish_level()
     {

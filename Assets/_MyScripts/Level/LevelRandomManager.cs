@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class LevelRandomManager : MonoBehaviour
+public class LevelRandomManager : Singleton<LevelRandomManager>
 {
     public List<GameObject> listLevel;
     public List<Transform> spawnLevels;

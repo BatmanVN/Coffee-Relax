@@ -23,14 +23,11 @@ public class FinishLevel : MonoBehaviour
             Observer.Notify(ListAction.FinishGame, true);
             showWin = StartCoroutine(show_win_panel());
 
-            Controller_Items.Ins.move_all_to_center_finish_level();
             Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
             Observer.Notify(ListAction.EndRoad,true);
         }
         if (finish.CompareTag(Const.cupTag))
         {
-            //confe = Instantiate(confet_Pref, confetSpawn.position, confetSpawn.rotation);
-            //confe.transform.SetParent(confetSpawn.transform);
             confet_Pref.SetActive(true);
             CupGroup br = finish.GetComponent<CupGroup>();
             if (br != null)
@@ -57,7 +54,7 @@ public class FinishLevel : MonoBehaviour
         Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
         Destroy(confet_Pref);
         StopCoroutine(showWin);
-        //Observer.Notify(UiAction.DestroyModel);
+
         //Advertisements.Instance.ShowInterstitial();
     }
 }

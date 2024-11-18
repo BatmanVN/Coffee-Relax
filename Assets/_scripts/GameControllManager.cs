@@ -19,7 +19,7 @@ public class GameControllManager : Singleton<GameControllManager>
 
     public int levelCurrent;
     public int coinCurrent;
-    public int skinId;
+    public int skinIdUse;
     public SkinCharacterData characterData;
     protected override void Awake()
     {
@@ -57,23 +57,23 @@ public class GameControllManager : Singleton<GameControllManager>
 
         //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //}
-        //if (Input.GetKeyDown(KeyCode.V))
-        //{
-        //    for (int i = 0; i < characterData.skinDatas.Count; i++)
-        //    {
-        //        if (i == 0)
-        //        {
-        //            SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
-        //            SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
-        //        }
-        //        else
-        //        {
-        //            SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
-        //            SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
-        //        }
-        //    }
-        //    Debug.Log("Delete Key Skin"); 
-        //}
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            for (int i = 0; i < characterData.skinDatas.Count; i++)
+            {
+                if (i == 0)
+                {
+                    SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
+                    SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
+                }
+                else
+                {
+                    SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
+                    SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
+                }
+            }
+            Debug.Log("Delete Key Skin");
+        }
     }
 
 

@@ -37,7 +37,6 @@ public class SpawnPlayer : MonoBehaviour
     }
     private void OnDestroy()
     {
-        //Observer.RemoveObserver(UiAction.DestroyModel, DestroyModel);
         Observer.RemoveObserver(ListAction.SpawnPlayer, PlayerSpawn);
     }
 }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5286570070533698839}
   - component: {fileID: 9147497958370998962}
   - component: {fileID: 6419467459761311352}
-  - component: {fileID: 5681029267979844920}
   - component: {fileID: 7885498593923100694}
   m_Layer: 0
   m_Name: Ice Cream Hat N
@@ -85,28 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5681029267979844920
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4762129809221300141}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 717191417218455094, guid: d5ad16e96cf04dc7be7df477155181d0, type: 3}
 --- !u!114 &7885498593923100694
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,10 +13,7 @@ public class CupGroup : GameUnit
     public Item_type item_Type;
     private void OnEnable()
     {
-        //Observer.AddObserver(ListAction.ShowCoffee, ShowCoffee);
-        //Observer.AddObserver(ListAction.ShowIceCream, ShowIceCream);
-        //Observer.AddObserver(ListAction.ShowLidCup, ShowLidCup);
-        //Observer.AddObserver(ListAction.ShowIce7, ShowIce7Color);
+        Observer.AddObserver(ListAction.SetUpCupTypes, SetActiveObjects);
     }
     private void Start()
     {
@@ -36,41 +33,15 @@ public class CupGroup : GameUnit
                     .Append(transform.DOLocalMoveY(pos_y_new, time).SetEase(ease_linear))
                     .Append(transform.DOLocalMoveY(pos_y_old, time).SetEase(ease_bounce));
     }
-
-    //public void ShowCoffee(object[] datas)
-    //{
-    //    if (datas == null || datas.Length < 1 || !(datas[0] is bool active)) return;
-    //    CupType coffee = cupTypes.Find(x => x.item_Type == Item_type.Cup);
-    //    if (coffee != null)
-    //        coffee.gameObject.SetActive(active);
-    //}
-
-    //public void ShowIceCream(object[] datas)
-    //{
-    //    if (datas == null || datas.Length < 1 || !(datas[0] is bool active)) return;
-    //    CupType iceCream = cupTypes.Find(x => x.item_Type == Item_type.IceCream);
-    //    if (iceCream != null)
-    //        iceCream.gameObject.SetActive(active);
-    //}
-    //public void ShowLidCup(object[] datas)
-    //{
-    //    if (datas == null || datas.Length < 1 || !(datas[0] is bool active)) return;
-    //    CupType lid = cupTypes.Find(x => x.item_Type == Item_type.Lid);
-    //    if (lid != null)
-    //        lid.gameObject.SetActive(active);
-    //}
-    //public void ShowIce7Color(object[] datas)
-    //{
-    //    if (datas == null || datas.Length < 1 || !(datas[0] is bool active)) return;
-    //    CupType ice7 = cupTypes.Find(x => x.item_Type == Item_type.ice7Color);
-    //    if (ice7 != null)
-    //        ice7.gameObject.SetActive(active);
-    //}
-    //private void OnDestroy()
-    //{
-    //    Observer.RemoveObserver(ListAction.ShowCoffee, ShowCoffee);
-    //    Observer.RemoveObserver(ListAction.ShowIceCream, ShowIceCream);
-    //    Observer.RemoveObserver(ListAction.ShowLidCup, ShowLidCup);
-    //    Observer.RemoveObserver(ListAction.ShowIce7, ShowIce7Color);
-    //}
+    public void SetActiveObjects(object[] datas)
+    {
+        foreach (CupType cupType in cupTypes)
+        {
+            cupType.gameObject.SetActive(item_Type == cupType.item_Type);
+        }
+    }
+    private void OnDestroy()
+    {
+        Observer.RemoveObserver(ListAction.SetUpCupTypes,SetActiveObjects);
+    }
 }

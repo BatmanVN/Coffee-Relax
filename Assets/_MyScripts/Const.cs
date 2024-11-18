@@ -5,9 +5,11 @@ using UnityEngine;
 public enum Item_type
 {
     Cup,
+    Coffee,
     IceCream,
     Lid,
-    ice7Color
+    ice7Color,
+    Milk
 }
 
 public enum ListAction
@@ -19,14 +21,13 @@ public enum ListAction
     FinishGame,
     Vibrate,
     IncreaseMoney,
-    ShowCoffee,
-    ShowIceCream,
-    ShowLidCup,
+    SetUpCupTypes,
     ShowIce7,
     SpawnPlayer,
     SetCamFollow,
     NextLevel,
-    EndRoad
+    EndRoad,
+    FinishMove
 }
 public enum UiAction
 {
@@ -50,6 +51,7 @@ public enum ActionInGame
 public class Const
 {
     //String Anim
+    public const string idleAnim = "Idle";
     public const string runAnim = "Run";
     public const string victoryAnim = "Victory";
 
@@ -58,4 +60,5 @@ public class Const
     public const string cupTag = "Cup";
     public const string groundTag = "Ground";
     public const string bonusStage = "Bonus Stage";
+    public const string thornTag = "ThornObstacle";
 }
