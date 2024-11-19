@@ -810,8 +810,13 @@ PrefabInstance:
     - target: {fileID: -3581492546229788717, guid: ac5da57fbdd256147a7050295f43ed67,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3127050722264223159, guid: ac5da57fbdd256147a7050295f43ed67,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c74856e8dcb4e80b6c78d9649ca0503, type: 2}
     - target: {fileID: -2245748515274300804, guid: ac5da57fbdd256147a7050295f43ed67,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -820,7 +825,7 @@ PrefabInstance:
     - target: {fileID: -2136999305653578984, guid: ac5da57fbdd256147a7050295f43ed67,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2007169739893661041, guid: ac5da57fbdd256147a7050295f43ed67,
         type: 3}
@@ -842,11 +847,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5a193ec6f1fac264bb3c518db900db17, type: 2}
+    - target: {fileID: -402105784786915004, guid: ac5da57fbdd256147a7050295f43ed67,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c74856e8dcb4e80b6c78d9649ca0503, type: 2}
     - target: {fileID: -148390986617578205, guid: ac5da57fbdd256147a7050295f43ed67,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: efa5569057388ef4aab46482936883ff, type: 2}
+    - target: {fileID: 62912172328303276, guid: ac5da57fbdd256147a7050295f43ed67,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c74856e8dcb4e80b6c78d9649ca0503, type: 2}
     - target: {fileID: 919132149155446097, guid: ac5da57fbdd256147a7050295f43ed67,
         type: 3}
       propertyPath: m_Name
@@ -895,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 4884995154760334853, guid: ac5da57fbdd256147a7050295f43ed67,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5621261584342690581, guid: ac5da57fbdd256147a7050295f43ed67,
         type: 3}
@@ -1186,7 +1201,7 @@ Transform:
   m_GameObject: {fileID: 1037811393}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -17, z: 265}
+  m_LocalPosition: {x: -3, y: -17, z: 267.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4971,11 +4986,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  sensitivity: 0.2
+  sensitivity: 0.5
   game_run: 0
   is_finish: 0
   speed_player: 5
-  horizontal_speed: 5
+  horizontal_speed: 10
   time: 1
   animName: Run
 --- !u!1001 &7889683527334798857

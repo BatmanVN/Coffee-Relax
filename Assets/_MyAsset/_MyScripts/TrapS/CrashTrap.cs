@@ -6,6 +6,7 @@ public class CrashTrap : MonoBehaviour
 {
     public GameObject smoke;
     public GameObject cupCrash;
+
     private void OnTriggerEnter(Collider cutter)
     {
         if (cutter.CompareTag(Const.cupTag))

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1791593772992565405}
   - component: {fileID: 1791593772992565784}
   - component: {fileID: 2428628422145436769}
-  m_Layer: 12
+  m_Layer: 6
   m_Name: CUTTER
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547ad71eef9ee1c4ca53cd5fa665087c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 6813416509558619124, guid: be9c1dd876409fc4695a2dbb6577bf41, type: 3}
 --- !u!1 &1791593771918750463
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1791593771969105147}
-  m_Layer: 12
+  m_Layer: 6
   m_Name: CutterObstacle_d1
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -210,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791593771969112392}
   - component: {fileID: 1791593773495884626}
-  m_Layer: 12
+  m_Layer: 6
   m_Name: Model Root
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -264,7 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1791593771969106606}
-  m_Layer: 12
+  m_Layer: 6
   m_Name: pos Root
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -297,7 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791593771969127299}
   - component: {fileID: 1791593775458822449}
-  m_Layer: 12
+  m_Layer: 6
   m_Name: Background Win
   m_TagString: 
   m_Icon: {fileID: 0}

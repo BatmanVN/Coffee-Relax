@@ -7,9 +7,10 @@ public enum Item_type
     Cup,
     Coffee,
     IceCream,
-    Lid,
+    LidCoffee,
     ice7Color,
-    Milk
+    Milk,
+    LidMilk
     //LidCream
 }
 
