@@ -45,33 +45,11 @@ public class BuySkinButton : MonoBehaviour
             ViewCharacter.Ins.SetStatusTextNoti(true, "ALREADY IN USE");
 
             // Cập nhật trạng thái sử dụng skin trong GameControllManager
-            //GameControllManager.Ins.SetStatusUseSkin(nameSkin, true);
             GameControllManager.Ins.SetIDSkinUse(idSkin);
 
-            // In thông tin skin hiện tại vào Console (dành cho việc debug)
-            Debug.Log(nameSkin);
-
-            // Đánh dấu skin hiện tại là đang sử dụng
-            ViewCharacter.Ins.baseSkins[idSkin].isUse = true;
 
             // Cập nhật thông tin về skin đang được sử dụng cho các đối tượng Observer
-            Observer.Notify(UiAction.UpdateUsedObject, nameSkin);
-
-            // Duyệt qua tất cả các skin và tắt sử dụng cho các skin không phải là skin hiện tại
-            foreach (var skin in ViewCharacter.Ins.baseSkins)
-            {
-                // Bỏ qua skin đang được chọn (idSkin)
-                if (skin.skinId == idSkin) continue;
-
-                // Đánh dấu skin không phải là skin đang sử dụng
-                skin.isUse = false;
-
-                // Cập nhật trạng thái sử dụng cho các skin không phải skin hiện tại
-                //GameControllManager.Ins.SetStatusUseSkin(skin.skinName, false);
-
-                // Cập nhật thông tin về các skin không được sử dụng cho Observer
-                Observer.Notify(UiAction.UpdateUsedObject, skin.skinName);
-            }
+            Observer.Notify(UiAction.UpdateUsedObject,idSkin);
         }
         else
         {

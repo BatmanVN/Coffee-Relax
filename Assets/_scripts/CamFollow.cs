@@ -42,13 +42,11 @@ public class CamFollow : MonoBehaviour
         target = player;
         if (target != null)
         {
-            ofsset = transform.position - target.position;
+            //ofsset = transform.position - target.position;
 
-            Vector3 distance = target.position + ofsset;
-            //distance.x = 0;
+            //Vector3 distance = target.position + ofsset;
 
-            tween = transform.DOMove(distance, speed_cam).SetEase(ease).SetAutoKill(false);
-            //targetLastPos = distance;
+            tween = transform.DOMove(ofsset, speed_cam).SetEase(ease).SetAutoKill(false);
 
             is_active = true;
         }

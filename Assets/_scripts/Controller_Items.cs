@@ -9,7 +9,7 @@ public class Controller_Items : Singleton<Controller_Items>
     // list cup
     public List<Transform> list_item;
     protected Vector3 velocity = Vector3.zero;
-
+    //public int currentItemTotal, afterDecreaseitem;
     public float smooth_speed, correct_smooth;
 
     // Start is called before the first frame update
@@ -75,11 +75,11 @@ public class Controller_Items : Singleton<Controller_Items>
         return total_items;
     }
 
-    public void move_all_to_center_finish_level()
-    {
-        for (int i = 0; i < list_item.Count; i++)
-        {
-            list_item[i].DOMoveX(0f, .4f);
-        }
-    }
+    //public void move_all_to_center_finish_level()
+    //{
+    //    for (int i = 0; i < list_item.Count; i++)
+    //    {
+    //        list_item[i].DOMoveX(0f, .1f);
+    //    }
+    //}
 }

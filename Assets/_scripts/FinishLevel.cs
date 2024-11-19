@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinishLevel : MonoBehaviour
+public class FinishLevel : Singleton<FinishLevel>
 {
     private Coroutine showWin;
-    public GameObject confet_Pref;
-    //public Transform confetSpawn;
-    //public GameObject confe;
+    private int currentMoney;
+    private int moneyAfterWin;
+    public int totalCoin;
+    private void OnEnable()
+    {
+        currentMoney = GameControllManager.Ins.getcoin();
+        //Observer.AddObserver(UiAction.GetCoinReward,GetCoinReward);
+    }
     void Start()
     {
-        
+
     }
 
     //When Finish
@@ -28,7 +33,7 @@ public class FinishLevel : MonoBehaviour
         }
         if (finish.CompareTag(Const.cupTag))
         {
-            confet_Pref.SetActive(true);
+
             CupGroup br = finish.GetComponent<CupGroup>();
             if (br != null)
             {
@@ -40,21 +45,34 @@ public class FinishLevel : MonoBehaviour
                     {
                         Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupType.money);
+                        Debug.Log(Controller_Items.Ins.total_items);
                     }
                 }
             }
         }
     }
 
+    //private void GetCoinReward(object[] datas)
+    //{
+    //    if(datas == null || datas.Length < 1 || !(datas[0] is int coinReward)) return;
+    //    coinReward = totalCoin;
+    //}
+
     IEnumerator show_win_panel()
     {
         yield return new WaitForSeconds(3f);
 
         UIManager.Ins.OpenUI<Win_UI>();
+        UIManager.Ins.CloseUI<InGame_UI>();
         Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
-        Destroy(confet_Pref);
+        moneyAfterWin = GameControllManager.Ins.getcoin();
+        totalCoin = moneyAfterWin - currentMoney;
         StopCoroutine(showWin);
 
         //Advertisements.Instance.ShowInterstitial();
+    }
+    private void OnDestroy()
+    {
+        //Observer.RemoveObserver(UiAction.GetCoinReward, GetCoinReward);
     }
 }

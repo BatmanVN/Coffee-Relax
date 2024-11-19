@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class FinishMoveCup : MonoBehaviour
 {
+    public GameObject confet_Pref;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(Const.cupTag))
         {
-            Controller_Items.Ins.move_all_to_center_finish_level();
+            confet_Pref.SetActive(true);
             Observer.Notify(ListAction.FinishMove);
         }
     }

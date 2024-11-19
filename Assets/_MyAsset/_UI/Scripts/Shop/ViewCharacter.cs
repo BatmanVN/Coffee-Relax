@@ -11,12 +11,14 @@ public class ViewCharacter : Singleton<ViewCharacter>
     public GameObject buttonDown;
     public Transform spawnPoint;
     public GameObject currentSkin;
+    public BaseSkin currentSelect;
     [Header("Price")]
     [SerializeField] public TextMeshProUGUI textPrice;
     [SerializeField] public GameObject useButton;
     [SerializeField] public GameObject buyButton;
     [Header("Text Notify")]
     [SerializeField] public Text textNoti;
+
     //public GameObject firstSpawn;
     protected override void Awake()
     {
@@ -77,7 +79,6 @@ public class ViewCharacter : Singleton<ViewCharacter>
             Destroy(currentSkin);
         }
     }
-
     private void OnDisable()
     {
         baseSkins.Clear();

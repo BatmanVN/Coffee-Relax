@@ -5988,8 +5988,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 11.607438, y: 4.745425, z: 1}
-  m_Center: {x: 0.16109324, y: 1.3808789, z: 0}
+  m_Size: {x: 11.607438, y: 5.0494065, z: 1}
+  m_Center: {x: 0.16109324, y: 1.5328696, z: 0}
 --- !u!54 &1364884694013338871
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6029,6 +6029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e51e7a5cec64549b53f0950840730e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  confet_Pref: {fileID: 5940401299902635449}
 --- !u!1 &2227401862352862749
 GameObject:
   m_ObjectHideFlags: 0
@@ -14018,7 +14019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c67db1b3ecd4874c948655a82f88a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  confet_Pref: {fileID: 5940401299902635449}
+  dontDestroyOnLoad: 0
+  totalCoin: 0
 --- !u!1 &5453173670933633882
 GameObject:
   m_ObjectHideFlags: 0
@@ -19338,7 +19340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1770694459663836081
 Transform:
   m_ObjectHideFlags: 0
@@ -23372,11 +23374,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4425889617865176, guid: 9e045a0c133562f4e8bfa2863d2e8cf1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4425889617865176, guid: 9e045a0c133562f4e8bfa2863d2e8cf1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4425889617865176, guid: 9e045a0c133562f4e8bfa2863d2e8cf1, type: 3}
       propertyPath: m_LocalPosition.x

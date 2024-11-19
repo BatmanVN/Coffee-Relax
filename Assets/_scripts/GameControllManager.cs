@@ -33,47 +33,24 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         levelCurrent = getlevel();
         coinCurrent = getcoin();
-        //Observer.Notify(UiAction.SpawnModel);
     }
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.U))
+        //if (Input.GetKeyDown(KeyCode.V))
         //{
-        //    setcoin(5000);
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //    for (int i = 0; i < characterData.skinDatas.Count; i++)
+        //    {
+        //        if (i == 0)
+        //        {
+        //            SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
+        //        }
+        //        else
+        //        {
+        //            SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
+        //        }
+        //    }
+        //    Debug.Log("Delete Key Skin");
         //}
-
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    resetall();
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.N))
-        //{
-        //    //setLevel(getlevel() + 1);
-        //    //if (levels.Length <= getlevel() + 1)
-        //    //    return;
-        //    setLevel(getlevel() + 1);
-
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //}
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            for (int i = 0; i < characterData.skinDatas.Count; i++)
-            {
-                if (i == 0)
-                {
-                    SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
-                    //SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
-                }
-                else
-                {
-                    SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
-                    //SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
-                }
-            }
-            Debug.Log("Delete Key Skin");
-        }
     }
 
 
@@ -94,7 +71,6 @@ public class GameControllManager : Singleton<GameControllManager>
         for (int i = 0; i < characterData.skinDatas.Count; i++)
         {
             PlayerPrefs.DeleteKey(characterData.skinDatas[i].NameCharacter + "Purchased");
-            PlayerPrefs.DeleteKey(characterData.skinDatas[i].NameCharacter + "Active");
             PlayerPrefs.DeleteKey("firsttime_genaral");
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -114,13 +90,11 @@ public class GameControllManager : Singleton<GameControllManager>
                 if (i == 0)
                 {
                     SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
-                    //SetStatusUseSkin(characterData.skinDatas[0].NameCharacter, true);
                     SetIDSkinUse(0);
                 }
                 else
                 {
                     SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
-                    //SetStatusUseSkin(characterData.skinDatas[i].NameCharacter, false);
                 }
             }
         }
@@ -129,10 +103,7 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         PlayerPrefs.SetInt(nameSkin + "Purchased", isBuy ? 1 : 0);
     }
-    //public void SetStatusUseSkin(string nameSkin, bool isActive)
-    //{
-    //    PlayerPrefs.SetInt(nameSkin + "Active", isActive ? 1 : 0);
-    //}
+
     public void SetIDSkinUse(int skinID)
     {
         PlayerPrefs.SetInt("SkinID_Used", skinID);

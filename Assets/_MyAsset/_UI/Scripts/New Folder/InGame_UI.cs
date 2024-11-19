@@ -12,20 +12,25 @@ public class InGame_UI : UICanvas
     public Button setting;
     public Button returnButton;
     public Button backButton;
+
     public GameObject pauseBar;
     public GameObject upEffect;
-    public Text txt_mmoney;
     public string nameScene;
     private Coroutine effect;
+
+    [Header("TEXT")]
+    public Text txt_mmoney;
+    public Text txt_Level;
+
     private void OnEnable()
     {
-        
         Observer.AddObserver(ListAction.Vibrate,_vibrate);
         Observer.AddObserver(ListAction.IncreaseMoney, increase_money);
         txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
     }
     private void Start()
     {
+        SetTextLevel();
         setting.onClick?.AddListener(OpenSetting);
         returnButton.onClick?.AddListener(ReturnButton);
         backButton.onClick?.AddListener(BackButton);
@@ -38,6 +43,12 @@ public class InGame_UI : UICanvas
         UIManager.Ins.OpenUI<MainMenu_UI>();
         //Observer.Notify(UiAction.SpawnModel);
         SceneManager.LoadSceneAsync(nameScene);
+    }
+
+    public void SetTextLevel()
+    {
+        int level = GameControllManager.Ins.levelCurrent + 1;
+        txt_Level.text = "LEVEL: " + level;
     }
 
     public void ReturnButton()
