@@ -11,7 +11,6 @@ public class FinishLevel : Singleton<FinishLevel>
     private void OnEnable()
     {
         currentMoney = GameControllManager.Ins.getcoin();
-        //Observer.AddObserver(UiAction.GetCoinReward,GetCoinReward);
     }
     void Start()
     {
@@ -25,7 +24,7 @@ public class FinishLevel : Singleton<FinishLevel>
         {
             //active = false;
 
-            Observer.Notify(ListAction.FinishGame, true);
+            //Observer.Notify(ListAction.FinishGame, true);
             showWin = StartCoroutine(show_win_panel());
 
             Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
@@ -45,18 +44,12 @@ public class FinishLevel : Singleton<FinishLevel>
                     {
                         Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupType.money);
-                        Debug.Log(Controller_Items.Ins.total_items);
                     }
                 }
             }
         }
     }
 
-    //private void GetCoinReward(object[] datas)
-    //{
-    //    if(datas == null || datas.Length < 1 || !(datas[0] is int coinReward)) return;
-    //    coinReward = totalCoin;
-    //}
 
     IEnumerator show_win_panel()
     {
@@ -70,9 +63,5 @@ public class FinishLevel : Singleton<FinishLevel>
         StopCoroutine(showWin);
 
         //Advertisements.Instance.ShowInterstitial();
-    }
-    private void OnDestroy()
-    {
-        //Observer.RemoveObserver(UiAction.GetCoinReward, GetCoinReward);
     }
 }

@@ -370,6 +370,7 @@ GameObject:
   - component: {fileID: 1791593772287901114}
   - component: {fileID: 1791593772992565183}
   - component: {fileID: 1791593772808014214}
+  - component: {fileID: 835505240336562876}
   m_Layer: 12
   m_Name: Lolipop_02
   m_TagString: 
@@ -490,3 +491,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &835505240336562876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791593771918771939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e50552312a781a40b09f56f62047d5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoke: {fileID: 6813416509558619124, guid: be9c1dd876409fc4695a2dbb6577bf41, type: 3}
+  cupCrash: {fileID: 728578499170400907, guid: 294da2e6c6cc65449af4dbd1b7ec4b91, type: 3}

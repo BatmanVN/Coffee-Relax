@@ -1,13 +1,16 @@
-using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 [CreateAssetMenu(fileName = "RoadsData", menuName = "ScriptableObjects/RoadsData", order = 1)]
 public class RoadsData : ScriptableObject
 {
+    [ListDrawerSettings(ShowFoldout = true)]
     public List<RoadData> roads;
 }
+
+[System.Serializable]
 public class RoadData
 {
     [HorizontalGroup("Split", 75)]
@@ -23,9 +26,4 @@ public class RoadData
     [VerticalGroup("Split/Right")]
     [LabelWidth(100)]
     public Material material;
-
-    [VerticalGroup("Split/Right")]
-    [LabelWidth(100)]
-    public GameObject roadInst;
-
 }

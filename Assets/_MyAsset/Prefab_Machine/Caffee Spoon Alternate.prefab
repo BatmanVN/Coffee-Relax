@@ -7494,6 +7494,7 @@ GameObject:
   - component: {fileID: 1791593771969093154}
   - component: {fileID: 1791593772992513052}
   - component: {fileID: 1791593772807963453}
+  - component: {fileID: 6763486947880931415}
   m_Layer: 0
   m_Name: coffeePOS (1)
   m_TagString: 
@@ -7565,6 +7566,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6763486947880931415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791593771918750692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dadf4359efc60149ba7d4e289be4974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machineType: 1
 --- !u!1 &1791593771918750895
 GameObject:
   m_ObjectHideFlags: 0
@@ -10063,6 +10077,7 @@ GameObject:
   - component: {fileID: 1791593771969094778}
   - component: {fileID: 1791593772992513394}
   - component: {fileID: 1791593772807963399}
+  - component: {fileID: 4743253436930145947}
   m_Layer: 0
   m_Name: coffeePOS (3)
   m_TagString: 
@@ -10134,6 +10149,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4743253436930145947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791593771918752874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dadf4359efc60149ba7d4e289be4974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machineType: 1
 --- !u!1 &1791593771918752952
 GameObject:
   m_ObjectHideFlags: 0
@@ -15326,6 +15354,7 @@ GameObject:
   - component: {fileID: 1791593771969098070}
   - component: {fileID: 1791593772992513345}
   - component: {fileID: 1791593772807963377}
+  - component: {fileID: 7880987844899871592}
   m_Layer: 0
   m_Name: coffeePOS (2)
   m_TagString: 
@@ -15397,3 +15426,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7880987844899871592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791593771918756806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dadf4359efc60149ba7d4e289be4974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machineType: 1
