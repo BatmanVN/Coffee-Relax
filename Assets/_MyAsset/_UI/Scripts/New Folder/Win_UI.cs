@@ -32,14 +32,9 @@ public class Win_UI : UICanvas
 
     public void btn_next()
     {
-        //Advertisements.Instance.ShowInterstitial();
-
-        // sound
-        //SoundManager.instance.Play("click");
-
         GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
         Observer.Notify(ListAction.NextLevel);
-        //Observer.Notify(UiAction.SpawnModel);
+
         Observer.Notify(ActionInGame.DisableRoad);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Close(0);

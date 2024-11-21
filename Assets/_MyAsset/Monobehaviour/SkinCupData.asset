@@ -15,41 +15,101 @@ MonoBehaviour:
   skinDatas:
   - sprite: {fileID: 21300000, guid: 5f04e3252719e3c409475bae7c93fc09, type: 3}
     id: 0
-    material: {fileID: 2100000, guid: 58499570b3da4bef8f35d706aa34a66e, type: 2}
-    price: 0
-  - sprite: {fileID: 21300000, guid: 8a3b7c83b78f203439ea0a3793b5f825, type: 3}
-    id: 0
-    material: {fileID: 0}
-    price: 0
-  - sprite: {fileID: 0}
-    id: 0
-    material: {fileID: 0}
-    price: 0
-  - sprite: {fileID: 0}
-    id: 0
-    material: {fileID: 0}
-    price: 0
-  - sprite: {fileID: 0}
-    id: 0
-    material: {fileID: 0}
-    price: 0
-  - sprite: {fileID: 0}
-    id: 0
-    material: {fileID: 0}
-    price: 0
-  - sprite: {fileID: 0}
-    id: 0
-    material: {fileID: 0}
-    price: 0
-  - sprite: {fileID: 0}
-    id: 0
-    material: {fileID: 0}
-    price: 0
-  - sprite: {fileID: 0}
-    id: 0
-    material: {fileID: 0}
-    price: 0
-  - sprite: {fileID: 0}
-    id: 0
-    material: {fileID: 0}
-    price: 0
+    NameCup: Buck1
+    buckInst: {fileID: 728578499170400907, guid: 57ce2e19e2ad450d950b9eae43f70049,
+      type: 3}
+    buckMap: {fileID: 728578499170400907, guid: 294da2e6c6cc65449af4dbd1b7ec4b91,
+      type: 3}
+    buckSell: {fileID: 728578499170400907, guid: aa40a528691d3594a957a7abcb711579,
+      type: 3}
+    price: 3000
+  - sprite: {fileID: 21300000, guid: ef80ff44186e7764893f3c28f0fbe721, type: 3}
+    id: 1
+    NameCup: Buck2
+    buckInst: {fileID: 2522004083302736037, guid: 109cee23bfa8f8b439fb06111c0d3f62,
+      type: 3}
+    buckMap: {fileID: 2522004083302736037, guid: 84bbf031d37624d47924ba586af31d87,
+      type: 3}
+    buckSell: {fileID: 2522004083302736037, guid: f747862830a78e442ba36de5328f1d56,
+      type: 3}
+    price: 4000
+  - sprite: {fileID: 21300000, guid: 420a275cecbea39409854fb6f790dabe, type: 3}
+    id: 2
+    NameCup: BuckForest
+    buckInst: {fileID: 2522004083302736037, guid: 28cb01b4c0d31fd498a1afbe8d5c35ed,
+      type: 3}
+    buckMap: {fileID: 2522004083302736037, guid: ba3faa0abe392a7459c2c4e416cd2cf0,
+      type: 3}
+    buckSell: {fileID: 2522004083302736037, guid: eb9f5f8ef60726e4890aa1b9b89915fa,
+      type: 3}
+    price: 5000
+  - sprite: {fileID: 21300000, guid: be285f3824642164b922d80f3e691f7f, type: 3}
+    id: 3
+    NameCup: BuckGold
+    buckInst: {fileID: 2522004083302736037, guid: d0d1855520b66bf4eaefdb41d725f6e1,
+      type: 3}
+    buckMap: {fileID: 2522004083302736037, guid: e2d527d93c61c3f49aa2bafd2a319649,
+      type: 3}
+    buckSell: {fileID: 2522004083302736037, guid: bce417bfc4738ed44b4358d0f3e3186c,
+      type: 3}
+    price: 6000
+  - sprite: {fileID: 21300000, guid: 53d7db96296bf5c43a25b2a5230c6600, type: 3}
+    id: 4
+    NameCup: BuckFrap
+    buckInst: {fileID: 2522004083302736037, guid: 844f898df59e563458ffea52358e6d13,
+      type: 3}
+    buckMap: {fileID: 2522004083302736037, guid: 8e3a510905aa25741ae04b6250366e7b,
+      type: 3}
+    buckSell: {fileID: 2522004083302736037, guid: f11333496a2dcfb4c80f0aa4e8657eba,
+      type: 3}
+    price: 8000
+  - sprite: {fileID: 21300000, guid: 85193d7ec974b1042ba2d5209f1781db, type: 3}
+    id: 5
+    NameCup: BuckUniverse
+    buckInst: {fileID: 2522004083302736037, guid: e2412bb2d34b4564791775e96a64d98c,
+      type: 3}
+    buckMap: {fileID: 2522004083302736037, guid: 32e2876549d1f4743830e5bb0882b6af,
+      type: 3}
+    buckSell: {fileID: 2522004083302736037, guid: 91e96698f0be6a74db2b8993914f5aa3,
+      type: 3}
+    price: 9000
+  - sprite: {fileID: 21300000, guid: be6740e457ec7d94aa852d1c861d28a8, type: 3}
+    id: 6
+    NameCup: BuckCream2
+    buckInst: {fileID: 2522004083302736037, guid: 6b7de4a27fa68c64b8a41be8bd85e443,
+      type: 3}
+    buckMap: {fileID: 2522004083302736037, guid: 72ebaa6778f087d4081a0d23a84340f3,
+      type: 3}
+    buckSell: {fileID: 2522004083302736037, guid: 2cf7b0d3dd1d72f49b57c64794c8a3ac,
+      type: 3}
+    price: 10000
+  - sprite: {fileID: 21300000, guid: 87da9c23d1dfe8a4db28c16a306c3678, type: 3}
+    id: 7
+    NameCup: BuckFlower
+    buckInst: {fileID: 2522004083302736037, guid: 35c91244e1d6c974b9a5653bc36d78b9,
+      type: 3}
+    buckMap: {fileID: 2522004083302736037, guid: 094916fd7181a0b4d95128a748cf6327,
+      type: 3}
+    buckSell: {fileID: 2522004083302736037, guid: 448d686ed9954c1408804061fb096caa,
+      type: 3}
+    price: 12000
+  - sprite: {fileID: 21300000, guid: 53bb32340c19f4a4fbe707e3a3c1c771, type: 3}
+    id: 8
+    NameCup: BuckIceCoffee
+    buckInst: {fileID: 2522004083302736037, guid: 6b3b86c781c66b6409f498823d573c87,
+      type: 3}
+    buckMap: {fileID: 2522004083302736037, guid: 308ae565300ea664d9a59ac40c4f4ccd,
+      type: 3}
+    buckSell: {fileID: 2522004083302736037, guid: 9ec4c30836f0a6d449276090ef1c5d77,
+      type: 3}
+    price: 15000
+  - sprite: {fileID: 21300000, guid: 4279fd6eebaadf04692c79e3d6ce42c8, type: 3}
+    id: 9
+    NameCup: BuckHot
+    buckInst: {fileID: 2522004083302736037, guid: 4898441610fac3a47a915eae0923c326,
+      type: 3}
+    buckMap: {fileID: 2522004083302736037, guid: 11bf5217470fd3a47a0fc7775bf3cefb,
+      type: 3}
+    buckSell: {fileID: 2522004083302736037, guid: 7ea9548c1f7221d448fd37f81b4a4ca7,
+      type: 3}
+    price: 20000

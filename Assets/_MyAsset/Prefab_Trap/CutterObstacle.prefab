@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1791593772455640090}
   - component: {fileID: 1791593772287866380}
   - component: {fileID: 1791593772992512968}
+  - component: {fileID: 111887439045020338}
   m_Layer: 0
   m_Name: CUTTER
   m_TagString: obstacle
@@ -105,6 +106,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.888204, y: 0.8263469, z: 0.303617}
   m_Center: {x: 0.03290993, y: -6.57614, z: 0.1206685}
+--- !u!114 &111887439045020338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791593771918749496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547ad71eef9ee1c4ca53cd5fa665087c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoke: {fileID: 5797428246745224015, guid: 24fa55c4f1386e04ea2800527f88c4e1, type: 3}
 --- !u!1 &1791593771918750574
 GameObject:
   m_ObjectHideFlags: 0

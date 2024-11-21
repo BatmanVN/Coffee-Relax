@@ -21,12 +21,14 @@ public class InGame_UI : UICanvas
     [Header("TEXT")]
     public Text txt_mmoney;
     public Text txt_Level;
+    private int level;
 
     private void OnEnable()
     {
         Observer.AddObserver(ListAction.Vibrate,_vibrate);
         Observer.AddObserver(ListAction.IncreaseMoney, increase_money);
         txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
+        level = LevelRandomManager.Ins.levelIndex;
     }
     private void Start()
     {
@@ -47,7 +49,6 @@ public class InGame_UI : UICanvas
 
     public void SetTextLevel()
     {
-        int level = GameControllManager.Ins.levelCurrent + 1;
         txt_Level.text = "LEVEL: " + level;
     }
 

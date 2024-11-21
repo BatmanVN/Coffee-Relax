@@ -148,6 +148,8 @@ public class CharacterController : MonoBehaviour
     public void move_player_to_center_finish_level(object[] datas)
     {
         is_finish = true;
+        anim.SetTrigger(Const.walkAnim);
+        speed_player = 5f;
         transform.DOKill();
         transform.DOLocalMoveX(-.2f, .1f);
     }

@@ -11,6 +11,7 @@ public class FinishMoveCup : MonoBehaviour
         {
             confet_Pref.SetActive(true);
             Observer.Notify(ListAction.FinishMove);
+            
         }
     }
 }

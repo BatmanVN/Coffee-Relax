@@ -13,7 +13,19 @@ public class SellGate: MonoBehaviour
     public float duration;
     public Transform money_stash_pos;
     public GameObject money_stash;
+    public int cupId;
 
+    private void OnEnable()
+    {
+        cupId = GameControllManager.Ins.GetIDSkinCupUse();
+        foreach (SkinCupItemData cup in GameControllManager.Ins.cupData.skinDatas)
+        {
+            if (cup.id == cupId)
+            {
+                fabrica_pref = cup.buckSell;
+            }
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

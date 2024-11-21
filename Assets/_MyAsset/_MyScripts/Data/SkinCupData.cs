@@ -25,7 +25,19 @@ public class SkinCupItemData
 
     [VerticalGroup("Split/Right")]
     [LabelWidth(100)]
-    public Material material;
+    public string NameCup;
+
+    [VerticalGroup("Split/Right")]
+    [LabelWidth(100)]
+    public GameObject buckInst;
+
+    [VerticalGroup("Split/Right")]
+    [LabelWidth(100)]
+    public GameObject buckMap;
+
+    [VerticalGroup("Split/Right")]
+    [LabelWidth(100)]
+    public GameObject buckSell;
 
     [VerticalGroup("Split/Right")]
     [LabelWidth(100)]

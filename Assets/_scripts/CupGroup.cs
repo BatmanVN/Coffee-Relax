@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 
 
-public class CupGroup : GameUnit
+public class CupGroup : MonoBehaviour
 {
     Sequence sequence;
     public Ease ease_bounce, ease_linear;

@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class ViewCharacter : Singleton<ViewCharacter>
 {
-    public List<BaseSkin> baseSkins = new List<BaseSkin>();
+    public List<BaseSkinCharacter> baseSkins = new List<BaseSkinCharacter>();
     public SkinCharacterData skinsData;
     public GameObject buttonDown;
     public Transform spawnPoint;
     public GameObject currentSkin;
-    public BaseSkin currentSelect;
+    public BaseSkinCharacter currentSelect;
     [Header("Price")]
     [SerializeField] public TextMeshProUGUI textPrice;
     [SerializeField] public GameObject useButton;
@@ -25,7 +25,7 @@ public class ViewCharacter : Singleton<ViewCharacter>
         base.Awake();
         foreach (Transform skin in transform)
         {
-            baseSkins.Add(skin.GetComponent<BaseSkin>());
+            baseSkins.Add(skin.GetComponent<BaseSkinCharacter>());
         }
         SetSkinID();
     }
@@ -35,7 +35,7 @@ public class ViewCharacter : Singleton<ViewCharacter>
         {
             foreach (Transform skin in transform)
             {
-                baseSkins.Add(skin.GetComponent<BaseSkin>());
+                baseSkins.Add(skin.GetComponent<BaseSkinCharacter>());
             }
             SetSkinID();
         }
@@ -82,8 +82,10 @@ public class ViewCharacter : Singleton<ViewCharacter>
     private void OnDisable()
     {
         baseSkins.Clear();
-        if(currentSkin != null)
+        if (currentSkin != null)
+        {
             Destroy(currentSkin);
+        }
     }
     private void OnDestroy()
     {

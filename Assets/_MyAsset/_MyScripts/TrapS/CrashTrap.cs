@@ -6,6 +6,18 @@ public class CrashTrap : MonoBehaviour
 {
     public GameObject smoke;
     public GameObject cupCrash;
+    public int CupId_Use;
+    private void OnEnable()
+    {
+        CupId_Use = GameControllManager.Ins.GetIDSkinCupUse();
+        foreach (SkinCupItemData cupSpawn in GameControllManager.Ins.cupData.skinDatas)
+        {
+            if (cupSpawn.id == CupId_Use)
+            {
+                cupCrash = cupSpawn.buckMap;
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider cutter)
     {

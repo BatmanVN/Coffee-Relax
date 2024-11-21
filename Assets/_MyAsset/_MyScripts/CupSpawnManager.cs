@@ -7,6 +7,7 @@ public class CupSpawnManager : MonoBehaviour
 {
     [SerializeField] public List<Transform> spawnsTransform;
     [SerializeField] protected GameObject cupPrefab;
+    public int CupId_Use;
     private void Awake()
     {
         foreach (Transform cupSpawn in transform)
@@ -16,6 +17,14 @@ public class CupSpawnManager : MonoBehaviour
     }
     private void OnEnable()
     {
+        CupId_Use = GameControllManager.Ins.GetIDSkinCupUse();
+        foreach (SkinCupItemData cupSpawn in GameControllManager.Ins.cupData.skinDatas)
+        {
+            if (cupSpawn.id == CupId_Use)
+            {
+                cupPrefab = cupSpawn.buckMap;
+            }
+        }
         Observer.AddObserver(ListAction.SpawnObject, SpawnCups);
     }
     private void Start()

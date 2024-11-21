@@ -32,6 +32,7 @@ public class MainMenu_UI : UICanvas
         Observer.Notify(ListAction.SpawnPlayer);
         Observer.Notify(ListAction.NextLevel);
         Observer.Notify(ActionInGame.SpawnRoad);
+        Observer.Notify(ListAction.GetPrefabCupID);
     }
     public void ShopButton()
     {

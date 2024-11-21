@@ -20,7 +20,9 @@ public class GameControllManager : Singleton<GameControllManager>
     public int levelCurrent;
     public int coinCurrent;
     public int skinIdUse;
+    public int skinidCupUse;
     public SkinCharacterData characterData;
+    public SkinCupData cupData;
     protected override void Awake()
     {
         base.Awake();
@@ -33,24 +35,16 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         levelCurrent = getlevel();
         coinCurrent = getcoin();
+        skinIdUse = GetIDSkinUse();
+        skinidCupUse = GetIDSkinCupUse();
     }
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.V))
-        //{
-        //    for (int i = 0; i < characterData.skinDatas.Count; i++)
-        //    {
-        //        if (i == 0)
-        //        {
-        //            SetStatusBuySkin(characterData.skinDatas[0].NameCharacter, true);
-        //        }
-        //        else
-        //        {
-        //            SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
-        //        }
-        //    }
-        //    Debug.Log("Delete Key Skin");
-        //}
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            PlayerPrefs.DeleteAll();
+            Debug.Log("Delete All");
+        }
     }
 
 
@@ -97,8 +91,22 @@ public class GameControllManager : Singleton<GameControllManager>
                     SetStatusBuySkin(characterData.skinDatas[i].NameCharacter, false);
                 }
             }
+            for (int i= 0; i < cupData.skinDatas.Count; i++)
+            {
+                if (i == 0)
+                {
+                    SetStatusBuySkinCup(cupData.skinDatas[0].NameCup, true);
+                    SetIDSkinCupUse(0);
+                }
+                else
+                {
+                    SetStatusBuySkinCup(cupData.skinDatas[i].NameCup, false);
+                }
+            }
         }
     }
+
+    //Character Skin Data
     public void SetStatusBuySkin(string nameSkin, bool isBuy)
     {
         PlayerPrefs.SetInt(nameSkin + "Purchased", isBuy ? 1 : 0);
@@ -112,6 +120,7 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         return PlayerPrefs.GetInt("SkinID_Used");
     }
+
     public bool GetStatusBuySkin(string nameSkin)
     {
         return PlayerPrefs.GetInt(nameSkin + "Purchased", 0) == 1;
@@ -120,22 +129,37 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         return PlayerPrefs.GetInt(nameSkin + "Active", 0) == 1;
     }
-    public bool CheckBuy(string nameSkin)
+
+    //Cup Skin Data
+    public void SetStatusBuySkinCup(string nameSkin, bool isBuy)
+    {
+        PlayerPrefs.SetInt(nameSkin + "Purchased", isBuy ? 1 : 0);
+    }
+    public bool GetStatusBuySkinCup(string nameSkin)
     {
         return PlayerPrefs.GetInt(nameSkin + "Purchased", 0) == 1;
     }
-    public bool CheckUse(string nameSkin)
+    public void SetIDSkinCupUse(int skinID)
     {
-        return PlayerPrefs.GetInt(nameSkin + "Active", 0) == 1;
+        PlayerPrefs.SetInt("Skin_CupID_Used", skinID);
     }
-    public void SetSkinID(int id)
+    public int GetIDSkinCupUse()
     {
-        PlayerPrefs.SetInt("SkinId", id);
+        return PlayerPrefs.GetInt("Skin_CupID_Used");
     }
-    public int GetPlayerByID()
-    {
-        return PlayerPrefs.GetInt("SkinID");
-    }
+
+    //public bool CheckBuy(string nameSkin)
+    //{
+    //    return PlayerPrefs.GetInt(nameSkin + "Purchased", 0) == 1;
+    //}
+    //public void SetSkinID(int id)
+    //{
+    //    PlayerPrefs.SetInt("SkinId", id);
+    //}
+    //public int GetPlayerByID()
+    //{
+    //    return PlayerPrefs.GetInt("SkinID");
+    //}
     // coin
     public int getcoin()
     {

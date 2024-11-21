@@ -19,7 +19,9 @@ public enum ListAction
     SetAimmator,
     ChangeAnim,
     GameRun,
+    GetPrefabCupID,
     SpawnObject,
+    SpawnCupIns,
     FinishGame,
     Vibrate,
     IncreaseMoney,
@@ -35,6 +37,7 @@ public enum UiAction
 {
     DestroySkin,
     GetIdSkin,
+    GetIdSkinCup,
     ChangeTextCoin,
     StatusUsed,
     StatusBuy,
@@ -54,6 +57,7 @@ public class Const
 {
     //String player Anim
     public const string idleAnim = "Idle";
+    public const string walkAnim = "Walk";
     public const string runAnim = "Run";
     public const string victoryAnim = "Victory";
 

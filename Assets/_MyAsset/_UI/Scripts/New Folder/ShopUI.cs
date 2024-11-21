@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ShopUI : UICanvas
 {
+    public ListDownButton listDown;
+    public SpawnSkin cameraSkin;
     public ScrollRect content;
     public RectTransform[] viewPort;
     public Button backButton;
@@ -26,6 +28,8 @@ public class ShopUI : UICanvas
         content.content = viewPort[0];
         viewPort[0].gameObject.SetActive(true);
         viewPort[1].gameObject.SetActive(false);
+        listDown.downButtons[0].gameObject.SetActive(true);
+        listDown.downButtons[1].gameObject.SetActive(false);
         Observer.AddObserver(UiAction.ChangeTextCoin,ChangeTextCoin);
         coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
     }
@@ -81,7 +85,9 @@ public class ShopUI : UICanvas
             content.content = viewPort[0];
             viewPort[0].gameObject.SetActive(true);
             viewPort[1].gameObject.SetActive(false);
-            buttonManager.SetActive(false);
+            cameraSkin.SpawnCharacter();
+            listDown.downButtons[0].gameObject.SetActive(true);
+            listDown.downButtons[1].gameObject.SetActive(false);
         }
         return;
     }
@@ -94,10 +100,13 @@ public class ShopUI : UICanvas
             content.content = viewPort[1];
             viewPort[0].gameObject.SetActive(false);
             viewPort[1].gameObject.SetActive(true);
-            buttonManager.SetActive(false);
+            listDown.downButtons[0].gameObject.SetActive(false);
+            listDown.downButtons[1].gameObject.SetActive(true);
+            cameraSkin.SpawnCup();
             Observer.Notify(UiAction.DestroySkin);
             Observer.Notify(UiAction.SetSkinEnable);
         }
+        return;
     }
     private void OnDestroy()
     {

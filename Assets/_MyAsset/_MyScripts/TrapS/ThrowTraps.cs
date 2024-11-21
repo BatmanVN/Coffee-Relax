@@ -13,7 +13,19 @@ public class ThrowTraps : MonoBehaviour
     public PathType path_type;
     public float duration;
     private bool isThrowed;
+    public int CupId_Use;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        CupId_Use = GameControllManager.Ins.GetIDSkinCupUse();
+        foreach (SkinCupItemData cupSpawn in GameControllManager.Ins.cupData.skinDatas)
+        {
+            if (cupSpawn.id == CupId_Use)
+            {
+                fabrica_pref = cupSpawn.buckMap;
+            }
+        }
+    }
     void Start()
     {
         convert_transform_to_vectors();

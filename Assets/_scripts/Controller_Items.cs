@@ -11,18 +11,17 @@ public class Controller_Items : Singleton<Controller_Items>
     protected Vector3 velocity = Vector3.zero;
     //public int currentItemTotal, afterDecreaseitem;
     public float smooth_speed, correct_smooth;
-
+    public GameObject cupPrefabs;
+    public int cupId;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        Observer.AddObserver(ListAction.GetPrefabCupID, GetPrefabID);
+        Observer.AddObserver(ListAction.SpawnCupIns, SpawnCupInst);
+    }
     void Start()
     {
-        foreach (Transform child in transform)
-        {
-            if (child.GetComponent<CupGroup>())
-            {
-                list_item.Add(child);
-            }
-        }
-        //anim_brushes_position();
+
     }
 
     // Update is called once per frame
@@ -33,17 +32,38 @@ public class Controller_Items : Singleton<Controller_Items>
 
     void FixedUpdate()
     {
-        
-    }
 
+    }
+    public void GetPrefabID(object[] datas)
+    {
+        cupId = GameControllManager.Ins.GetIDSkinCupUse();
+        foreach (SkinCupItemData cup in GameControllManager.Ins.cupData.skinDatas)
+        {
+            if (cup.id == cupId)
+            {
+                cupPrefabs = cup.buckInst;
+            }
+        }
+    }
+    public void SpawnCupInst(object[] datas)
+    {
+        for (int i = 0; i < 26; i++)
+        {
+            GameObject cup = Instantiate(cupPrefabs, this.transform.position, this.transform.rotation);
+            cup.transform.SetParent(this.transform);
+            cup.transform.position = new Vector3(0, this.transform.position.y, this.transform.position.z + i);
+            list_item.Add(cup.transform);
+        }
+    }
     void anim_items_position()
     {
-            for (int i = 1; i < list_item.Count; i++)
-            {
-                Vector3 tmp_pos = list_item[i - 1].position;
-                tmp_pos.z = list_item[i].position.z;
-                list_item[i].position = Vector3.SmoothDamp(list_item[i].position, tmp_pos, ref velocity, smooth_speed + i / correct_smooth);
-            }
+        if (list_item.Count <= 0) return;
+        for (int i = 1; i < list_item.Count; i++)
+        {
+            Vector3 tmp_pos = list_item[i - 1].position;
+            tmp_pos.z = list_item[i].position.z;
+            list_item[i].position = Vector3.SmoothDamp(list_item[i].position, tmp_pos, ref velocity, smooth_speed + i / correct_smooth);
+        }
     }
 
     public void Increase_item()
@@ -65,6 +85,7 @@ public class Controller_Items : Singleton<Controller_Items>
     {
         if (count_items > 0)
         {
+            //list_item[count_items].gameObject.SetActive(false);
             list_item[count_items].gameObject.SetActive(false);
             count_items--;
         }
@@ -82,4 +103,9 @@ public class Controller_Items : Singleton<Controller_Items>
     //        list_item[i].DOMoveX(0f, .1f);
     //    }
     //}
+    private void OnDestroy()
+    {
+        Observer.RemoveObserver(ListAction.GetPrefabCupID, GetPrefabID);
+        Observer.RemoveObserver(ListAction.SpawnCupIns, SpawnCupInst);
+    }
 }
