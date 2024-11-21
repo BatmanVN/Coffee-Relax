@@ -28,7 +28,7 @@ public class InGame_UI : UICanvas
         Observer.AddObserver(ListAction.Vibrate,_vibrate);
         Observer.AddObserver(ListAction.IncreaseMoney, increase_money);
         txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
-        level = LevelRandomManager.Ins.levelIndex;
+        level = GameControllManager.Ins.getlevel() + 1;
     }
     private void Start()
     {
@@ -42,7 +42,7 @@ public class InGame_UI : UICanvas
     {
         Close(0);
         Time.timeScale = 1.0f;
-        UIManager.Ins.OpenUI<MainMenu_UI>();
+        UIManager.Ins.OpenUI<Loading>();
         //Observer.Notify(UiAction.SpawnModel);
         SceneManager.LoadSceneAsync(nameScene);
     }

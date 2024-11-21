@@ -28,11 +28,12 @@ public class MainMenu_UI : UICanvas
     public void PlayButton()
     {
         Close(0);
-        UIManager.Ins.OpenUI<Swipe_UI>();
+        UIManager.Ins.OpenUI<Loading>();
         Observer.Notify(ListAction.SpawnPlayer);
         Observer.Notify(ListAction.NextLevel);
         Observer.Notify(ActionInGame.SpawnRoad);
         Observer.Notify(ListAction.GetPrefabCupID);
+        Observer.Notify(UiAction.MenuLoading);
     }
     public void ShopButton()
     {

@@ -1,10 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Xml.Linq;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -34,11 +27,10 @@ public class Win_UI : UICanvas
     {
         GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
         Observer.Notify(ListAction.NextLevel);
-
         Observer.Notify(ActionInGame.DisableRoad);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Close(0);
-        UIManager.Ins.OpenUI<Swipe_UI>();
+        UIManager.Ins.OpenUI<Loading>();
+        Observer.Notify(UiAction.WinLoading);
     }
     public void show_multiplication(object[] datas)
     {

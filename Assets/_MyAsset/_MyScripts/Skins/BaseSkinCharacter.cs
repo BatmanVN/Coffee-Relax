@@ -39,6 +39,9 @@ public class BaseSkinCharacter : MonoBehaviour
         buttons.onClick?.AddListener(() => InsCharacter(skinId));
     }
 
+
+
+
     //Kiểm tra đang sử dụng skin nào, để hiển thị model skin đó
     protected void SetStatusUiSkin()
     {

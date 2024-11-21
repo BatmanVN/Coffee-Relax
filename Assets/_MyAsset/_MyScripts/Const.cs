@@ -44,7 +44,9 @@ public enum UiAction
     UpdateUsedObject,
     SpawnModel,
     SetSkinEnable,
-    GetCoinReward
+    GetCoinReward,
+    MenuLoading,
+    WinLoading
 }
 
 public enum ActionInGame
@@ -60,6 +62,7 @@ public class Const
     public const string walkAnim = "Walk";
     public const string runAnim = "Run";
     public const string victoryAnim = "Victory";
+    public const string byeAnim = "Bye";
 
     //String trap anim
     public const string throwTrapAnim = "Disable";

@@ -19,6 +19,9 @@ public class ViewCharacter : Singleton<ViewCharacter>
     [Header("Text Notify")]
     [SerializeField] public Text textNoti;
 
+
+    private float changeInterval = 3f;
+    private string[] animationStates = { Const.idleAnim, Const.victoryAnim, Const.byeAnim, Const.runAnim, Const.walkAnim };
     //public GameObject firstSpawn;
     protected override void Awake()
     {
@@ -46,9 +49,22 @@ public class ViewCharacter : Singleton<ViewCharacter>
 
     private void Start()
     {
-        
+        StartCoroutine(ChangeAnimationRoutine());
     }
+    private IEnumerator ChangeAnimationRoutine()
+    {
+        while (true)
+        {
 
+            string randomAnimation = animationStates[Random.Range(0, animationStates.Length)];
+
+
+            currentSkin.gameObject.GetComponent<Animator>().SetTrigger(randomAnimation);
+
+
+            yield return new WaitForSeconds(changeInterval);
+        }
+    }
     private void SetSkinID()
     {
         for (int i = 0; i < baseSkins.Count; i++)

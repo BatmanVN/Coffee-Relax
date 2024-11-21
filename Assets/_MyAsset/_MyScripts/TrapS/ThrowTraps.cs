@@ -22,7 +22,7 @@ public class ThrowTraps : MonoBehaviour
         {
             if (cupSpawn.id == CupId_Use)
             {
-                fabrica_pref = cupSpawn.buckMap;
+                fabrica_pref = cupSpawn.buckSell;
             }
         }
     }

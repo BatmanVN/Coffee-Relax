@@ -85,7 +85,6 @@ public class Controller_Items : Singleton<Controller_Items>
     {
         if (count_items > 0)
         {
-            //list_item[count_items].gameObject.SetActive(false);
             list_item[count_items].gameObject.SetActive(false);
             count_items--;
         }

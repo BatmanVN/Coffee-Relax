@@ -6,6 +6,8 @@ public class SpawnModel_Main : MonoBehaviour
 {
     public GameObject model;
     public int skinID;
+    private float changeInterval = 3f;
+    private string[] animationStates = { Const.idleAnim, Const.victoryAnim, Const.byeAnim,Const.runAnim,Const.walkAnim };
     private void OnEnable()
     {
         SpawnModel();
@@ -14,22 +16,36 @@ public class SpawnModel_Main : MonoBehaviour
     }
     private void Start()
     {
-        //SpawnModel();
+        
     }
     public void SpawnModel(/*object[] datas*/)
     {
         var listSkinDatas = GameControllManager.Ins.characterData.skinDatas;
+        skinID = GameControllManager.Ins.GetIDSkinUse();
         for (int i = 0; i < listSkinDatas.Count; i++)
         {
-            if (GameControllManager.Ins.GetStatusUseSkin(listSkinDatas[i].NameCharacter))
+            if (listSkinDatas[i].id == skinID)
             {
-                skinID = i;
                 model = Instantiate(listSkinDatas[skinID].character_pref, transform.position, transform.rotation);
                 model.transform.SetParent(transform);
+                StartCoroutine(ChangeAnimationRoutine());
             }
         }
     }
-    
+    private IEnumerator ChangeAnimationRoutine()
+    {
+        while (true)
+        {
+
+            string randomAnimation = animationStates[Random.Range(0, animationStates.Length)];
+
+
+            model.gameObject.GetComponent<Animator>().SetTrigger(randomAnimation);
+
+
+            yield return new WaitForSeconds(changeInterval);
+        }
+    }
     private void OnDisable()
     {
         if(model != null)
