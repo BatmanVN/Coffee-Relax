@@ -13,7 +13,7 @@ public class ViewCharacter : Singleton<ViewCharacter>
     public GameObject currentSkin;
     public BaseSkinCharacter currentSelect;
     [Header("Price")]
-    [SerializeField] public TextMeshProUGUI textPrice;
+    [SerializeField] public Text textPrice;
     [SerializeField] public GameObject useButton;
     [SerializeField] public GameObject buyButton;
     [Header("Text Notify")]

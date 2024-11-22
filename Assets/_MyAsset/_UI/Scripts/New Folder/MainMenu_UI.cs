@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class MainMenu_UI : UICanvas
 {
-    public Button shopButton;
-    public Button gachaButton;
-    public Button dailyButton;
-    public Button playButton;
+    //public List<Button> buttons;
     [Header("SkinData")]
     public SkinCharacterData skinDatas;
     private void Awake()
     {
-        
+        //foreach (Transform button in transform)
+        //{
+        //    buttons.Add(button.GetComponent<Button>());
+        //}
     }
     private void OnEnable()
     {
@@ -21,24 +21,6 @@ public class MainMenu_UI : UICanvas
     }
     private void Start()
     {
-
-        playButton.onClick?.AddListener(PlayButton);  
-        shopButton.onClick?.AddListener(ShopButton);
+        
     }
-    public void PlayButton()
-    {
-        Close(0);
-        UIManager.Ins.OpenUI<Loading>();
-        Observer.Notify(ListAction.SpawnPlayer);
-        Observer.Notify(ListAction.NextLevel);
-        Observer.Notify(ActionInGame.SpawnRoad);
-        Observer.Notify(ListAction.GetPrefabCupID);
-        Observer.Notify(UiAction.MenuLoading);
-    }
-    public void ShopButton()
-    {
-        Close(0);
-        UIManager.Ins.OpenUI<ShopUI>();
-    }
-
 }

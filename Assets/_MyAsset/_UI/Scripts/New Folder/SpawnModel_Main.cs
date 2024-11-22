@@ -8,11 +8,12 @@ public class SpawnModel_Main : MonoBehaviour
     public int skinID;
     private float changeInterval = 3f;
     private string[] animationStates = { Const.idleAnim, Const.thinkAnim, Const.byeAnim, Const.cuteAnim, Const.walkModelAnim, Const.reiAnim, Const.flyIdleAnim };
+
+    private Coroutine anim;
+
     private void OnEnable()
     {
         SpawnModel();
-        //Observer.AddObserver(UiAction.DestroyModel, DestroyModel);
-        //Observer.AddObserver(UiAction.SpawnModel, SpawnModel);
     }
     private void Start()
     {
@@ -28,10 +29,11 @@ public class SpawnModel_Main : MonoBehaviour
             {
                 model = Instantiate(listSkinDatas[skinID].character_pref, transform.position, transform.rotation);
                 model.transform.SetParent(transform);
-                StartCoroutine(ChangeAnimationRoutine());
+                anim = StartCoroutine(ChangeAnimationRoutine());
             }
         }
     }
+
     private IEnumerator ChangeAnimationRoutine()
     {
         while (true)
@@ -46,14 +48,15 @@ public class SpawnModel_Main : MonoBehaviour
             yield return new WaitForSeconds(changeInterval);
         }
     }
+
     private void OnDisable()
     {
+        StopCoroutine(anim);
         if(model != null)
             Destroy(model);
     }
     private void OnDestroy()
     {
-        //Observer.RemoveObserver(UiAction.DestroyModel, DestroyModel);
-        //Observer.RemoveObserver(UiAction.SpawnModel, SpawnModel);
+
     }
 }

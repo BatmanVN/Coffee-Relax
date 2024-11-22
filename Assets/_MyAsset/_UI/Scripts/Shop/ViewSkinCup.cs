@@ -13,7 +13,7 @@ public class ViewSkinCup : Singleton<ViewSkinCup>
     public GameObject currentSkin;
     public BaseSkinCup currentSelect;
     [Header("Price")]
-    [SerializeField] public TextMeshProUGUI textPrice;
+    [SerializeField] public Text textPrice;
     [SerializeField] public GameObject useButton;
     [SerializeField] public GameObject buyButton;
     [Header("Text Notify")]

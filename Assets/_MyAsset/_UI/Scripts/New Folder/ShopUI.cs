@@ -1,10 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ShopUI : UICanvas
 {
+    [Header("UI Elements")]
     public ListDownButton listDown;
     public SpawnSkin cameraSkin;
     public ScrollRect content;
@@ -12,104 +13,120 @@ public class ShopUI : UICanvas
     public Button backButton;
     public Toggle characterToggle;
     public Toggle cupToggle;
- 
+
+    [Header("Visual Elements")]
     public Text coinTextConner;
-    [SerializeField] Animator anim;
-    private string animName = "Character";
     public GameObject buttonManager;
+    public GameObject upEffect;
+
+    [Header("PanelTop")]
+    public GameObject[] buttonTop;
 
     private Coroutine effect;
-    public GameObject upEffect;
 
     private void OnEnable()
     {
-        ChangeAnim("Idle");
-        ChangeAnim("Charecter");
-        content.content = viewPort[0];
-        viewPort[0].gameObject.SetActive(true);
-        viewPort[1].gameObject.SetActive(false);
-        listDown.downButtons[0].gameObject.SetActive(true);
-        listDown.downButtons[1].gameObject.SetActive(false);
-        Observer.AddObserver(UiAction.ChangeTextCoin,ChangeTextCoin);
-        coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
+        // Đặt trạng thái mặc định
+        SetViewPort(0);
+        UpdateCoinText(GameControllManager.Ins?.getcoin() ?? 0);
+
+        // Đăng ký Observer
+        Observer.AddObserver(UiAction.ChangeTextCoin, ChangeTextCoin);
     }
+
     private void Start()
     {
-        ChangeAnim("Character");
+        // Thiết lập các sự kiện
         characterToggle.onValueChanged?.AddListener(CharacterButton);
         cupToggle.onValueChanged?.AddListener(CupButton);
         backButton.onClick?.AddListener(BackButton);
-        //buyButton.onClick?.AddListener(BuyButton);
-        //coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
+
     }
-    public void ChangeAnim(string animName)
+
+    private void OnDestroy()
     {
-        if (this.animName != animName)
-        {
-            anim.ResetTrigger(this.animName);
-            this.animName = animName;
-            anim.SetTrigger(this.animName);
-        }
+        // Gỡ Observer khi ShopUI bị hủy
+        Observer.RemoveObserver(UiAction.ChangeTextCoin, ChangeTextCoin);
     }
+
     public void ChangeTextCoin(object[] datas)
     {
-        if(datas == null ||datas.Length < 1 || !(datas[0] is int coin)) return;
+        if (datas != null && datas.Length > 0 && datas[0] is int coin)
+        {
+            UpdateCoinText(coin);
+        }
+    }
+
+    private void UpdateCoinText(int coin)
+    {
         coinTextConner.text = coin.ToString();
     }
+
     public void BuyButton()
     {
-        effect = StartCoroutine(TurnOffEffect());
+        StartEffectCoroutine();
     }
+
     public void UpEffect(bool active)
     {
-        upEffect.SetActive(active);
+        if (upEffect != null)
+            upEffect.SetActive(active);
     }
-    public IEnumerator TurnOffEffect()
+
+    private void StartEffectCoroutine()
+    {
+        if (effect != null)
+            StopCoroutine(effect);
+
+        effect = StartCoroutine(TurnOffEffect());
+    }
+
+    private IEnumerator TurnOffEffect()
     {
         yield return new WaitForSeconds(1);
         UpEffect(false);
-        StopCoroutine(effect);
     }
+
     public void BackButton()
     {
         Close(0);
-        UIManager.Ins.OpenUI<MainMenu_UI>();
-        
+        UIManager.Ins?.OpenUI<MainMenu_UI>();
     }
+
     public void CharacterButton(bool active)
     {
         if (active)
         {
-            ChangeAnim("Idle");
-            ChangeAnim("Character");
-            content.content = viewPort[0];
-            viewPort[0].gameObject.SetActive(true);
-            viewPort[1].gameObject.SetActive(false);
-            cameraSkin.SpawnCharacter();
-            listDown.downButtons[0].gameObject.SetActive(true);
-            listDown.downButtons[1].gameObject.SetActive(false);
+            SetViewPort(0);
+            cameraSkin?.SpawnCharacter();
         }
-        return;
     }
+
     public void CupButton(bool active)
     {
         if (active)
         {
-            ChangeAnim("Idle");
-            ChangeAnim("Cup");
-            content.content = viewPort[1];
-            viewPort[0].gameObject.SetActive(false);
-            viewPort[1].gameObject.SetActive(true);
-            listDown.downButtons[0].gameObject.SetActive(false);
-            listDown.downButtons[1].gameObject.SetActive(true);
-            cameraSkin.SpawnCup();
+            SetViewPort(1);
+            cameraSkin?.SpawnCup();
             Observer.Notify(UiAction.DestroySkin);
             Observer.Notify(UiAction.SetSkinEnable);
         }
-        return;
     }
-    private void OnDestroy()
+
+    private void SetViewPort(int index)
     {
-        Observer.RemoveObserver(UiAction.ChangeTextCoin,ChangeTextCoin);
+        if (index < 0 || index >= viewPort.Length) return;
+
+        for (int i = 0; i < viewPort.Length; i++)
+        {
+            bool isActive = i == index;
+            viewPort[i]?.gameObject.SetActive(isActive);
+            if (listDown?.downButtons != null && i < listDown.downButtons.Count)
+                listDown.downButtons[i]?.gameObject.SetActive(isActive);
+            buttonTop[i]?.SetActive(isActive);
+        }
+
+        if (content != null)
+            content.content = viewPort[index];
     }
 }
