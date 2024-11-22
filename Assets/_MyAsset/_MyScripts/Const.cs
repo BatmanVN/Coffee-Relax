@@ -14,6 +14,8 @@ public enum Item_type
     //LidCream
 }
 
+
+
 public enum ListAction
 {
     SetAimmator,
@@ -25,6 +27,7 @@ public enum ListAction
     FinishGame,
     Vibrate,
     IncreaseMoney,
+    DecreaseMoney,
     SetUpCupTypes,
     ShowIce7,
     SpawnPlayer,
@@ -52,7 +55,9 @@ public enum UiAction
 public enum ActionInGame
 {
     SpawnRoad,
-    DisableRoad
+    DisableRoad,
+    PlayerFly,
+    MoneyTower
 }
 
 public class Const
@@ -61,8 +66,14 @@ public class Const
     public const string idleAnim = "Idle";
     public const string walkAnim = "Walk";
     public const string runAnim = "Run";
+    public const string flyAnim = "Fly";
     public const string victoryAnim = "Victory";
     public const string byeAnim = "Bye";
+    public const string walkModelAnim = "WalkModel";
+    public const string flyIdleAnim = "FlyIdle";
+    public const string reiAnim = "Rei";
+    public const string thinkAnim = "Think"; 
+    public const string cuteAnim = "Cute";
 
     //String trap anim
     public const string throwTrapAnim = "Disable";

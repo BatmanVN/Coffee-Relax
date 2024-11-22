@@ -7,7 +7,7 @@ public class SpawnModel_Main : MonoBehaviour
     public GameObject model;
     public int skinID;
     private float changeInterval = 3f;
-    private string[] animationStates = { Const.idleAnim, Const.victoryAnim, Const.byeAnim,Const.runAnim,Const.walkAnim };
+    private string[] animationStates = { Const.idleAnim, Const.thinkAnim, Const.byeAnim, Const.cuteAnim, Const.walkModelAnim, Const.reiAnim, Const.flyIdleAnim };
     private void OnEnable()
     {
         SpawnModel();

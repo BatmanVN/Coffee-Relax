@@ -21,7 +21,7 @@ public class ViewCharacter : Singleton<ViewCharacter>
 
 
     private float changeInterval = 3f;
-    private string[] animationStates = { Const.idleAnim, Const.victoryAnim, Const.byeAnim, Const.runAnim, Const.walkAnim };
+    private string[] animationStates = { Const.idleAnim, Const.thinkAnim, Const.byeAnim, Const.cuteAnim, Const.walkModelAnim,Const.reiAnim,Const.flyIdleAnim };
     //public GameObject firstSpawn;
     protected override void Awake()
     {

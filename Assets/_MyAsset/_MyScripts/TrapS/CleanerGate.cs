@@ -12,6 +12,7 @@ public class CleanerGate : MonoBehaviour
 
             CupGroup cupGroup = cleanGate.GetComponent<CupGroup>();
             if(cupGroup == null) return;
+            cupGroup.item_Type = Item_type.Cup;
             foreach (CupType cupType in cupGroup.cupTypes)
             {
                 cupType.gameObject.SetActive(false);

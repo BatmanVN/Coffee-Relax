@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class CharacterController : MonoBehaviour
 {
-    [SerializeField] private Animator anim;
+    public Animator anim;
     [SerializeField] private float sensitivity;
     protected Rigidbody rb;
     public bool game_run, is_finish;
@@ -13,7 +13,7 @@ public class CharacterController : MonoBehaviour
     protected Vector2 firstClick, currentHandPoint, pressSlowMotion;
     protected Vector3 mvm;
     public float time;
-
+    public bool isFly;
     public string animName = Const.runAnim;
     private void OnEnable()
     {
@@ -22,6 +22,7 @@ public class CharacterController : MonoBehaviour
         Observer.AddObserver(ListAction.GameRun, StatusGame);
         Observer.AddObserver(ListAction.FinishGame, RotateWin);
         Observer.AddObserver(ListAction.FinishMove, move_player_to_center_finish_level);
+        Observer.AddObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
     }
     private void Start()
     {
@@ -38,43 +39,6 @@ public class CharacterController : MonoBehaviour
     {
         player_movements2();
     }
-    protected void player_movements1()
-    {
-        if (game_run)
-        {
-            // Player move forward
-            transform.Translate(transform.forward * speed_player * Time.deltaTime);
-
-            // Player move right & left
-            if (Input.GetMouseButtonDown(0))
-            {
-                firstClick = Input.mousePosition;
-            }
-
-            if (Input.GetMouseButton(0))
-            {
-                currentHandPoint = Input.mousePosition;
-
-                Vector3 tmp = transform.position;
-
-                // Tính toán độ chênh lệch x
-                float xdiff = (currentHandPoint.x - firstClick.x) * Time.smoothDeltaTime * horizontal_speed * sensitivity;
-
-                //tmp.x += xdiff;
-                tmp.x = Mathf.Lerp(tmp.x, tmp.x + xdiff, Time.deltaTime * horizontal_speed);
-                tmp.x = Mathf.Clamp(tmp.x, -3f, 3f); // Giảm khoảng giới hạn nếu cần
-                transform.position = tmp;
-
-
-                firstClick = currentHandPoint;
-            }
-
-            if (Input.GetMouseButtonUp(0))
-            {
-                mvm = Vector3.zero;
-            }
-        }
-    }
 
     protected void player_movements2()
     {
@@ -83,7 +47,7 @@ public class CharacterController : MonoBehaviour
             // Player move forward
             transform.Translate(transform.forward * speed_player * Time.deltaTime);
 
-            if (!is_finish)
+            if (!is_finish && !isFly)
             {
                 // Player move right & left
                 if (Input.GetMouseButtonDown(0))
@@ -120,11 +84,14 @@ public class CharacterController : MonoBehaviour
 
     public void RotateWin(object[] datas)
     {
-        transform.DORotate(new Vector3(0, transform.eulerAngles.y + 180, 0), 0.1f).SetEase(Ease.Linear)
-            .OnComplete(() =>
-        {
-            anim.SetTrigger(Const.victoryAnim);
-        });
+        //transform.DORotate(new Vector3(0, transform.eulerAngles.y + 180, 0), 0.1f).SetEase(Ease.Linear)
+        //    .OnComplete(() =>
+        //{
+        transform.SetParent(MoneyTower.inst.gameObject.transform);
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
+        anim.SetTrigger(Const.flyIdleAnim);
+        Observer.Notify(ActionInGame.MoneyTower, anim);
+        //});
         speed_player = 0f;
     }
 
@@ -153,6 +120,40 @@ public class CharacterController : MonoBehaviour
         transform.DOKill();
         transform.DOLocalMoveX(-.2f, .1f);
     }
+
+    public void Move_player_to_center_fly(object[] datas)
+    {
+        if (datas == null || datas.Length < 4) return;
+
+        // Khởi tạo các biến
+        //Vector3[] path = null;
+        float duration = 0f;
+        PathMode path_mode = PathMode.Full3D;
+        PathType path_type = PathType.CatmullRom;
+
+        // Kiểm tra và gán giá trị từ mảng datas
+        if (!(datas[0] is Vector3[] paths)) return;
+        if (datas[1] is float dur) duration = dur;
+        if (datas[2] is PathMode mode) path_mode = mode;
+        if (datas[3] is PathType type) path_type = type;
+
+        // Nếu bất kỳ biến nào không được gán đúng, dừng lại
+        if (paths == null || duration <= 0f) return;
+
+        // Logic di chuyển
+        isFly = true;
+        anim.SetTrigger(Const.flyAnim);
+        //speed_player = 5f;
+        transform.DOKill();
+        transform.DOPath(paths, duration, path_type, path_mode, 10, Color.red)
+           .OnComplete(() =>
+           {
+               anim.SetTrigger(Const.runAnim);
+               isFly = false;
+           });
+        Debug.Log("Fly");
+    }
+
     public void StatusGame(object[] datas)
     {
         if (datas == null || datas.Length < 1 || !(datas[0] is bool active)) return;
@@ -165,5 +166,6 @@ public class CharacterController : MonoBehaviour
         Observer.RemoveObserver(ListAction.ChangeAnim, ChangeStatusAnim);
         Observer.RemoveObserver(ListAction.GameRun, StatusGame);
         Observer.RemoveObserver(ListAction.GameRun, RotateWin);
+        Observer.RemoveObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
     }
 }

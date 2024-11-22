@@ -15,6 +15,7 @@ public class InGame_UI : UICanvas
 
     public GameObject pauseBar;
     public GameObject upEffect;
+    public GameObject downEffect;
     public string nameScene;
     private Coroutine effect;
 
@@ -27,6 +28,7 @@ public class InGame_UI : UICanvas
     {
         Observer.AddObserver(ListAction.Vibrate,_vibrate);
         Observer.AddObserver(ListAction.IncreaseMoney, increase_money);
+        Observer.AddObserver(ListAction.DecreaseMoney, Decrease_money);
         txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
         level = GameControllManager.Ins.getlevel() + 1;
     }
@@ -67,18 +69,40 @@ public class InGame_UI : UICanvas
     {
         upEffect.SetActive(active);
     }
+    public void DownEffect(bool active)
+    {
+        downEffect.SetActive(active);
+    }
     public void increase_money(object[] datas)
     {
         if (datas == null || datas.Length < 1 || !(datas[0] is int nbr)) return;
         GameControllManager.Ins.setcoin(GameControllManager.Ins.getcoin() + nbr);
         txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
+        txt_mmoney.color = Color.yellow;
         UpEffect(true);
-        effect = StartCoroutine(TurnOffEffect());
+        effect = StartCoroutine(TurnOffUpEffect());
     }
-    public IEnumerator TurnOffEffect()
+
+    public void Decrease_money(object[] datas)
+    {
+        if (datas == null || datas.Length < 1 || !(datas[0] is int nbr)) return;
+        GameControllManager.Ins.setcoin(GameControllManager.Ins.getcoin() - nbr);
+        txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
+        txt_mmoney.color = Color.red;
+        Debug.Log(GameControllManager.Ins.getcoin());
+        DownEffect(true);
+        effect = StartCoroutine(TurnOffDownEffect());
+    }
+    public IEnumerator TurnOffUpEffect()
     {
         yield return new WaitForSeconds(1);
         UpEffect(false);
+        StopCoroutine(effect);
+    }
+    public IEnumerator TurnOffDownEffect()
+    {
+        yield return new WaitForSeconds(1);
+        DownEffect(false);
         StopCoroutine(effect);
     }
     public void _vibrate(object[] datas)
@@ -89,5 +113,6 @@ public class InGame_UI : UICanvas
     {
         Observer.RemoveObserver(ListAction.Vibrate, _vibrate);
         Observer.RemoveObserver(ListAction.IncreaseMoney, increase_money);
+        Observer.RemoveObserver(ListAction.DecreaseMoney,Decrease_money);
     }
 }

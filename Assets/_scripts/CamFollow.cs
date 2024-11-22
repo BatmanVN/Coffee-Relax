@@ -2,7 +2,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class CamFollow : MonoBehaviour
+public class CamFollow : Singleton<CamFollow>
 {
     public Transform target; // Target to follow
     public Vector3 targetLastPos, ofsset;

@@ -94,14 +94,6 @@ public class Controller_Items : Singleton<Controller_Items>
     {
         return total_items;
     }
-
-    //public void move_all_to_center_finish_level()
-    //{
-    //    for (int i = 0; i < list_item.Count; i++)
-    //    {
-    //        list_item[i].DOMoveX(0f, .1f);
-    //    }
-    //}
     private void OnDestroy()
     {
         Observer.RemoveObserver(ListAction.GetPrefabCupID, GetPrefabID);
