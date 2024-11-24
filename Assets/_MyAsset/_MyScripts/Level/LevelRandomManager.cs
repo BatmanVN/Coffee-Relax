@@ -37,15 +37,16 @@ public class LevelRandomManager : Singleton<LevelRandomManager>
     protected void SelectLevel(object[] datas)
     {
         levelIndex = GameControllManager.Ins.getlevel() + 1;
+        int totalLevel = listLevel.Count + 1;
         if (levelIndex >= listLevel.Count + 1)
         {
             levelIndex = Random.Range(1, listLevel.Count + 1);
-            Debug.Log("level > 10");
+            Debug.Log("level > " + totalLevel);
         }
         else
         {
             levelIndex = GameControllManager.Ins.getlevel() + 1;
-            Debug.Log("level < 10");
+            Debug.Log("level < " + totalLevel);
         }
         GameObject level = Instantiate(listLevel[levelIndex - 1], spawnLevels[levelIndex - 1].transform.position, spawnLevels[levelIndex - 1].transform.rotation);
         level.transform.SetParent(spawnLevels[levelIndex - 1].transform);

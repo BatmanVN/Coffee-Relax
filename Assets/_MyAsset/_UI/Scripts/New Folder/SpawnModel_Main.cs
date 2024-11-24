@@ -46,7 +46,7 @@ public class SpawnModel_Main : MonoBehaviour
         isTouch = true;
         turnOff = StartCoroutine(TurnOffTouch());
     }
-    IEnumerator TurnOffTouch()
+    private IEnumerator TurnOffTouch()
     {
         yield return new WaitForSeconds(timeTouch);
         isTouch = false;
