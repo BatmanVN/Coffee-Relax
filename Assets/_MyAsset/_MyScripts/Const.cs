@@ -74,6 +74,7 @@ public class Const
     public const string reiAnim = "Rei";
     public const string thinkAnim = "Think"; 
     public const string cuteAnim = "Cute";
+    public const string angryAnim = "Angry";
 
     //String trap anim
     public const string throwTrapAnim = "Disable";

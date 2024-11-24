@@ -121,7 +121,7 @@ public class ShopUI : UICanvas
         {
             bool isActive = i == index;
             viewPort[i]?.gameObject.SetActive(isActive);
-            if (listDown?.downButtons != null && i < listDown.downButtons.Count)
+            if (listDown?.downButtons != null)
                 listDown.downButtons[i]?.gameObject.SetActive(isActive);
             buttonTop[i]?.SetActive(isActive);
         }

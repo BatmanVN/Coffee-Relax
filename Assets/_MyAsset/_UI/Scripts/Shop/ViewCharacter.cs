@@ -20,8 +20,7 @@ public class ViewCharacter : Singleton<ViewCharacter>
     [SerializeField] public Text textNoti;
 
 
-    private float changeInterval = 3f;
-    private string[] animationStates = { Const.idleAnim, Const.thinkAnim, Const.byeAnim, Const.cuteAnim, Const.walkModelAnim,Const.reiAnim,Const.flyIdleAnim };
+
     //public GameObject firstSpawn;
     protected override void Awake()
     {
@@ -49,21 +48,7 @@ public class ViewCharacter : Singleton<ViewCharacter>
 
     private void Start()
     {
-        StartCoroutine(ChangeAnimationRoutine());
-    }
-    private IEnumerator ChangeAnimationRoutine()
-    {
-        while (true)
-        {
-
-            string randomAnimation = animationStates[Random.Range(0, animationStates.Length)];
-
-
-            currentSkin.gameObject.GetComponent<Animator>().SetTrigger(randomAnimation);
-
-
-            yield return new WaitForSeconds(changeInterval);
-        }
+        
     }
     private void SetSkinID()
     {
