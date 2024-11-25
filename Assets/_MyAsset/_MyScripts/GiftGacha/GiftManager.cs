@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GiftManager : MonoBehaviour
+public class GiftManager : Singleton<GiftManager>
 {
-    [SerializeField] private List<Gift> gifts = new List<Gift>();
-    //[SerializeField] private RewardBar showReward;
-    //[SerializeField] private GameObject wheel;
-    //[SerializeField] private float angle;
+    [field: SerializeField] public List<BaseGift> gifts { get; set; }
+
+    private void OnEnable()
+    {
+        foreach (Transform gift in transform)
+        {
+            gifts.Add(gift.GetComponent<BaseGift>());
+        }
+    }
 }

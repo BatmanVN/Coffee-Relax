@@ -3,19 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum GameState
-{
-    MainMenu,
-    GamePlay,
-    Setting,
-    Win,
-    Lose,
-}
 public class GameControllManager : Singleton<GameControllManager>
 {
-
-    //public GameObject[] levels;
-    private static GameState gameState = GameState.MainMenu;
 
     public int levelCurrent;
     public int coinCurrent;
@@ -28,7 +17,7 @@ public class GameControllManager : Singleton<GameControllManager>
         base.Awake();
         Input.multiTouchEnabled = true;
         onstartfirsttime();
-        ChangeState(GameState.MainMenu);
+        //ChangeState(GameState.MainMenu);
         UIManager.Ins.OpenUI<MainMenu_UI>();
     }
     void Start()
@@ -147,19 +136,6 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         return PlayerPrefs.GetInt("Skin_CupID_Used");
     }
-
-    //public bool CheckBuy(string nameSkin)
-    //{
-    //    return PlayerPrefs.GetInt(nameSkin + "Purchased", 0) == 1;
-    //}
-    //public void SetSkinID(int id)
-    //{
-    //    PlayerPrefs.SetInt("SkinId", id);
-    //}
-    //public int GetPlayerByID()
-    //{
-    //    return PlayerPrefs.GetInt("SkinID");
-    //}
     // coin
     public int getcoin()
     {
@@ -168,14 +144,5 @@ public class GameControllManager : Singleton<GameControllManager>
     public void setcoin(int nbr)
     {
         PlayerPrefs.SetInt("coin", nbr);
-    }
-    public static void ChangeState(GameState state)
-    {
-        gameState = state;
-    }
-
-    public static bool IsState(GameState state)
-    {
-        return gameState == state;
     }
 }
