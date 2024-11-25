@@ -11,6 +11,8 @@ public class CupGroup : MonoBehaviour
     public float time;
     public List<CupType> cupTypes;
     public Item_type item_Type;
+    public Animator anim;
+    private void OnValidate() => anim = GetComponent<Animator>();
     private void OnEnable()
     {
         Observer.AddObserver(ListAction.SetUpCupTypes, SetActiveObjects);

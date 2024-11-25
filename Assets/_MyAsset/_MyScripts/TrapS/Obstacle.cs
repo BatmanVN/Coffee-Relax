@@ -13,7 +13,20 @@ public class Obstacle : MonoBehaviour
     public GameObject smoke_pref;
     public float power;
     public int countDrop;
+    public int CupId_Use;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        CupId_Use = GameControllManager.Ins.GetIDSkinCupUse();
+        foreach (SkinCupItemData cupSpawn in GameControllManager.Ins.cupData.skinDatas)
+        {
+            if (cupSpawn.id == CupId_Use)
+            {
+                item_pref = cupSpawn.buckMap;
+            }
+        }
+    }
+
     void Start()
     {
         transform.DOLocalMove(pos, durations).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);

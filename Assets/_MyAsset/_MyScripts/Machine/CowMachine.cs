@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CowMachine : BaseMachine
 {
+    private Coroutine turnOff;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(Const.cupTag))
@@ -17,5 +18,16 @@ public class CowMachine : BaseMachine
                 cupGroup.animate_group_item();
             }
         }
+        if (other.CompareTag(Const.playerTag))
+        {
+            turnOff = StartCoroutine(TurnOff());
+            Debug.Log("IGNORE");
+        }
+    }
+    IEnumerator TurnOff()
+    {
+        yield return new WaitForSeconds(time);
+        machine.SetActive(false);
+        StopCoroutine(turnOff);
     }
 }

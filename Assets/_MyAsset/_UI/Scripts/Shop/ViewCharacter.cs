@@ -20,8 +20,6 @@ public class ViewCharacter : Singleton<ViewCharacter>
     [SerializeField] public Text textNoti;
 
 
-
-    //public GameObject firstSpawn;
     protected override void Awake()
     {
         base.Awake();

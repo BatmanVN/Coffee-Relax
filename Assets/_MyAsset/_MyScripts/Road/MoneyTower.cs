@@ -7,6 +7,8 @@ public class MoneyTower : MonoBehaviour
 {
     public static MoneyTower inst;
     public ListPosFinish posFinish;
+    public Transform posPlayer;
+
     private void Awake()
     {
         if (inst != null && inst != this)
@@ -33,12 +35,19 @@ public class MoneyTower : MonoBehaviour
         int targetIndex = Mathf.Clamp(Controller_Items.Ins.total_items, 0, posFinish.listPos.Count - 1);
         float targetY = posFinish.listPos[targetIndex].transform.position.y;
 
-        transform.DOLocalMoveY(targetY, 3f)
+        transform.DOLocalMoveY(targetY, 8f)
                     .SetEase(Ease.OutExpo) // Hiệu ứng easing "tăng nhanh, giảm dần"
                     .OnComplete(() =>
                     {
-                        CamFollow.Ins.ofsset = new Vector3(3.8f, 9f, -8f);
-                        anim.SetTrigger(Const.victoryAnim);
+                        CamFollow.Ins.ofsset = new Vector3(3.8f, 9.5f, -4f);
+                        if (Controller_Items.Ins.total_items > 1)
+                        {
+                            anim.SetTrigger(Const.victoryAnim);
+                        }
+                        if (Controller_Items.Ins.total_items <= 1)
+                        {
+                            anim.SetTrigger(Const.cryAnim);
+                        }
                     });
     }
     private void OnDestroy()

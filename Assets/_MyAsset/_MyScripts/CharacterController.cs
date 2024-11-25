@@ -15,6 +15,9 @@ public class CharacterController : MonoBehaviour
     public float time;
     public bool isFly;
     public string animName = Const.runAnim;
+
+    private Coroutine money;
+
     private void OnEnable()
     {
         Observer.AddObserver(ListAction.SetAimmator, SetAnimator);
@@ -46,7 +49,6 @@ public class CharacterController : MonoBehaviour
         {
             // Player move forward
             transform.Translate(transform.forward * speed_player * Time.deltaTime);
-
             if (!is_finish && !isFly)
             {
                 // Player move right & left
@@ -54,26 +56,20 @@ public class CharacterController : MonoBehaviour
                 {
                     firstClick = Input.mousePosition;
                 }
-
                 if (Input.GetMouseButton(0))
                 {
                     currentHandPoint = Input.mousePosition;
-
                     Vector3 targetX = transform.position;
                     // Tính toán độ chênh lệch x
                     float xdiff = (currentHandPoint.x - firstClick.x) * Time.smoothDeltaTime * horizontal_speed * sensitivity;
-
                     // Tính toán vị trí mới
                     targetX.x += xdiff;
                     targetX.x = Mathf.Clamp(targetX.x, -3f, 3f); // Giới hạn phạm vi di chuyển
-
                     // Sử dụng DoTween để di chuyển mượt mà
                     /*transform.DOKill();*/ // Dừng tất cả tween trước đó nếu có
                     transform.DOLocalMoveX(targetX.x, time);/*.SetEase(Ease.InOutQuad);*/ // Di chuyển nhân vật đến vị trí targetX trong 0.2 giây
-
                     firstClick = currentHandPoint; // Cập nhật vị trí nhấn chuột
                 }
-
                 if (Input.GetMouseButtonUp(0))
                 {
                     mvm = Vector3.zero;
@@ -84,15 +80,19 @@ public class CharacterController : MonoBehaviour
 
     public void RotateWin(object[] datas)
     {
-        //transform.DORotate(new Vector3(0, transform.eulerAngles.y + 180, 0), 0.1f).SetEase(Ease.Linear)
-        //    .OnComplete(() =>
-        //{
         transform.SetParent(MoneyTower.inst.gameObject.transform);
+        transform.position = MoneyTower.inst.posPlayer.transform.position;
         transform.localRotation = Quaternion.Euler(0, 0, 0);
-        anim.SetTrigger(Const.flyIdleAnim);
-        Observer.Notify(ActionInGame.MoneyTower, anim);
-        //});
+        anim.SetTrigger(Const.cuteAnim);
+        money = StartCoroutine(MoneyUp());
         speed_player = 0f;
+    }
+
+    private IEnumerator MoneyUp()
+    {
+        yield return new WaitForSeconds(1f);
+        Observer.Notify(ActionInGame.MoneyTower, anim);
+        StopCoroutine(money);
     }
 
     public void SetAnimator(object[] datas)
@@ -126,7 +126,6 @@ public class CharacterController : MonoBehaviour
         if (datas == null || datas.Length < 4) return;
 
         // Khởi tạo các biến
-        //Vector3[] path = null;
         float duration = 0f;
         PathMode path_mode = PathMode.Full3D;
         PathType path_type = PathType.CatmullRom;

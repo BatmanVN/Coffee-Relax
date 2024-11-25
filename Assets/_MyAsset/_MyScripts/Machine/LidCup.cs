@@ -1,11 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LidCup : MonoBehaviour
 {
     public Item_type type;
-    //public Material dfMaterial;
+    public GameObject machine;
+    private Coroutine turnOff;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(Const.cupTag))
@@ -32,5 +34,16 @@ public class LidCup : MonoBehaviour
                 }
             }
         }
+        if (other.CompareTag(Const.playerTag))
+        {
+            turnOff = StartCoroutine(TurnOff());
+            Debug.Log("IGNORE");
+        }
+    }
+    IEnumerator TurnOff()
+    {
+        yield return new WaitForSeconds(0.3f);
+        machine.SetActive(false);
+        StopCoroutine(turnOff);
     }
 }

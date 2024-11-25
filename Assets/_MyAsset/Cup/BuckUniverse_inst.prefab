@@ -250,6 +250,7 @@ MonoBehaviour:
   time: 0.15
   cupTypes: []
   item_Type: 0
+  anim: {fileID: 2574532726578316315}
 --- !u!64 &781859954555915608
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -285,7 +286,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8b5d1a1c08cc4284e85589f63532a773, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

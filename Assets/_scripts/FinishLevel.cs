@@ -28,7 +28,7 @@ public class FinishLevel : Singleton<FinishLevel>
             showWin = StartCoroutine(show_win_panel());
 
             Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
-            Observer.Notify(ListAction.EndRoad,true);
+
         }
         if (finish.CompareTag(Const.cupTag))
         {
@@ -45,11 +45,11 @@ public class FinishLevel : Singleton<FinishLevel>
                         Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupType.money);
                     }
-                    if (cupType.money <= 0 || Controller_Items.Ins.count_items <= 0)
-                    {
-                        Observer.Notify(ListAction.DecreaseMoney, -50);
-                        Debug.Log("decrese Money");
-                    }
+                }
+                if (br.item_Type == Item_type.Cup)
+                {
+                    Observer.Notify(ListAction.DecreaseMoney, -50);
+                    Debug.Log("decrese Money");
                 }
             }
         }
@@ -58,7 +58,7 @@ public class FinishLevel : Singleton<FinishLevel>
 
     IEnumerator show_win_panel()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(15f);
 
         UIManager.Ins.OpenUI<Win_UI>();
         UIManager.Ins.CloseUI<InGame_UI>();

@@ -20,6 +20,10 @@ public class CamFollow : Singleton<CamFollow>
     {
         
     }
+    void LateUpdate()
+    {
+        transform.position = Vector3.Lerp(transform.position, ofsset, Time.deltaTime * speed_cam);
+    }
 
     void Update()
     {
@@ -42,10 +46,6 @@ public class CamFollow : Singleton<CamFollow>
         target = player;
         if (target != null)
         {
-            //ofsset = transform.position - target.position;
-
-            //Vector3 distance = target.position + ofsset;
-
             tween = transform.DOMove(ofsset, speed_cam).SetEase(ease).SetAutoKill(false);
 
             is_active = true;

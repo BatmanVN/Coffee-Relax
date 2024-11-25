@@ -75,6 +75,7 @@ public class Const
     public const string thinkAnim = "Think"; 
     public const string cuteAnim = "Cute";
     public const string angryAnim = "Angry";
+    public const string cryAnim = "Cry";
 
     //String trap anim
     public const string throwTrapAnim = "Disable";
@@ -86,4 +87,8 @@ public class Const
     public const string groundTag = "Ground";
     public const string bonusStage = "Bonus Stage";
     public const string thornTag = "ThornObstacle";
+
+    //Layer Camera
+    public const string canSee = "Obstacle";
+    public const string cantSee = "IgnoreCamera";
 }

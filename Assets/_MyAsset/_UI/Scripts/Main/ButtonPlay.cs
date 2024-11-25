@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ButtonPlay : MonoBehaviour
+public class ButtonPlay : MonoBehaviour, IPointerDownHandler
 {
     public Button playButton;
 
-    void Start()
+    //void Start()
+    //{
+    //    playButton.onClick?.AddListener(PlayButton);
+    //}
+    public void OnPointerDown(PointerEventData eventData)
     {
-        playButton.onClick?.AddListener(PlayButton);
+        PlayButton();
     }
-
     public void PlayButton()
     {
         UIManager.Ins.CloseAll();

@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class BaseMachine : MonoBehaviour
 {
+    public GameObject machine;
     public Item_type machineType;
+    public float time = 0.3f;
 }

@@ -7,7 +7,7 @@ public class SpawnModel_Main : MonoBehaviour
 {
     public GameObject model;
     public int skinID;
-    private float changeInterval = 3f;
+    private float changeInterval = 5f;
     private string[] animationStates = { Const.idleAnim, Const.thinkAnim, Const.byeAnim, Const.cuteAnim, Const.walkModelAnim, Const.reiAnim, Const.flyIdleAnim };
 
     public Button touchCharacter;
@@ -34,6 +34,7 @@ public class SpawnModel_Main : MonoBehaviour
             {
                 model = Instantiate(listSkinDatas[skinID].character_pref, transform.position, transform.rotation);
                 model.transform.SetParent(transform);
+                model.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
                 anim = StartCoroutine(ChangeAnimationRoutine());
             }
         }
@@ -56,6 +57,9 @@ public class SpawnModel_Main : MonoBehaviour
 
     private IEnumerator ChangeAnimationRoutine()
     {
+        model.GetComponent<Animator>().SetTrigger(Const.byeAnim);
+        yield return new WaitForSeconds(changeInterval);
+
         while (!isTouch)
         {
             string randomAnimation = animationStates[Random.Range(0, animationStates.Length)];

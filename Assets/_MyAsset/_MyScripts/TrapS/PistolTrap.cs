@@ -14,7 +14,7 @@ public class PistolTrap : MonoBehaviour
     public float duration;
     private bool isThrowed;
     public int CupId_Use;
-    // Start is called before the first frame update
+
     private void OnEnable()
     {
         CupId_Use = GameControllManager.Ins.GetIDSkinCupUse();

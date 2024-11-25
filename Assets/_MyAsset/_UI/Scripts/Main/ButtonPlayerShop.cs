@@ -8,7 +8,7 @@ public class ButtonPlayerShop : MonoBehaviour
     public Button touchCharacter;
     public ViewCharacter player;
     public Animator spawnPoint;
-    private float changeInterval = 3f;
+    private float changeInterval = 5f;
     private string[] animationStates = { Const.idleAnim, Const.thinkAnim, Const.byeAnim, Const.cuteAnim, Const.walkModelAnim, Const.reiAnim, Const.flyIdleAnim };
     public RectTransform spawnRect;
     public float timeTouch;
@@ -29,10 +29,12 @@ public class ButtonPlayerShop : MonoBehaviour
     }
     private IEnumerator ChangeAnimationRoutine()
     {
+        player.currentSkin.GetComponent<Animator>().SetTrigger(Const.byeAnim);
+        yield return new WaitForSeconds(changeInterval);
         while (!isTouch)
         {
             string randomAnimation = animationStates[Random.Range(0, animationStates.Length)];
-            player.currentSkin.gameObject.GetComponent<Animator>().SetTrigger(randomAnimation);
+            player.currentSkin.GetComponent<Animator>().SetTrigger(randomAnimation);
             yield return new WaitForSeconds(changeInterval);
         }
     }
