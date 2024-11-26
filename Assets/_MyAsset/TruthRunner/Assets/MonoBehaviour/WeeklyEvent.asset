@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc5ffae7998e518e88e2bbdf24de090, type: 3}
+  m_Name: "WeeklyEvent"
+  m_EditorClassIdentifier: 
+  ActiveTasks: {fileID: 11400000, guid: d3a5e3dfc4a64f628e8695ea5e6396a2, type: 2}
+  EventRewards:
+  - RewardsList:
+    - ItemId: 350
+      icon: {fileID: 21300000, guid: 4202157dd583454fa9ee0fdc31f4bb30, type: 3}
+      adCount: 0
+    - ItemId: 231
+      icon: {fileID: 21300000, guid: 61c95357960542e8a1800b7227e08364, type: 3}
+      adCount: 0
+    - ItemId: 1071
+      icon: {fileID: 21300000, guid: 04602d4d7064432aaa3af322abb74f09, type: 3}
+      adCount: 0
+    - ItemId: 516
+      icon: {fileID: 21300000, guid: 3296a551a131401a8e0e9ade21ce2190, type: 3}
+      adCount: 0
+  RewardedItem: 100

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6df58bfd4c5fae8e03e1ff4ca95000, type: 3}
+  m_Name: "CandyEnv"
+  m_EditorClassIdentifier: 
+  Environments:
+  - PrefabName: "prfb_candy_basic_environment_pink"
+    FogColor: {r: 0.827451, g: 0.3058824, b: 1, a: 0}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0, g: 0, b: 0, a: 0}
+    SiluetColor: {r: 0, g: 0, b: 0, a: 0}
+    SkyBoxMaterial: {fileID: 2100000, guid: fd2695b385944daeb3a8c4f330f91e43, type: 2}
+    fogDensity: 0.004
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  - PrefabName: "prfb_candy_basic_environment_warmpink"
+    FogColor: {r: 0.9529412, g: 0.509804, b: 0.6784314, a: 0}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0, g: 0, b: 0, a: 0}
+    SiluetColor: {r: 0, g: 0, b: 0, a: 0}
+    SkyBoxMaterial: {fileID: 2100000, guid: 3a4e66da8a804c5fab0bbc5f6f9238b8, type: 2}
+    fogDensity: 0.004
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  - PrefabName: "prfb_candy_basic_environment_purple"
+    FogColor: {r: 0.6627451, g: 0.4588235, b: 0.9607843, a: 0}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0, g: 0, b: 0, a: 0}
+    SiluetColor: {r: 0, g: 0, b: 0, a: 0}
+    SkyBoxMaterial: {fileID: 2100000, guid: bef31eff32264da18ad63bc1d7b05731, type: 2}
+    fogDensity: 0.004
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  LevelGap: 10
+  DSType: 5

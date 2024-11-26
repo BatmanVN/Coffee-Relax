@@ -12,7 +12,7 @@ public class PistolTrap : MonoBehaviour
     public PathMode path_mode;
     public PathType path_type;
     public float duration;
-    private bool isThrowed;
+    //private bool isThrowed;
     public int CupId_Use;
 
     private void OnEnable()
@@ -54,7 +54,7 @@ public class PistolTrap : MonoBehaviour
                 }
                 fb.transform.DOPath(path, duration, path_type, path_mode, 10, Color.red)
                     .OnComplete(() => Destroy(fb.gameObject));
-                isThrowed = true;
+                //isThrowed = true;
                 Controller_Items.Ins.decrease_item();
             //}
         }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ef2041aab245174e49c964611e7274, type: 3}
+  m_Name: "IdleZone_Helipad"
+  m_EditorClassIdentifier: 
+  UpgradableType: 2
+  UpgradableZones:
+  - Order: 0
+    SpawnObject: {fileID: 1791602922341440321, guid: 4a98879a8935438e8bf08fad065769f2, type: 2}
+    SpawnImage: {fileID: 21300000, guid: dfc94fce246e40098f90a1f502503ef9, type: 3}
+  - Order: 1
+    SpawnObject: {fileID: 1791602922341498254, guid: b68c54eb407f47a7b6dbc278b0618564, type: 2}
+    SpawnImage: {fileID: 21300000, guid: 9e2fed169b3b44478b8c1b41702c2ca3, type: 3}
+  - Order: 2
+    SpawnObject: {fileID: 1791602922341461774, guid: 8a8b8fb126e64eb5b5d461cc9a157847, type: 2}
+    SpawnImage: {fileID: 21300000, guid: 7dcd5cc24d5f4f21aa0e593bc2ce7521, type: 3}

@@ -34,6 +34,7 @@ public class GameControllManager : Singleton<GameControllManager>
             PlayerPrefs.DeleteAll();
             Debug.Log("Delete All");
         }
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
     }
 
 
@@ -144,5 +145,22 @@ public class GameControllManager : Singleton<GameControllManager>
     public void setcoin(int nbr)
     {
         PlayerPrefs.SetInt("coin", nbr);
+    }
+    private float deltaTime = 0.0f;
+    private GUIStyle guiStyle = new GUIStyle();
+
+    void OnGUI()
+    {
+        // Tạo style cho văn bản hiển thị FPS
+        guiStyle.fontSize = 50;
+        guiStyle.normal.textColor = Color.red;
+
+        // Tính FPS
+        float fps = 1.0f / deltaTime;
+        string fpsText = string.Format("FPS: {0:0.}", fps);
+
+        // Hiển thị FPS ở góc trên bên trái
+        // Tạo một khu vực nhỏ để hiển thị FPS
+        GUI.Label(new Rect(50, 50, 300, 40), fpsText, guiStyle);
     }
 }

@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6df58bfd4c5fae8e03e1ff4ca95000, type: 3}
+  m_Name: "Pride_2022SO"
+  m_EditorClassIdentifier: 
+  Environments:
+  - PrefabName: "prfb_pride_environment"
+    FogColor: {r: 0.1568628, g: 0.4, b: 0.8980392, a: 1}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0.1960784, g: 0.2941177, b: 0.9960784, a: 1}
+    SiluetColor: {r: 0.2156863, g: 0.2392157, b: 0.9960784, a: 0.4745098}
+    SkyBoxMaterial: {fileID: 2100000, guid: 68be06566652464380874b62b580d20f, type: 2}
+    fogDensity: 0.008
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  - PrefabName: "prfb_pride_environment"
+    FogColor: {r: 0.972549, g: 0.427451, b: 0.7411765, a: 1}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0.772549, g: 0.3490196, b: 0.7647059, a: 1}
+    SiluetColor: {r: 0.5176471, g: 0.254902, b: 0.6901961, a: 0.4745098}
+    SkyBoxMaterial: {fileID: 2100000, guid: 5ab7f78a38a54e27aef85e11a9a80ecc, type: 2}
+    fogDensity: 0.008
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  - PrefabName: "prfb_pride_environment"
+    FogColor: {r: 0.3607843, g: 0.1568628, b: 0.6509804, a: 1}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0.509804, g: 0.3647059, b: 0.9960784, a: 1}
+    SiluetColor: {r: 0.4352941, g: 0.2627451, b: 0.8509804, a: 0.682353}
+    SkyBoxMaterial: {fileID: 2100000, guid: 5b5fc2e5553943d3bc93df1722680d86, type: 2}
+    fogDensity: 0.008
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  - PrefabName: "prfb_pride_environment"
+    FogColor: {r: 0.9254902, g: 0.372549, b: 0.7882353, a: 1}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0.7607843, g: 0.3803922, b: 0.8823529, a: 1}
+    SiluetColor: {r: 0.5176471, g: 0.254902, b: 0.6901961, a: 0.4745098}
+    SkyBoxMaterial: {fileID: 2100000, guid: b2c00e3484474f1097663bd271f6841d, type: 2}
+    fogDensity: 0.008
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  - PrefabName: "prfb_pride_environment"
+    FogColor: {r: 0.9176471, g: 0.5019608, b: 0.9254902, a: 1}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0.8784314, g: 0.5058824, b: 0.8862745, a: 1}
+    SiluetColor: {r: 0.5176471, g: 0.254902, b: 0.6901961, a: 0.4745098}
+    SkyBoxMaterial: {fileID: 2100000, guid: d3cdb20ee3bf47cea428753a62cf4aef, type: 2}
+    fogDensity: 0.008
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  - PrefabName: "prfb_pride_environment"
+    FogColor: {r: 0.3333333, g: 0.3607843, b: 0.7764706, a: 1}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0.4235294, g: 0.3333333, b: 0.8705882, a: 1}
+    SiluetColor: {r: 0.5176471, g: 0.254902, b: 0.6901961, a: 0.4745098}
+    SkyBoxMaterial: {fileID: 2100000, guid: 472e57ecce6b4f61a3ccced8ad526e02, type: 2}
+    fogDensity: 0.008
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  - PrefabName: "prfb_pride_environment"
+    FogColor: {r: 0.8745098, g: 0.4156863, b: 1, a: 1}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0.5843138, g: 0.2078431, b: 0.8588235, a: 1}
+    SiluetColor: {r: 0.6313726, g: 0.2745098, b: 0.8901961, a: 0.7529412}
+    SkyBoxMaterial: {fileID: 2100000, guid: 10bb0a974f8743169f67a3e8cf4737c0, type: 2}
+    fogDensity: 0.008
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  - PrefabName: "prfb_pride_environment"
+    FogColor: {r: 0.8862745, g: 0.4431373, b: 0.4392157, a: 1}
+    SantaColor: {r: 0, g: 0, b: 0, a: 0}
+    VerticalFog: {r: 0.7843137, g: 0.427451, b: 0.4313726, a: 1}
+    SiluetColor: {r: 0.9254902, g: 0.4666667, b: 0.5058824, a: 0.4745098}
+    SkyBoxMaterial: {fileID: 2100000, guid: c800e4be6bea402b915ec4c83a9cea4e, type: 2}
+    fogDensity: 0.008
+    needLight: 0
+    LightColor: {r: 0, g: 0, b: 0, a: 0}
+    Intensity: 0
+  LevelGap: 10
+  DSType: 9

@@ -1,0 +1,3654 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e42c12d6b00be1f55db234dce3adba7f, type: 3}
+  m_Name: "AnnaChill Variant"
+  m_EditorClassIdentifier: 
+  ItemId: 1041
+  IsMale: 0
+  TargetMesh: {fileID: 4300000, guid: 26da03cf9a5c4296b6bfd2db0d6f32bb, type: 2}
+  MeshMaterials:
+  - {fileID: 2100000, guid: 48b04ae352184edbae035f20a9120e30, type: 2}
+  - {fileID: 2100000, guid: d075d4507807494e9fef5af45cc98dc1, type: 2}
+  - {fileID: 2100000, guid: 8fc2c424e8714db68d3a996575fbab2e, type: 2}
+  SkinMaterial: {fileID: 2100000, guid: 7ab5ccf0d88847d2a97593363e97ae0b, type: 2}
+  SkinMaterials:
+  - {fileID: 2100000, guid: 7ab5ccf0d88847d2a97593363e97ae0b, type: 2}
+  - {fileID: 2100000, guid: 7ab5ccf0d88847d2a97593363e97ae0b, type: 2}
+  HandOpening: 0.6
+  InGameAnimator: {fileID: 9100000, guid: d3ea29a633674255ab253abb5fa19a8d, type: 2}
+  ShowRoomAnimator: {fileID: 22100000, guid: bb5aa05e7752420ebd56e294a266cd95, type: 2}
+  AccessoryPositionData:
+  - ItemId: 336
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.6E-05, y: -0.018308, z: 2.4E-05}
+        rotation: {x: -0.02015312, y: 1.191558E-07, z: 2.432621E-09, w: 0.9997969}
+        scale: {x: 0.01062153, y: 0.01062153, z: 0.01062153}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 337
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.016, z: -0.00262}
+        rotation: {x: 0.06675465, y: 1.189113E-07, z: -7.930252E-09, w: 0.9977695}
+        scale: {x: 0.009318667, y: 0.009318672, z: 0.009318672}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 338
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.4572E-06, y: -0.01811, z: -0.0031156}
+        rotation: {x: 0.06675465, y: 1.189113E-07, z: -7.930252E-09, w: 0.9977695}
+        scale: {x: 0.01076233, y: 0.01076234, z: 0.01076234}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 339
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -4.3128E-08, y: -0.015996, z: -0.0027378}
+        rotation: {x: 0.06675465, y: 1.189113E-07, z: -7.930252E-09, w: 0.9977695}
+        scale: {x: 0.00956226, y: 0.009562263, z: 0.009562263}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 327
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -9E-05, y: -0.01357, z: -0.00263}
+        rotation: {x: 0.06675474, y: 1.189113E-07, z: -7.930262E-09, w: 0.9977694}
+        scale: {x: 0.008517199, y: 0.008517203, z: 0.008517202}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 19
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 5E-05, y: -0.01074, z: 0.00039}
+        rotation: {x: -0.8376497, y: 6.507332E-08, z: 9.984105E-08, w: 0.5462078}
+        scale: {x: 0.2370872, y: 0.2370872, z: 0.2370874}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 22
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 2.799905E-05, y: -0.016976, z: -0.001897717}
+        rotation: {x: 0.731716, y: 8.124952E-08, z: -8.718533E-08, w: 0.6816097}
+        scale: {x: 0.01, y: 0.01, z: 0.01}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 23
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0.00488, y: -0.016616, z: -5.9E-05}
+        rotation: {x: -0.6092731, y: -0.2653193, z: 0.2664603, w: 0.6981339}
+        scale: {x: 0.08250024, y: 0.08250022, z: 0.08250026}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 24
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 4.999971E-05, y: -0.0172138, z: 0.001340362}
+        rotation: {x: 0.6455311, y: 0.2186099, z: 0.1496183, w: 0.7163196}
+        scale: {x: 0.01, y: 0.01, z: 0.01}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 310
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -2.599968E-05, y: -0.02012755, z: 0.001594651}
+        rotation: {x: -0.747526, y: 7.914124E-08, z: 8.910349E-08, w: 0.6642327}
+        scale: {x: 1.172357, y: 1.172356, z: 1.172356}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 301
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -3.349795E-10, y: -0.01028918, z: -0.001851156}
+        rotation: {x: 0.06206489, y: 1.189472E-07, z: -7.371345E-09, w: 0.9980722}
+        scale: {x: 0.006473246, y: 0.006473246, z: 0.006473246}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 306
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.099959E-05, y: -0.01646326, z: 0.001865648}
+        rotation: {x: -0.05889722, y: 1.18967E-07, z: 7.044374E-09, w: 0.9982641}
+        scale: {x: 0.0096, y: 0.009599999, z: 0.009599997}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 308
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -0.0003199996, y: -0.01698645, z: 0.00175037}
+        rotation: {x: 0.006766756, y: 0.7332169, z: 0.67993, w: 0.006523225}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 311
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0.001780862, y: -0.00316537, z: -0.001508193}
+        rotation: {x: -0.5645593, y: -0.334478, z: -0.3837392, w: 0.6497242}
+        scale: {x: 0.3283661, y: 0.3283661, z: 0.3283662}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 307
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0.00273, y: 0.004729, z: -0.002556}
+        rotation: {x: 0.2614586, y: 1.150364E-07, z: -3.113498E-08, w: 0.9652147}
+        scale: {x: 0.005665216, y: 0.005665217, z: 0.005665215}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -0.4806159, y: -0.2842542, z: 0.2638347}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 100, y: 100, z: 100}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 314
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.000004E-05, y: -0.01713, z: 0.00104}
+        rotation: {x: -0.04400687, y: 1.190588E-07, z: 5.269833E-09, w: 0.9990312}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 315
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.000004E-05, y: -0.01713, z: 0.00104}
+        rotation: {x: -0.04400687, y: 1.190588E-07, z: 5.269833E-09, w: 0.9990312}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 316
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.016925, z: 0.003018999}
+        rotation: {x: -0.8475854, y: -2.131628E-14, z: -2.220446E-15, w: 0.5306591}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 319
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.3E-05, y: -0.017126, z: 0.001047}
+        rotation: {x: -0.04400693, y: 1.190588E-07, z: 5.269841E-09, w: 0.9990312}
+        scale: {x: 0.01, y: 0.01000001, z: 0.01}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 317
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -4.999999E-05, y: -0.017172, z: 0.00105}
+        rotation: {x: 0.1366163, y: -0.6683767, z: 0.181177, w: 0.7083668}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 318
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -0.000115, y: -0.011681, z: -0.003972}
+        rotation: {x: 0.1314838, y: 1.181441E-07, z: -1.564453E-08, w: 0.9913183}
+        scale: {x: 0.007630218, y: 0.007630222, z: 0.007630221}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 321
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -7E-05, y: -0.01725, z: 0.00107}
+        rotation: {x: -0.04400687, y: 1.190588E-07, z: 5.269835E-09, w: 0.9990312}
+        scale: {x: 0.01, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0.014}
+        rotation: {x: -0.7071069, y: 4.652017E-22, z: 6.031632E-22, w: 0.7071067}
+        scale: {x: 100, y: 100, z: 100}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 312
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -8.887368E-05, z: 0}
+        rotation: {x: 1.713633E-07, y: -1.563194E-13, z: -3.996803E-14, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 341
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01726363, z: 0}
+        rotation: {x: -0.0153911, y: 1.19195E-07, z: 1.834736E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 344
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 3E-05, y: -0.01701, z: 0.0032}
+        rotation: {x: -0.09668789, y: 0.006092434, z: 0.0005060263, w: 0.995296}
+        scale: {x: 0.01131641, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 346
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01702, z: -1E-05}
+        rotation: {x: -0.0153911, y: 1.19195E-07, z: 1.834736E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 348
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -0.00012, y: -0.01399, z: -0.00263}
+        rotation: {x: 0.06675474, y: 1.189113E-07, z: -7.930262E-09, w: 0.9977694}
+        scale: {x: 0.008517199, y: 0.008517203, z: 0.008517202}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 351
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1E-05, y: 0.00144, z: -0.00014}
+        rotation: {x: 0.119588, y: -1.563194E-13, z: -2.851197E-08, w: 0.9928237}
+        scale: {x: 0.009834047, y: 0.009834051, z: 0.009834051}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 352
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1E-05, y: 0.00128, z: -0.00022}
+        rotation: {x: 0.07829483, y: 0.003113057, z: -0.0001634036, w: 0.9969254}
+        scale: {x: 0.01078297, y: 0.01078298, z: 0.01078298}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 353
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.000004E-05, y: 0.001496126, z: -0.00021}
+        rotation: {x: -0.03894467, y: 0.01186745, z: -0.0006223738, w: 0.9991708}
+        scale: {x: 0.0111526, y: 0.01115261, z: 0.01115261}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 355
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0.00125, z: -0.00013}
+        rotation: {x: 0.1054072, y: 0.001070853, z: -5.605502E-05, w: 0.9944286}
+        scale: {x: 0.0111526, y: 0.01115261, z: 0.01115261}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 356
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0.00089, y: 0.001891, z: 0.000685}
+        rotation: {x: 0.1119809, y: -0.0939778, z: 0.01534441, w: 0.9891375}
+        scale: {x: 0.01062153, y: 0.01062153, z: 0.01062153}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 357
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.017362, z: -0.005178}
+        rotation: {x: 0.119588, y: -1.563194E-13, z: -2.851197E-08, w: 0.9928237}
+        scale: {x: 0.01062153, y: 0.01062153, z: 0.01062153}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -0.0002, y: 1.8772, z: 0.0278}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.02746235, y: 0.02746235, z: 0.02746235}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0.0007, y: 1.8253, z: 0.1807}
+        rotation: {x: -0.09655089, y: 0.007147563, z: -0.001243634, w: 0.9953016}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 359
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.017138, z: -2.1E-05}
+        rotation: {x: -0.0153911, y: 1.19195E-07, z: 1.834736E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.8018, z: 0.1799}
+        rotation: {x: -0.09420628, y: -1.766338E-10, z: -2.435603E-09, w: 0.9955528}
+        scale: {x: 1.0641, y: 1.0641, z: 1.0641}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 332
+    positionData:
+    - Side: 2
+      BonePart: 7
+      TransformSerializable:
+        position: {x: -0.005969, y: 0.007396, z: 0.008088}
+        rotation: {x: 0.4756493, y: -0.1266176, z: 0.8186742, w: -0.295801}
+        scale: {x: 0.008586579, y: 0.008586579, z: 0.008586579}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 1
+      BonePart: 7
+      TransformSerializable:
+        position: {x: 0.00066619, y: 0.007093, z: 0.0097561}
+        rotation: {x: -0.6765708, y: -0.219061, z: 0.6590505, w: 0.2447788}
+        scale: {x: 0.008321262, y: 0.008321262, z: 0.008321262}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 334
+    positionData:
+    - Side: 2
+      BonePart: 7
+      TransformSerializable:
+        position: {x: -0.010361, y: 0.00827, z: 0.013112}
+        rotation: {x: 0.4655175, y: -0.1223546, z: 0.7978524, w: -0.3629801}
+        scale: {x: 0.01364513, y: 0.01364513, z: 0.01364513}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 333
+    positionData:
+    - Side: 2
+      BonePart: 7
+      TransformSerializable:
+        position: {x: 0.010871, y: 0.00875, z: -0.003333}
+        rotation: {x: 0.9315765, y: -0.2986276, z: -0.2069976, w: 0.01178366}
+        scale: {x: 0.0100413, y: 0.0100413, z: 0.0100413}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 335
+    positionData:
+    - Side: 2
+      BonePart: 7
+      TransformSerializable:
+        position: {x: -0.011012, y: 0.006245, z: 0.010857}
+        rotation: {x: 0.3893802, y: -0.1402111, z: 0.8198277, w: -0.3957352}
+        scale: {x: 0.01241607, y: 0.01241607, z: 0.01241607}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 309
+    positionData:
+    - Side: 2
+      BonePart: 7
+      TransformSerializable:
+        position: {x: 0.011371, y: 0.006837, z: -0.006874}
+        rotation: {x: 0.5617419, y: -0.05394471, z: -0.4754688, w: 0.6748819}
+        scale: {x: 1.09, y: 1.09, z: 1.09}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 1
+      BonePart: 7
+      TransformSerializable:
+        position: {x: -0.013236, y: 0.008595, z: -0.003923}
+        rotation: {x: 0.6383344, y: 0.09297373, z: 0.3800092, w: 0.6629316}
+        scale: {x: 1.178944, y: 1.178944, z: 1.178944}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 328
+    positionData:
+    - Side: 2
+      BonePart: 7
+      TransformSerializable:
+        position: {x: -0.001035244, y: -0.005383336, z: -0.0007669786}
+        rotation: {x: 0.843382, y: -0.4096918, z: -0.3426999, w: 0.05844938}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 2
+      BonePart: 8
+      TransformSerializable:
+        position: {x: -0.0001621666, y: -0.002538409, z: 4.256843E-05}
+        rotation: {x: 0.8866707, y: -0.3754956, z: -0.2405213, w: 0.1223424}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 1
+      BonePart: 7
+      TransformSerializable:
+        position: {x: 0.001035251, y: -0.005383338, z: -0.0007669659}
+        rotation: {x: 0.8433818, y: 0.4096923, z: 0.3426998, w: 0.05844997}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 1
+      BonePart: 8
+      TransformSerializable:
+        position: {x: 0.0001621719, y: -0.002538416, z: 4.257311E-05}
+        rotation: {x: 0.886671, y: 0.3754952, z: 0.2405209, w: 0.1223423}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 26
+    positionData:
+    - Side: 2
+      BonePart: 8
+      TransformSerializable:
+        position: {x: 0.018038, y: 0.013969, z: -0.008991}
+        rotation: {x: 0.7495434, y: -0.3662787, z: 0.1979658, w: -0.5146205}
+        scale: {x: 0.000157898, y: 0.000157898, z: 0.000157898}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 1
+      BonePart: 8
+      TransformSerializable:
+        position: {x: -0.01506, y: 0.01352, z: -0.01028}
+        rotation: {x: 0.7423982, y: 0.4184132, z: -0.1264133, w: -0.5077351}
+        scale: {x: 0.0001439753, y: 0.0001439754, z: 0.0001439754}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 340
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 2E-06, y: -0.01756, z: -0.000173}
+        rotation: {x: -0.003753208, y: 1.191552E-07, z: 3.941373E-10, w: 0.999993}
+        scale: {x: 0.01226501, y: 0.01226502, z: 0.01226502}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 313
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: -0.01406, z: 0.0018}
+        rotation: {x: -0.06594878, y: 1.188999E-07, z: 7.805226E-09, w: 0.997823}
+        scale: {x: 0.01, y: 0.01, z: 0.01}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 360
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: -0.01413587, z: -0.0002905748}
+        rotation: {x: -0.003753064, y: 1.191552E-07, z: 3.941237E-10, w: 0.999993}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0.08422136, y: 1.652624, z: 0.0322577}
+        rotation: {x: -0.7467543, y: -0.0228569, z: 0.02999061, w: 0.6640303}
+        scale: {x: 182.0898, y: 182.0898, z: 182.0898}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 21
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: -3E-05, y: -0.01535, z: 0.00313}
+        rotation: {x: -0.1043327, y: 1.185109E-07, z: 1.237901E-08, w: 0.9945424}
+        scale: {x: 1.1, y: 1.1, z: 1.1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 304
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: -0.01449, z: 0.00417}
+        rotation: {x: -0.8001014, y: 8.502745E-08, z: 7.425363E-08, w: 0.5998648}
+        scale: {x: 1.06, y: 1.06, z: 1.06}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 330
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 1E-05, y: -0.01304, z: -0.00045}
+        rotation: {x: -0.6720083, y: 0.6720091, z: 0.2200099, w: 0.2200098}
+        scale: {x: 0.9247914, y: 0.9247914, z: 0.9247914}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 326
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: -0.01417293, z: -0.000278574}
+        rotation: {x: -0.003753135, y: 1.191552E-07, z: 3.941286E-10, w: 0.999993}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: 1.641, z: 0.046}
+        rotation: {x: 0.7071068, y: 1.828988E-21, z: -1.828988E-21, w: 0.7071067}
+        scale: {x: 0.0125, y: 0.0125, z: 0.0125}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 320
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: -0.013564, z: 0.004023}
+        rotation: {x: -0.1446003, y: 1.179112E-07, z: 1.717745E-08, w: 0.9894902}
+        scale: {x: 0.01, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 342
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: -3E-05, y: -0.01245, z: -0.00191}
+        rotation: {x: 0.04553529, y: -4.81531E-05, z: -0.0008506017, w: 0.9989625}
+        scale: {x: 0.009000007, y: 0.009000011, z: 0.01039411}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: 1.528, z: 0.207}
+        rotation: {x: 0.05381324, y: -4.92033E-05, z: -0.0009289528, w: 0.9985506}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 331
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: 0.002907975, z: 0.0001343654}
+        rotation: {x: 0.01163862, y: 1.490108E-08, z: -1.490117E-08, w: 0.9999323}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 345
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 9E-05, y: -0.01499, z: 0.0045}
+        rotation: {x: -0.1486144, y: 0.0001420225, z: 0.002500986, w: 0.9888921}
+        scale: {x: 0.01080001, y: 0.01080001, z: 0.01205174}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: -8.146014E-08, y: 4.477884E-21, z: -7.608332E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 347
+    positionData:
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: -0.016052, z: -0.000249}
+        rotation: {x: -0.003753064, y: 1.191551E-07, z: 3.941265E-10, w: 0.999993}
+        scale: {x: 0.01122701, y: 0.01122701, z: 0.01122701}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 5
+      TransformSerializable:
+        position: {x: 0, y: -0.445, z: -0.01}
+        rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+        scale: {x: 0.01265552, y: 0.01265552, z: 0.01265552}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 27
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0, y: -0.00097, z: -0.0021}
+        rotation: {x: -6.717479E-06, y: -0.9980361, z: 0.06264096, w: 7.187753E-05}
+        scale: {x: 0.004080324, y: 0.004080324, z: 0.004080323}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 302
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 5E-05, y: -0.01201, z: 0.00036}
+        rotation: {x: -0.7127677, y: -0.1755612, z: 0.1928903, w: 0.651102}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 303
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -0.00703, y: -0.00357, z: -0.0129}
+        rotation: {x: -1.490116E-08, y: -0.02381367, z: -0.0007103413, w: 0.9997162}
+        scale: {x: 0.01054721, y: 0.01054721, z: 0.0105472}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0.7166174, y: 0.6121377, z: 1.076108}
+        rotation: {x: -0.2790503, y: -0.6144619, z: 0.3307182, w: 0.6596916}
+        scale: {x: 24.6847, y: 33.44275, z: 25.6847}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0.7116174, y: 0.6131377, z: 1.076108}
+        rotation: {x: -0.2790503, y: -0.6144619, z: 0.3307182, w: 0.6596916}
+        scale: {x: 24.6847, y: 33.44275, z: -25.6847}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 305
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0.00358, y: -0.00965, z: -0.00157}
+        rotation: {x: -0.692104, y: -0.1071578, z: 0.09959435, w: 0.706817}
+        scale: {x: 0.8432065, y: 0.8432065, z: 0.8432066}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 25
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -1E-05, y: -0.01263, z: -0.0018}
+        rotation: {x: 0.01490971, y: 7.105427E-15, z: -4.440892E-15, w: 0.9998888}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 1, y: 0, z: 0, w: 0}
+        scale: {x: -1, y: -1, z: -1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 349
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -0.00014, y: -0.00938, z: -0.00323}
+        rotation: {x: 0.09695383, y: -3.283418E-11, z: 2.654499E-11, w: 0.995289}
+        scale: {x: 0.008517199, y: 0.008517203, z: 0.008517204}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 20
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -6E-05, y: 0.00035, z: -0.00213}
+        rotation: {x: -7.686786E-05, y: -0.9913691, z: 0.131099, w: 0.000588067}
+        scale: {x: 0.007899998, y: 0.007900008, z: 0.007899999}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -0.001, y: 0.271, z: -0.071}
+        rotation: {x: -0.1862447, y: -1.345761E-07, z: 3.936102E-07, w: 0.9825035}
+        scale: {x: 0.011161, y: 0.011161, z: 0.011161}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0, y: 0.1020164, z: -0.001306485}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.2, y: 0.2, z: 0.2}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 329
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0, y: 0.004697116, z: 0.0002427922}
+        rotation: {x: 0.03029762, y: -1.039768E-07, z: -1.540443E-08, w: 0.9995409}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 11
+      TransformSerializable:
+        position: {x: 0, y: 0.006149181, z: -0.0004231233}
+        rotation: {x: -0.04055011, y: 1.430475E-08, z: -3.169818E-09, w: 0.9991776}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 350
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0, y: -0.01412, z: -0.00042}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000004, y: 0.01000004, z: 0.01000004}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0.004, y: 0.093, z: -0.129}
+        rotation: {x: 0.03490314, y: -1.396984E-09, z: 2.663E-09, w: 0.9993907}
+        scale: {x: 1.0788, y: 1.0788, z: 1.0788}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -0.001, y: 0.431, z: -0.813}
+        rotation: {x: 0.2750769, y: -4.656613E-10, z: -1.804437E-09, w: 0.9614222}
+        scale: {x: 1.220592, y: 1, z: 1.632455}
+      IsChild: 1
+      ShapeKeyValues:
+      - Index: 4
+        Value: 141.13
+  - ItemId: 354
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0.00184, y: -0.00685, z: -0.00171}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000004, y: 0.01000004, z: 0.01000004}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -0.2384595, y: 0.8792176, z: 0.1079149}
+        rotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
+        scale: {x: 0.6, y: 0.6, z: 0.6}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -0.1384595, y: 0.8792176, z: 0.1079149}
+        rotation: {x: 0, y: -0.258819, z: 0, w: 0.9659259}
+        scale: {x: 0.6, y: 0.6, z: 0.6}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 358
+    positionData:
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0, y: -0.01412, z: -0.00042}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000004, y: 0.01000004, z: 0.01000004}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0.004, y: 0.093, z: -0.129}
+        rotation: {x: 0.03490314, y: -1.396984E-09, z: 2.663E-09, w: 0.9993907}
+        scale: {x: 1.0788, y: 1.0788, z: 1.0788}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0.0774, y: 1.3908, z: -0.2649}
+        rotation: {x: -0.7070574, y: 0, z: 0, w: 0.7071562}
+        scale: {x: 82.101, y: 82.101, z: 82.101}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: 0.0165, y: 1.3878, z: -0.2311001}
+        rotation: {x: -0.7070574, y: 0, z: 0, w: 0.7071562}
+        scale: {x: 173.0378, y: 173.0378, z: 173.0378}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -0.0631, y: 1.3883, z: -0.2485}
+        rotation: {x: -0.7070574, y: 0, z: 0, w: 0.7071562}
+        scale: {x: 100, y: 100, z: 100}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -0.0183, y: 1.4011, z: -0.2920001}
+        rotation: {x: -0.7070574, y: 0, z: 0, w: 0.7071562}
+        scale: {x: 72.152, y: 72.152, z: 72.152}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 4
+      TransformSerializable:
+        position: {x: -0.001, y: 0.431, z: -0.813}
+        rotation: {x: 0.2750769, y: -4.656613E-10, z: -1.804437E-09, w: 0.9614222}
+        scale: {x: 1.220592, y: 1, z: 1.632455}
+      IsChild: 1
+      ShapeKeyValues:
+      - Index: 4
+        Value: 141.13
+  - ItemId: 343
+    positionData:
+    - Side: 4
+      BonePart: 11
+      TransformSerializable:
+        position: {x: 0, y: -0.01096973, z: 0.0009604995}
+        rotation: {x: -0.055924, y: 1.190226E-07, z: 6.666651E-09, w: 0.998435}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 11
+      TransformSerializable:
+        position: {x: -0.004, y: 1.124, z: -0.156}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  HairPositionData:
+  - ItemId: 4000
+    positionData: []
+  - ItemId: 4017
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -3.33197E-16, z: -9.094947E-15}
+        rotation: {x: -1.421085E-14, y: 8.077936E-28, z: 1.203706E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4067
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.6, z: 0.05}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -2.384186E-07, z: 4.470348E-08}
+        rotation: {x: -9.735359E-08, y: 3.342027E-21, z: 4.364651E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.741649, z: 0.0536315}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995677, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4021
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -8.97325E-15, z: 0}
+        rotation: {x: -1.421085E-14, y: 2.019484E-28, z: 4.814825E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4055
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4025
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.05}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: -3.352761E-08}
+        rotation: {x: -9.735359E-08, y: 4.477884E-21, z: 5.84807E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.741648, z: 0.05363153}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995677, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4026
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: -3.352761E-08}
+        rotation: {x: -1.569582E-07, y: 4.477884E-21, z: -5.207403E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: 0, z: 0}
+        rotation: {x: -1.421085E-14, y: 0, z: -9.62965E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.741647, z: 0.05363153}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995676, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4066
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4037
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775286E-09, z: 1.293699E-09}
+        rotation: {x: -2.842171E-14, y: 1.149065E-41, z: -7.222237E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: 4.599718E-08}
+        rotation: {x: -1.569582E-07, y: 3.342027E-21, z: 1.039341E-28, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775286E-09, z: 1.293699E-09}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4068
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -1.338862E-14, z: -4.547473E-15}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4033
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.6, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775284E-09, z: -9.723067E-11}
+        rotation: {x: 0, y: 8.077936E-28, z: 9.62965E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: 4.460628E-08}
+        rotation: {x: -9.735359E-08, y: 3.612181E-21, z: 4.71747E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4011
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.05}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: -3.352761E-08}
+        rotation: {x: -9.735359E-08, y: 4.477884E-21, z: 5.84807E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4046
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.6, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: -7.087772E-08}
+        rotation: {x: -9.735359E-08, y: 3.612181E-21, z: 4.71747E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4034
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.705303E-15, y: -1.253561E-14, z: -9.094947E-15}
+        rotation: {x: -2.842171E-14, y: 1.149065E-41, z: -7.222237E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516153E-09, y: -5.382655E-08, z: -9.044332E-08}
+        rotation: {x: -1.569582E-07, y: 3.342027E-21, z: 1.039341E-28, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 2.273737E-15, y: -7.988142E-15, z: -9.094947E-15}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4050
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4072
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.6, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: -1.499836E-08}
+        rotation: {x: -9.735359E-08, y: 5.034743E-21, z: 6.575322E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4038
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.07}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516153E-09, y: -1.306138E-07, z: -8.811327E-08}
+        rotation: {x: -1.569582E-07, y: 3.342027E-21, z: 1.039341E-28, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 2.273737E-15, y: -1.140449E-08, z: 1.293699E-09}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4073
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.6, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: -7.087772E-08}
+        rotation: {x: -9.735359E-08, y: 3.612181E-21, z: 4.71747E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4061
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775286E-09, z: 1.293699E-09}
+        rotation: {x: 0, y: 4.038968E-28, z: 8.425944E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: 4.599718E-08}
+        rotation: {x: -9.735359E-08, y: 3.342027E-21, z: 4.55897E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4004
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: 0, z: -3.72529E-09}
+        rotation: {x: 0, y: 4.038968E-28, z: 7.222237E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.097819E-08}
+        rotation: {x: -9.735359E-08, y: 3.342027E-21, z: 4.364651E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4030
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 3.72529E-08}
+        rotation: {x: -1.569582E-07, y: 3.342027E-21, z: 1.039341E-28, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: 0, z: -7.450581E-09}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4029
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -8.97325E-15, z: 0}
+        rotation: {x: -1.421085E-14, y: 0, z: -9.62965E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4065
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -8.97325E-15, z: 0}
+        rotation: {x: -1.421085E-14, y: 8.077936E-28, z: 1.203706E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4042
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -7.76069E-15, z: -2.273737E-15}
+        rotation: {x: -1.421085E-14, y: 0, z: -9.62965E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4003
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775286E-09, z: 1.293699E-09}
+        rotation: {x: 0, y: 8.077936E-28, z: 9.62965E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: 4.599718E-08}
+        rotation: {x: -9.735359E-08, y: 3.612181E-21, z: 4.71747E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4001
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.470348E-08}
+        rotation: {x: -9.735359E-08, y: 3.612181E-21, z: 4.71747E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: 4.599718E-08}
+        rotation: {x: -9.735359E-08, y: 3.612181E-21, z: 4.71747E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4012
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4013
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4014
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4018
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -3.33197E-16, z: -9.094947E-15}
+        rotation: {x: -1.421085E-14, y: 8.077936E-28, z: 1.203706E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4019
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 2.273737E-15, y: -7.988142E-15, z: -9.094947E-15}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4020
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 2.273737E-15, y: -7.988142E-15, z: -9.094947E-15}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4022
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -8.97325E-15, z: 0}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 1022
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.6, z: 0.04}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.192093E-07, z: 4.097819E-08}
+        rotation: {x: -9.735359E-08, y: 2.586579E-21, z: 3.378044E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4024
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.07}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.470348E-08}
+        rotation: {x: -1.569582E-07, y: 3.342027E-21, z: 1.039341E-28, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: 0, z: 0}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4028
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.05}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.273554E-07, z: -1.360746E-08}
+        rotation: {x: -9.735359E-08, y: 5.034743E-21, z: 6.575322E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4027
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.6, z: 0.03999999}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.192093E-07, z: 2.607703E-08}
+        rotation: {x: -9.735359E-08, y: 5.944501E-21, z: 7.763457E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.005602E-13, y: 1.741646, z: 0.05363153}
+        rotation: {x: 0.01539133, y: -1.191951E-07, z: -1.834764E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4031
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -8.97325E-15, z: 0}
+        rotation: {x: -1.421085E-14, y: 2.019484E-27, z: 1.92593E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4032
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -1.374817E-14, z: -2.273737E-15}
+        rotation: {x: -1.421085E-14, y: 2.019484E-27, z: 1.92593E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4036
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.6, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775284E-09, z: -9.723067E-11}
+        rotation: {x: 0, y: 1.615587E-27, z: 1.685189E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: 4.460628E-08}
+        rotation: {x: -9.735359E-08, y: 5.034743E-21, z: 6.575322E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4040
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775286E-09, z: 1.293699E-09}
+        rotation: {x: -2.842171E-14, y: 1.149065E-41, z: -7.222237E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: 4.599718E-08}
+        rotation: {x: -1.569582E-07, y: 3.342027E-21, z: 1.039341E-28, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775286E-09, z: 1.293699E-09}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4039
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775286E-09, z: 1.293699E-09}
+        rotation: {x: -2.842171E-14, y: 1.149065E-41, z: -7.222237E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.289846E-07, z: 4.599718E-08}
+        rotation: {x: -1.569582E-07, y: 3.342027E-21, z: 1.039341E-28, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -9.775286E-09, z: 1.293699E-09}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4041
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.07}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -1.140449E-08, z: 1.293699E-09}
+        rotation: {x: -2.842171E-14, y: 1.149065E-41, z: -7.222237E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.306138E-07, z: 4.599718E-08}
+        rotation: {x: -1.569582E-07, y: 3.342027E-21, z: 1.039341E-28, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -1.140449E-08, z: 1.293699E-09}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4069
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: 0, z: -3.72529E-09}
+        rotation: {x: 0, y: 1.615587E-27, z: 1.685189E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: -1.862645E-08}
+        rotation: {x: -9.735359E-08, y: 5.034743E-21, z: 6.575322E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4071
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.05}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: -3.352761E-08}
+        rotation: {x: -9.735359E-08, y: 4.477884E-21, z: 5.84807E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4070
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4043
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -1.374817E-14, z: -2.273737E-15}
+        rotation: {x: -1.421085E-14, y: 2.019484E-27, z: 1.92593E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4044
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4045
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4047
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.05}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: -3.352761E-08}
+        rotation: {x: -9.735359E-08, y: 4.477884E-21, z: 5.84807E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4048
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -7.76069E-15, z: -2.273737E-15}
+        rotation: {x: -1.421085E-14, y: 0, z: -9.62965E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4049
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -1.374817E-14, z: -2.273737E-15}
+        rotation: {x: -1.421085E-14, y: 2.019484E-27, z: 1.92593E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4051
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4053
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4052
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4005
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.05}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.470348E-08}
+        rotation: {x: -1.569582E-07, y: 3.612181E-21, z: -4.200665E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: 0, z: 0}
+        rotation: {x: -1.421085E-14, y: 8.077936E-28, z: 1.203706E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4006
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -8.97325E-15, z: 0}
+        rotation: {x: -1.421085E-14, y: 4.038968E-28, z: -2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4057
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4058
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4059
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4060
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4076
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4075
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.05}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 0.2, y: 0.2, z: 0.2}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: -7.078052E-08}
+        rotation: {x: -1.569583E-07, y: 3.612181E-21, z: -4.200665E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: 0, z: 0}
+        rotation: {x: -1.421085E-14, y: 8.077936E-28, z: 1.203706E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4062
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.05999999}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: 0, z: 3.72529E-09}
+        rotation: {x: 0, y: -8.617986E-42, z: 3.611119E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.842877E-08}
+        rotation: {x: -9.735359E-08, y: 4.477884E-21, z: 5.84807E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4064
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.470348E-08}
+        rotation: {x: -1.569582E-07, y: 4.477884E-21, z: -5.207403E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: 0, z: 0}
+        rotation: {x: -1.421085E-14, y: 0, z: -9.62965E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4063
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.07}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.470348E-08}
+        rotation: {x: -9.735359E-08, y: 4.477884E-21, z: 5.84807E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4008
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717483, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.71, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 0.2, y: 0.2, z: 0.2}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -2.384186E-07, z: 0}
+        rotation: {x: 0, y: 4.038968E-28, z: 7.222238E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -2.384186E-07, z: 4.097819E-08}
+        rotation: {x: -9.735359E-08, y: 3.342027E-21, z: 4.364654E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4009
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.307109E-08}
+        rotation: {x: -9.735359E-08, y: 3.612181E-21, z: 4.71747E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4010
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.71, z: 0.07}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -1.192093E-07, z: 4.470348E-08}
+        rotation: {x: -9.735359E-08, y: 4.477884E-21, z: 5.84807E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4077
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.470348E-08}
+        rotation: {x: 8.146034E-08, y: 2.58658E-21, z: -6.790457E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.097819E-08}
+        rotation: {x: 8.146034E-08, y: 2.58658E-21, z: -6.790457E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: 0, z: 4.470348E-08}
+        rotation: {x: -8.146017E-08, y: 3.342027E-21, z: -7.839748E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4035
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.490116E-08, y: -2.481938E-07, z: 2.248111E-07}
+        rotation: {x: 1, y: -5.563815E-17, z: -8.614734E-09, w: 7.54979E-08}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -6.519258E-09, y: -2.481938E-07, z: 2.695146E-07}
+        rotation: {x: 1, y: -1.862645E-09, z: -6.519258E-09, w: 1.947072E-07}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.490116E-08, y: -2.481938E-07, z: 2.248111E-07}
+        rotation: {x: 1, y: -5.563815E-17, z: -8.614734E-09, w: 7.54979E-08}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4074
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.6, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516152E-09, y: 2.384186E-07, z: -5.587935E-08}
+        rotation: {x: -9.73536E-08, y: 3.612181E-21, z: 4.717472E-29, w: 1}
+        scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4078
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -3.659315E-16, y: 1.660879, z: 0.05885747}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -0.0162288, z: 4.470348E-08}
+        rotation: {x: 0.7071066, y: 2.554197E-21, z: -2.554198E-21, w: 0.7071069}
+        scale: {x: 0.01, y: 0.01, z: 0.01}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.57297E-15, y: 1.74165, z: 0.0536316}
+        rotation: {x: 0.01539126, y: -1.191951E-07, z: -1.834757E-09, w: 0.9998816}
+        scale: {x: 0.1995681, y: 0.199568, z: 0.1995681}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.9999999, y: 0.9999996, z: 0.9999998}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4007
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.07}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 8.516154E-09, y: -2.384186E-07, z: -8.195639E-08}
+        rotation: {x: -1.569582E-07, y: 3.612181E-21, z: -4.200665E-29, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -2.384186E-07, z: -7.450581E-09}
+        rotation: {x: -1.421085E-14, y: 8.077936E-28, z: 1.203706E-34, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -1.094591E-13, y: 1.741646, z: 0.05363135}
+        rotation: {x: 0.01539128, y: -1.191951E-07, z: -1.834755E-09, w: 0.9998816}
+        scale: {x: 0.1995679, y: 0.1995675, z: 0.1995678}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 0.9999998, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4079
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0.7071066, y: 2.554197E-21, z: -2.554198E-21, w: 0.7071069}
+        scale: {x: 0.01, y: 0.009999999, z: 0.009999999}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4080
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01726363, z: 0}
+        rotation: {x: -0.0153911, y: 1.19195E-07, z: 1.834736E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: -8.146014E-08, y: 4.477884E-21, z: -7.608332E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4081
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01717477, z: 0}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.9999989, y: 0.9999981, z: 0.9999981}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4082
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.017141, z: -1E-06}
+        rotation: {x: -0.01539127, y: 1.191951E-07, z: 1.834749E-09, w: 0.9998816}
+        scale: {x: 0.01000002, y: 0.01000003, z: 0.01000003}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4083
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.018893, z: -0.00056}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000002, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0.1881668, z: 0}
+        rotation: {x: -9.735359E-08, y: 3.612181E-21, z: 1.730391E-22, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4084
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -2E-05, y: -0.01733, z: -0.00048}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000002, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4085
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -2E-05, y: -0.01733, z: -0.00048}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000002, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4086
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -2E-05, y: -0.01733, z: -0.00048}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000002, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4087
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -2E-05, y: -0.01733, z: -0.00048}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000002, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4088
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -2E-05, y: -0.01733, z: -0.00048}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000002, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4089
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -2E-05, y: -0.01733, z: -0.00048}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000002, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+  - ItemId: 4090
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: -2E-05, y: -0.01719, z: -0.00048}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 0.01000002, y: 0.01000002, z: 0.01000002}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: -1.629205E-07, y: 2.701534E-22, z: 6.818394E-28, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4091
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01723, z: 0}
+        rotation: {x: -0.01539125, y: 1.19195E-07, z: 1.834755E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.136868E-15, y: -1.80682E-14, z: 0}
+        rotation: {x: -2.842171E-14, y: 4.038968E-28, z: 2.407412E-35, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4092
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.017058, z: -2E-05}
+        rotation: {x: -0.01539125, y: 1.19195E-07, z: 1.834755E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 1.7, z: 0.06}
+        rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+        scale: {x: 100, y: 100, z: 100}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.396984E-09, y: -9.775285E-09, z: 8.74428E-09}
+        rotation: {x: 1.629815E-09, y: 5.587935E-09, z: -7.70372E-34, w: 1}
+        scale: {x: 100, y: 100, z: 100}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 2.328307E-09, y: -1.289846E-07, z: 3.109602E-08}
+        rotation: {x: -1.58092E-07, y: 3.958121E-09, z: -9.313226E-10, w: 1}
+        scale: {x: 100, y: 99.99999, z: 100}
+      IsChild: 1
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 1.396984E-09, y: -9.775285E-09, z: 8.74428E-09}
+        rotation: {x: 1.629815E-09, y: 5.587935E-09, z: -7.70372E-34, w: 1}
+        scale: {x: 100, y: 100, z: 100}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4093
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01715, z: -3E-05}
+        rotation: {x: -0.0153911, y: 1.19195E-07, z: 1.834736E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4094
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01719, z: 4E-05}
+        rotation: {x: -0.0153911, y: 1.19195E-07, z: 1.834736E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4095
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01702, z: -4E-05}
+        rotation: {x: -0.0153911, y: 1.19195E-07, z: 1.834736E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0.7071066, y: 1.828987E-21, z: -1.828987E-21, w: 0.7071069}
+        scale: {x: 0.01, y: 0.009999999, z: 0.009999999}
+      IsChild: 1
+      ShapeKeyValues: []
+  - ItemId: 4096
+    positionData:
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: -0.01726, z: 0.00027}
+        rotation: {x: -0.0153911, y: 1.19195E-07, z: 1.834736E-09, w: 0.9998816}
+        scale: {x: 0.01000001, y: 0.01000001, z: 0.01000001}
+      IsChild: 0
+      ShapeKeyValues: []
+    - Side: 4
+      BonePart: 6
+      TransformSerializable:
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0.7071066, y: 3.166342E-21, z: -3.166342E-21, w: 0.7071069}
+        scale: {x: 0.01, y: 0.009999999, z: 0.009999999}
+      IsChild: 1
+      ShapeKeyValues: []
+  CustomAccessoryMeshData: []
+  DefaultHair: 4043
