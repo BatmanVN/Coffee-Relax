@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1791593771969096656}
   - component: {fileID: 1791593772992513366}
   - component: {fileID: 1791593772807963500}
+  - component: {fileID: 4397964443222949161}
   m_Layer: 0
   m_Name: collider
   m_TagString: 
@@ -81,6 +82,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4397964443222949161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791593771918747116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ebd40f9a6ca304aa44a56e3bdb2a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machine: {fileID: 1791593771918750468}
+  machineType: 5
+  time: 0.3
 --- !u!1 &1791593771918747285
 GameObject:
   m_ObjectHideFlags: 0

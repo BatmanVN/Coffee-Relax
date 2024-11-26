@@ -21,8 +21,9 @@ public class MachineCoffeeControl : BaseMachine
 
         if (other.CompareTag(Const.playerTag))
         {
+            if (machine == null) return;
             turnOff = StartCoroutine(TurnOff());
-            Debug.Log("IGNORE");
+
         }
     }
     IEnumerator TurnOff()

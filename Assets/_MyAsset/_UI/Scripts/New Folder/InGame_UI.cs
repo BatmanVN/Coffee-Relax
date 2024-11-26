@@ -51,7 +51,7 @@ public class InGame_UI : UICanvas
 
     public void SetTextLevel()
     {
-        txt_Level.text = "LEVEL: " + level;
+        txt_Level.text = level.ToString();
     }
 
     public void ReturnButton()

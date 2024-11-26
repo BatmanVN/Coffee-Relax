@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class WaterTrap : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject waterEffect;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.CompareTag(Const.cupMapTag))
+        {
+            GameObject effect = Instantiate(waterEffect,other.transform.position,other.transform.rotation);
+            Destroy(effect,2f);
+        }
     }
 }

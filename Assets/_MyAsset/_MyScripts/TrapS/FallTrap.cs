@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class FallTrap : MonoBehaviour
 {
@@ -16,7 +15,7 @@ public class FallTrap : MonoBehaviour
         {
             if (cupSpawn.id == CupId_Use)
             {
-                cupIns = cupSpawn.buckInst;
+                cupIns = cupSpawn.buckMap;
             }
         }
     }
@@ -27,9 +26,10 @@ public class FallTrap : MonoBehaviour
         {
             Observer.Notify(ListAction.Vibrate);
             Controller_Items.Ins.decrease_item();
-            CupGroup cupObj = Instantiate(cupIns, pointFall.transform.position, pointFall.transform.rotation).gameObject.GetComponent<CupGroup>();
+            CupObject cupObj = Instantiate(cupIns, pointFall.transform.position, pointFall.transform.rotation).gameObject.GetComponent<CupObject>();
             Rigidbody rb = cupObj.GetComponent<Rigidbody>();
             rb.isKinematic = false;
+            Destroy(cupObj.gameObject,3f);
         }
     }
 }

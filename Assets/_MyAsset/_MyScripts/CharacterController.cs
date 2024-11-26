@@ -7,6 +7,7 @@ public class CharacterController : MonoBehaviour
 {
     public Animator anim;
     [SerializeField] private float sensitivity;
+    [SerializeField] private float timeRotateStart;
     protected Rigidbody rb;
     public bool game_run, is_finish;
     public float speed_player, horizontal_speed;
@@ -14,6 +15,7 @@ public class CharacterController : MonoBehaviour
     protected Vector3 mvm;
     public float time;
     public bool isFly;
+    private bool isRotate;
     public string animName = Const.runAnim;
 
     private Coroutine money;
@@ -26,6 +28,7 @@ public class CharacterController : MonoBehaviour
         Observer.AddObserver(ListAction.FinishGame, RotateWin);
         Observer.AddObserver(ListAction.FinishMove, move_player_to_center_finish_level);
         Observer.AddObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
+        Observer.AddObserver(ActionInGame.RotateStart, RotateStartGame);
     }
     private void Start()
     {
@@ -45,7 +48,7 @@ public class CharacterController : MonoBehaviour
 
     protected void player_movements2()
     {
-        if (game_run)
+        if (game_run && !isRotate)
         {
             // Player move forward
             transform.Translate(transform.forward * speed_player * Time.deltaTime);
@@ -76,6 +79,18 @@ public class CharacterController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void RotateStartGame(object[] datas)
+    {
+        isRotate = true;
+        Time.timeScale = 0.4f;
+        transform.DORotate(new Vector3(0, 0, 0), timeRotateStart).SetEase(Ease.InOutSine).OnComplete(() =>
+        {
+            isRotate = false;
+            Time.timeScale = 1f;
+            Observer.Notify(ListAction.SpawnCupIns);
+        });
     }
 
     public void RotateWin(object[] datas)
@@ -166,5 +181,6 @@ public class CharacterController : MonoBehaviour
         Observer.RemoveObserver(ListAction.GameRun, StatusGame);
         Observer.RemoveObserver(ListAction.GameRun, RotateWin);
         Observer.RemoveObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
+        Observer.RemoveObserver(ActionInGame.RotateStart,RotateStartGame);
     }
 }

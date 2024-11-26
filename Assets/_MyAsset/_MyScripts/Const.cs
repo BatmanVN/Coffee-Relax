@@ -54,6 +54,7 @@ public enum UiAction
 
 public enum ActionInGame
 {
+    RotateStart,
     SpawnRoad,
     DisableRoad,
     PlayerFly,
@@ -84,9 +85,11 @@ public class Const
     //String Tag
     public const string playerTag = "Player";
     public const string cupTag = "Cup";
+    public const string cupMapTag = "CupMap";
     public const string groundTag = "Ground";
     public const string bonusStage = "Bonus Stage";
     public const string thornTag = "ThornObstacle";
+
 
     //Layer Camera
     public const string canSee = "Obstacle";

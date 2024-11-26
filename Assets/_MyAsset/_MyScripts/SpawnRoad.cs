@@ -6,8 +6,10 @@ public class SpawnRoad : MonoBehaviour
 {
     public GameObject roadPref;
     private GameObject currentRoad;
+    private int level;
     private void OnEnable()
     {
+        level = GameControllManager.Ins.getlevel();
         Observer.AddObserver(ActionInGame.SpawnRoad, RoadSpawn);
         Observer.AddObserver(ActionInGame.DisableRoad, DisableRoad);
     }
@@ -18,6 +20,8 @@ public class SpawnRoad : MonoBehaviour
             currentRoad = Instantiate(roadPref, this.transform.position, this.transform.rotation);
             currentRoad.transform.SetParent(this.transform);
         }
+        if(level > 10)
+            this.enabled = false;
     }
     
     protected void DisableRoad(object[] datas)
