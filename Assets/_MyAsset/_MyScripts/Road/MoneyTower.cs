@@ -35,7 +35,7 @@ public class MoneyTower : MonoBehaviour
         int targetIndex = Mathf.Clamp(Controller_Items.Ins.total_items, 0, posFinish.listPos.Count - 1);
         float targetY = posFinish.listPos[targetIndex].transform.position.y;
 
-        transform.DOLocalMoveY(targetY, 8f)
+        transform.DOLocalMoveY(targetY, 7f)
                     .SetEase(Ease.OutExpo) // Hiệu ứng easing "tăng nhanh, giảm dần"
                     .OnComplete(() =>
                     {

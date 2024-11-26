@@ -34,7 +34,7 @@ public class SpawnModel_Main : MonoBehaviour
             {
                 model = Instantiate(listSkinDatas[skinID].character_pref, transform.position, transform.rotation);
                 model.transform.SetParent(transform);
-                model.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+                model.transform.localScale = new Vector3(0.045f, 0.045f, 0.045f);
                 anim = StartCoroutine(ChangeAnimationRoutine());
             }
         }
