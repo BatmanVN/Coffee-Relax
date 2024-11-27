@@ -49,7 +49,9 @@ public enum UiAction
     SetSkinEnable,
     GetCoinReward,
     MenuLoading,
-    WinLoading
+    WinLoading,
+    CheckUiUsed,
+    CheckUiCup
 }
 
 public enum ActionInGame

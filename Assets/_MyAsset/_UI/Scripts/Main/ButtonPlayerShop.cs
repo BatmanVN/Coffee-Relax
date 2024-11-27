@@ -34,7 +34,10 @@ public class ButtonPlayerShop : MonoBehaviour
         while (!isTouch)
         {
             string randomAnimation = animationStates[Random.Range(0, animationStates.Length)];
-            player.currentSkin.GetComponent<Animator>().SetTrigger(randomAnimation);
+            if (player.currentSkin != null)
+            {
+                player.currentSkin.GetComponent<Animator>().SetTrigger(randomAnimation);
+            }
             yield return new WaitForSeconds(changeInterval);
         }
     }

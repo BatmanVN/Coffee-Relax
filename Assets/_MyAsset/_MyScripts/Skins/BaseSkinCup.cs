@@ -42,6 +42,7 @@ public class BaseSkinCup : MonoBehaviour
     //Kiểm tra đang sử dụng skin nào, để hiển thị model skin đó
     protected void SetStatusUiSkin()
     {
+        Observer.Notify(UiAction.CheckUiCup);
         if (skinId == iDUsed)
         {
             ViewSkinCup.Ins.currentSkin = Instantiate(skinCupItemData.buckMap, ViewSkinCup.Ins.spawnPoint.position, ViewSkinCup.Ins.spawnPoint.rotation);
@@ -61,6 +62,7 @@ public class BaseSkinCup : MonoBehaviour
         isBuy = GameControllManager.Ins.GetStatusBuySkinCup(skinCupItemData.NameCup);
         iDUsed = GameControllManager.Ins.GetIDSkinCupUse();
         Observer.Notify(UiAction.GetIdSkinCup, skinId);
+        Observer.Notify(UiAction.CheckUiCup);
 
         //Check đang bấm skin nào để hiện bo viền
         if (ViewSkinCup.Ins.currentSelect != null)

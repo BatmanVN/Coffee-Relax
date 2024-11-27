@@ -15,7 +15,8 @@ public class GameControllManager : Singleton<GameControllManager>
     protected override void Awake()
     {
         base.Awake();
-        Input.multiTouchEnabled = true;
+        //Application.targetFrameRate = 60;
+        Input.multiTouchEnabled = false;
         onstartfirsttime();
         //ChangeState(GameState.MainMenu);
         UIManager.Ins.OpenUI<MainMenu_UI>();
@@ -29,11 +30,6 @@ public class GameControllManager : Singleton<GameControllManager>
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            PlayerPrefs.DeleteAll();
-            Debug.Log("Delete All");
-        }
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
     }
 

@@ -263,6 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791593771969096680}
   - component: {fileID: 1791593772992513084}
+  - component: {fileID: 1515866803995586423}
   m_Layer: 0
   m_Name: Collider
   m_TagString: obstacle
@@ -306,6 +307,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.437598, y: 1.959632, z: 1.63955}
   m_Center: {x: 0.6461035, y: 0.005567431, z: 0.0007227659}
+--- !u!114 &1515866803995586423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791593771918749076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a5ce429007f034dbc44ba933771871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoke: {fileID: 5797428246745224015, guid: 24fa55c4f1386e04ea2800527f88c4e1, type: 3}
+  cupCrash: {fileID: 0}
+  CupId_Use: 0
 --- !u!1 &1791593771918749633
 GameObject:
   m_ObjectHideFlags: 0

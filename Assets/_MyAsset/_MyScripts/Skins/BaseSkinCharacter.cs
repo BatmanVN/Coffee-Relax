@@ -45,6 +45,7 @@ public class BaseSkinCharacter : MonoBehaviour
     //Kiểm tra đang sử dụng skin nào, để hiển thị model skin đó
     protected void SetStatusUiSkin()
     {
+        Observer.Notify(UiAction.CheckUiUsed,skinId);
         if (skinId == iDUsed)
         {
             ViewCharacter.Ins.currentSkin = Instantiate(characterData.character_pref, ViewCharacter.Ins.spawnPoint.position, ViewCharacter.Ins.spawnPoint.rotation);
@@ -64,9 +65,9 @@ public class BaseSkinCharacter : MonoBehaviour
         isBuy = GameControllManager.Ins.GetStatusBuySkin(characterData.NameCharacter);
         iDUsed = GameControllManager.Ins.GetIDSkinUse();
         Observer.Notify(UiAction.GetIdSkin, skinId);
-
+        Observer.Notify(UiAction.CheckUiUsed,skinId);
         //Check đang bấm skin nào để hiện bo viền
-        if(ViewCharacter.Ins.currentSelect != null)
+        if (ViewCharacter.Ins.currentSelect != null)
             ViewCharacter.Ins.currentSelect.select.SetActive(false);
         ViewCharacter.Ins.currentSelect = this;
         select.SetActive(true);

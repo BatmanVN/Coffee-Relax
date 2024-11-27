@@ -62,7 +62,15 @@ public class FinishLevel : Singleton<FinishLevel>
 
         UIManager.Ins.OpenUI<Win_UI>();
         UIManager.Ins.CloseUI<InGame_UI>();
-        Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
+        if (Controller_Items.Ins != null)
+        {
+            Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
+        }
+        else
+        {
+            Debug.LogError("Controller_Items.Ins is null!");
+        }
+        //Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
         moneyAfterWin = GameControllManager.Ins.getcoin();
         totalCoin = moneyAfterWin - currentMoney;
         StopCoroutine(showWin);

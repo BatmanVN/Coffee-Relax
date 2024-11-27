@@ -24,6 +24,7 @@ public class Observer : MonoBehaviour
         if (!Listeners.ContainsKey(enumType)) return;
         foreach (var action in Listeners[enumType])
         {
+            if (action == null) continue;
             try
             {
                 action?.Invoke(datas);
