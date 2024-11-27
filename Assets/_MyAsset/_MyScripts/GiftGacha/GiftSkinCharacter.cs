@@ -18,6 +18,7 @@ public class GiftSkinCharacter : BaseGift
             currentCoin = GameControllManager.Ins.getcoin();
             int total = currentCoin + moneyGift;
             GameControllManager.Ins.setcoin(total);
+            Observer.Notify(WheelAction.UpdateCashCoiner, total);
         }
         GameControllManager.Ins.SetStatusBuySkin(GameControllManager.Ins.characterData.skinDatas[random].NameCharacter,true);
         Debug.Log(prizeSegment);

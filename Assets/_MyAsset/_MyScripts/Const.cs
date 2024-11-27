@@ -53,6 +53,10 @@ public enum UiAction
     CheckUiUsed,
     CheckUiCup
 }
+public enum WheelAction
+{
+    UpdateCashCoiner
+}
 
 public enum ActionInGame
 {

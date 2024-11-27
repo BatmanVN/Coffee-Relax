@@ -5,24 +5,25 @@ using UnityEngine;
 
 public class LevelRandomManager : Singleton<LevelRandomManager>
 {
-    public List<GameObject> listLevel;
+    //public List<GameObject> listLevel;
+    public LevelsDatas levelsDatas;
     public List<Transform> spawnLevels;
     public int levelIndex;
     private void OnEnable()
     {
         Observer.AddObserver(ListAction.NextLevel, SelectLevel);
-        listLevel = Resources.LoadAll<GameObject>("Levels").ToList();
+        //listLevel = Resources.LoadAll<GameObject>("Levels").ToList();
 
-        // Sắp xếp danh sách theo số thứ tự trong tên
-        listLevel = listLevel.OrderBy(level =>
-        {
-            // Lấy phần số từ tên đối tượng, giả sử tên có dạng "level_x"
-            string name = level.name;
-            string numberPart = name.Substring(name.LastIndexOf('_') + 1);
+        //// Sắp xếp danh sách theo số thứ tự trong tên
+        //listLevel = listLevel.OrderBy(level =>
+        //{
+        //    // Lấy phần số từ tên đối tượng, giả sử tên có dạng "level_x"
+        //    string name = level.name;
+        //    string numberPart = name.Substring(name.LastIndexOf('_') + 1);
 
-            // Chuyển đổi phần số thành int để sắp xếp chính xác
-            return int.Parse(numberPart);
-        }).ToList();
+        //    // Chuyển đổi phần số thành int để sắp xếp chính xác
+        //    return int.Parse(numberPart);
+        //}).ToList();
 
     }
 
@@ -37,18 +38,21 @@ public class LevelRandomManager : Singleton<LevelRandomManager>
     protected void SelectLevel(object[] datas)
     {
         levelIndex = GameControllManager.Ins.getlevel() + 1;
-        int totalLevel = listLevel.Count + 1;
-        if (levelIndex >= listLevel.Count + 1)
+        int totalLevel = levelsDatas.levels.Count + 1;
+        if (levelIndex >= levelsDatas.levels.Count + 1)
         {
-            levelIndex = Random.Range(1, listLevel.Count + 1);
+            levelIndex = Random.Range(1, levelsDatas.levels.Count + 1);
             Debug.Log("level > " + totalLevel);
         }
         else
         {
-            levelIndex = GameControllManager.Ins.getlevel() + 1;
+            if (levelIndex == levelsDatas.levels[levelIndex].level)
+            {
+                levelIndex = GameControllManager.Ins.getlevel() + 1;
+            }
             Debug.Log("level < " + totalLevel);
         }
-        GameObject level = Instantiate(listLevel[levelIndex - 1], spawnLevels[levelIndex - 1].transform.position, spawnLevels[levelIndex - 1].transform.rotation);
+        GameObject level = Instantiate(levelsDatas.levels[levelIndex - 1].levelPrefab, spawnLevels[levelIndex - 1].transform.position, spawnLevels[levelIndex - 1].transform.rotation);
         level.transform.SetParent(spawnLevels[levelIndex - 1].transform);
         Debug.Log("Level: " +  levelIndex);
     }

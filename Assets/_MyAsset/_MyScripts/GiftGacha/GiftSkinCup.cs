@@ -13,6 +13,7 @@ public class GiftSkinCup : BaseGift
             currentCoin = GameControllManager.Ins.getcoin();
             int total = currentCoin + moneyGift;
             GameControllManager.Ins.setcoin(total);
+            Observer.Notify(WheelAction.UpdateCashCoiner, total);
         }
         GameControllManager.Ins.SetStatusBuySkin(GameControllManager.Ins.cupData.skinDatas[random].NameCup, true);
         Debug.Log(prizeSegment);

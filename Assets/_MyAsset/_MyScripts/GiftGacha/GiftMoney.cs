@@ -15,5 +15,6 @@ public class GiftMoney : BaseGift
         int total = currentCoin + moneyGift;
         GameControllManager.Ins.setcoin(total);
         Debug.Log(prizeSegment + 1);
+        Observer.Notify(WheelAction.UpdateCashCoiner, total);
     }
 }
