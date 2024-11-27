@@ -17,7 +17,6 @@ public class LightManager : MonoBehaviour
             {
                 lig.gameObject.SetActive(true);
             }
-            Debug.Log(light.gameObject.name);
         }
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Gate : BaseMachine
 {
-    // Start is called before the first frame update
+    private Coroutine turnOff;
+
     void Start()
     {
         
@@ -25,5 +26,16 @@ public class Gate : BaseMachine
                 cupGroup.animate_group_item();
             }
         }
+        if (other.CompareTag(Const.playerTag))
+        {
+            turnOff = StartCoroutine(TurnOff());
+            Debug.Log("IGNORE");
+        }
+    }
+    IEnumerator TurnOff()
+    {
+        yield return new WaitForSeconds(time);
+        machine.SetActive(false);
+        StopCoroutine(turnOff);
     }
 }

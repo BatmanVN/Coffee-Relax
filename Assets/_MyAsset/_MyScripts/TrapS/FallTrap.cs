@@ -15,7 +15,7 @@ public class FallTrap : MonoBehaviour
         {
             if (cupSpawn.id == CupId_Use)
             {
-                cupIns = cupSpawn.buckMap;
+                cupIns = cupSpawn.buckSell;
             }
         }
     }
@@ -26,10 +26,29 @@ public class FallTrap : MonoBehaviour
         {
             Observer.Notify(ListAction.Vibrate);
             Controller_Items.Ins.decrease_item();
-            CupObject cupObj = Instantiate(cupIns, pointFall.transform.position, pointFall.transform.rotation).gameObject.GetComponent<CupObject>();
-            Rigidbody rb = cupObj.GetComponent<Rigidbody>();
+            FabricaBox fb = Instantiate(cupIns, pointFall.transform.position, pointFall.transform.rotation).gameObject.GetComponent<FabricaBox>();
+            CupGroup cupOnHand = fall.GetComponent<CupGroup>();
+            if (fb != null && cupOnHand != null)
+            {
+                CupType cupInsType = cupOnHand.cupTypes.Find(type => type != null && type.gameObject.activeSelf);
+                if (cupInsType != null)
+                {
+                    GetGameObjectValue(cupInsType.item_Type, fb);
+                }
+            }
+            Rigidbody rb = fb.GetComponent<Rigidbody>();
             rb.isKinematic = false;
-            Destroy(cupObj.gameObject,3f);
+            Destroy(fb.gameObject,3f);
         }
     }
+    private void GetGameObjectValue(Item_type cupType, FabricaBox fb)
+    {
+        if (fb != null && fb.cupTypes != null)
+        {
+            CupType typeFb = fb.cupTypes.Find(cupfb => cupfb.item_Type == cupType);
+            if (typeFb != null)
+                typeFb.gameObject.SetActive(true);
+        }
+    }
+
 }
