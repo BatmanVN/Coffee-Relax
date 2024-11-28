@@ -15,7 +15,6 @@ public class Swipe_Button : MonoBehaviour, IPointerDownHandler
         Observer.Notify(ListAction.ChangeAnim, Const.runAnim);
         Observer.Notify(ListAction.GameRun, true);
         Observer.Notify(ListAction.SpawnObject);
-        
         Observer.Notify(ActionInGame.RotateStart);
 
         UIManager.Ins.OpenUI<InGame_UI>();

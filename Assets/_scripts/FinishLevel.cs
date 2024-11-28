@@ -41,7 +41,7 @@ public class FinishLevel : Singleton<FinishLevel>
                 if (cupType != null)
                 {
                     if (cupType.money > 0)
-                    {
+                    { 
                         Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupType.money);
                     }
@@ -58,7 +58,7 @@ public class FinishLevel : Singleton<FinishLevel>
 
     IEnumerator show_win_panel()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(10f);
 
         UIManager.Ins.OpenUI<Win_UI>();
         UIManager.Ins.CloseUI<InGame_UI>();
@@ -73,7 +73,6 @@ public class FinishLevel : Singleton<FinishLevel>
         //Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
         moneyAfterWin = GameControllManager.Ins.getcoin();
         totalCoin = moneyAfterWin - currentMoney;
-        StopCoroutine(showWin);
 
         //Advertisements.Instance.ShowInterstitial();
     }

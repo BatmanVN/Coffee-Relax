@@ -1,0 +1,20 @@
+public enum ListAction
+{
+    SetAimmator,
+    ChangeAnim,
+    GameRun,
+    GetPrefabCupID,
+    SpawnObject,
+    SpawnCupIns,
+    FinishGame,
+    Vibrate,
+    IncreaseMoney,
+    DecreaseMoney,
+    SetUpCupTypes,
+    ShowIce7,
+    SpawnPlayer,
+    SetCamFollow,
+    NextLevel,
+    EndRoad,
+    FinishMove
+}

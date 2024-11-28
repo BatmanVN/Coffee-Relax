@@ -53,6 +53,7 @@ public class SellGate: MonoBehaviour
                     GetGameObjectValue(cupInsType.item_Type, fb);
                     if (cupInsType.money > 0)
                     {
+                        Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupInsType.money);
                     }
                 }

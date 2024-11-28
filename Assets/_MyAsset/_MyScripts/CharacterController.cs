@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class CharacterController : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class CharacterController : MonoBehaviour
     protected Vector3 mvm;
     public float time;
     public bool isFly;
-    private bool isRotate;
+    private bool isRotate, isBlock;
     public string animName = Const.runAnim;
 
     private Coroutine money;
@@ -29,6 +31,7 @@ public class CharacterController : MonoBehaviour
         Observer.AddObserver(ListAction.FinishMove, move_player_to_center_finish_level);
         Observer.AddObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
         Observer.AddObserver(ActionInGame.RotateStart, RotateStartGame);
+        Observer.AddObserver(ActionInGame.PushBack, MoveBack);
     }
     private void Start()
     {
@@ -48,9 +51,10 @@ public class CharacterController : MonoBehaviour
 
     protected void player_movements2()
     {
-        if (game_run && !isRotate)
+        if (game_run && !isRotate && !isBlock)
         {
             // Player move forward
+
             transform.Translate(transform.forward * speed_player * Time.deltaTime);
             if (!is_finish && !isFly)
             {
@@ -70,14 +74,37 @@ public class CharacterController : MonoBehaviour
                     targetX.x = Mathf.Clamp(targetX.x, -3f, 3f); // Giới hạn phạm vi di chuyển
                     // Sử dụng DoTween để di chuyển mượt mà
                     /*transform.DOKill();*/ // Dừng tất cả tween trước đó nếu có
-                    transform.DOLocalMoveX(targetX.x, time);/*.SetEase(Ease.InOutQuad);*/ // Di chuyển nhân vật đến vị trí targetX trong 0.2 giây
+                    transform.DOLocalMoveX(targetX.x, time);/*.SetEase(Ease.InOutQuad);*/ // Di chuyển nhân vật đến vị trí targetX trong time giây
                     firstClick = currentHandPoint; // Cập nhật vị trí nhấn chuột
                 }
                 if (Input.GetMouseButtonUp(0))
                 {
                     mvm = Vector3.zero;
                 }
+                if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out RaycastHit hit, 10f))
+                {
+                    Vector3 adjustedPosition = transform.position;
+                    adjustedPosition.y = hit.point.y; // Cập nhật vị trí Y dựa trên bề mặt
+                    transform.position = adjustedPosition;
+                }
             }
+        }
+    }
+
+    protected void MoveBack(object[] datas)
+    {
+        if (datas == null || datas.Length < 1 || !(datas[0] is float distance)) return;
+        if (!isBlock)
+        {
+            anim.SetTrigger(Const.stunAnim);
+            isBlock = true;
+            float moveBackDirection = transform.position.z - distance;
+            transform.DOMoveZ(moveBackDirection, 3f).SetEase(/*Ease.OutBack*/Ease.OutQuad).OnComplete(
+                () =>
+                {
+                    isBlock = false;
+                    anim.SetTrigger(Const.runAnim);
+                });
         }
     }
 
@@ -102,6 +129,7 @@ public class CharacterController : MonoBehaviour
         money = StartCoroutine(MoneyUp());
         speed_player = 0f;
     }
+
 
     private IEnumerator MoneyUp()
     {
@@ -181,6 +209,7 @@ public class CharacterController : MonoBehaviour
         Observer.RemoveObserver(ListAction.GameRun, StatusGame);
         Observer.RemoveObserver(ListAction.GameRun, RotateWin);
         Observer.RemoveObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
-        Observer.RemoveObserver(ActionInGame.RotateStart,RotateStartGame);
+        Observer.RemoveObserver(ActionInGame.RotateStart, RotateStartGame);
+        Observer.RemoveObserver(ActionInGame.PushBack,MoveBack);
     }
 }
