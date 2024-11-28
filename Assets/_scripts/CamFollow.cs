@@ -22,7 +22,7 @@ public class CamFollow : Singleton<CamFollow>
     }
     void LateUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position, ofsset, Time.deltaTime * speed_cam);
+        //transform.position = Vector3.Lerp(transform.position, ofsset, Time.deltaTime * speed_cam);
     }
 
     void Update()

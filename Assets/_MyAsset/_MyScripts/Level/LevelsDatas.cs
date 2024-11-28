@@ -13,11 +13,8 @@ public class LevelsDatas : ScriptableObject
 [System.Serializable]
 public class LevelData
 {
-    [VerticalGroup("Split/Right")]
-    [LabelWidth(100)]
+
     public int level;
 
-    [VerticalGroup("Split/Right")]
-    [LabelWidth(100)]
     public GameObject levelPrefab;
 }

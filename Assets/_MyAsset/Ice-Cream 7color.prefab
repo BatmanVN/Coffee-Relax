@@ -126,10 +126,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1993978526659639305}
-  - component: {fileID: 1218180042236732080}
   - component: {fileID: 1218180042236732081}
   - component: {fileID: 388868100449622219}
   - component: {fileID: 18355901080496040}
+  - component: {fileID: 1010725437591413058}
   m_Layer: 0
   m_Name: Ice-Cream 7color
   m_TagString: Untagged
@@ -156,33 +156,6 @@ Transform:
   - {fileID: 3311320749710727549}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1218180042236732080
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218180042236732083}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &1218180042236732081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -240,6 +213,33 @@ MonoBehaviour:
   machine: {fileID: 1267153001513967426}
   machineType: 4
   time: 0.3
+--- !u!54 &1010725437591413058
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218180042236732083}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1267153001513967426
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +251,6 @@ GameObject:
   - component: {fileID: 1935989684777715192}
   - component: {fileID: 3274644459260742237}
   - component: {fileID: 762560245449948823}
-  - component: {fileID: 7927428042870669625}
   m_Layer: 0
   m_Name: Cup Ice Cream N
   m_TagString: Untagged
@@ -325,28 +324,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7927428042870669625
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267153001513967426}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1973660135213781936, guid: b75dcbe799f34d90bd855fac015d9a10, type: 3}
 --- !u!1 &2028503961006178704
 GameObject:
   m_ObjectHideFlags: 0

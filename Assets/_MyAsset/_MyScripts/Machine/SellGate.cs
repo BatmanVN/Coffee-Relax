@@ -26,7 +26,7 @@ public class SellGate: MonoBehaviour
             }
         }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         convert_transform_to_vectors();
@@ -37,17 +37,18 @@ public class SellGate: MonoBehaviour
         if (other.CompareTag(Const.cupTag))
         {
             Observer.Notify(ListAction.Vibrate);
-            GameObject gm = Instantiate(money_stash, money_stash_pos.position, money_stash.transform.rotation);
+            //GameObject gm = Instantiate(money_stash, money_stash_pos.position, money_stash.transform.rotation);
 
-            Destroy(gm, 2f);
-
-            FabricaBox fb = Instantiate(fabrica_pref , path[0] , fabrica_pref.transform.rotation).GetComponent<FabricaBox>();
+            //Destroy(gm, 2f);
 
             CupGroup br = other.GetComponent<CupGroup>();
+            if(br.item_Type == Item_type.Cup) return;
+            FabricaBox fb = Instantiate(fabrica_pref , path[0] , fabrica_pref.transform.rotation).GetComponent<FabricaBox>();
+
 
             if (br != null && fb != null)
             {
-                CupType cupInsType = br.cupTypes.Find(type => type != null && type.gameObject.activeSelf);
+                CupType cupInsType = br.cupTypes.Find(type => type != null && type.gameObject.activeSelf && type.item_Type != Item_type.Cup);
                 if (cupInsType != null)
                 {
                     GetGameObjectValue(cupInsType.item_Type, fb);
@@ -56,12 +57,21 @@ public class SellGate: MonoBehaviour
                         Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupInsType.money);
                     }
+                    cupInsType.gameObject.SetActive(false);
                 }
             }
             fb.transform.DOPath(path, duration, path_type, path_mode, 10, Color.red)
                 .OnComplete(() => Destroy(fb.gameObject));
 
             Controller_Items.Ins.decrease_item();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag(Const.cupTag))
+        {
+            CupGroup br = other.GetComponent<CupGroup>();
+            br.item_Type = Item_type.Cup;
         }
     }
     private void GetGameObjectValue(Item_type cupType, FabricaBox fb)

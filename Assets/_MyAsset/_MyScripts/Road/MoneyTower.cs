@@ -39,7 +39,7 @@ public class MoneyTower : MonoBehaviour
                     .SetEase(Ease.OutExpo) // Hiệu ứng easing "tăng nhanh, giảm dần"
                     .OnComplete(() =>
                     {
-                        CamFollow.Ins.ofsset = new Vector3(3.8f, 8.5f, -2f);
+                        CamFollow.Ins.ofsset = new Vector3(3.9f, 8.5f, -3.5f);
                         if (Controller_Items.Ins.total_items > 1)
                         {
                             anim.SetTrigger(Const.victoryAnim);

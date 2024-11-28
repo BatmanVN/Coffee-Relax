@@ -58,7 +58,7 @@ public class FinishLevel : Singleton<FinishLevel>
 
     IEnumerator show_win_panel()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(12f);
 
         UIManager.Ins.OpenUI<Win_UI>();
         UIManager.Ins.CloseUI<InGame_UI>();

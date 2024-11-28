@@ -15,10 +15,10 @@ public class GameControllManager : Singleton<GameControllManager>
     protected override void Awake()
     {
         base.Awake();
-        //Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 0; // Vô hiệu hóa VSync
+        Application.targetFrameRate = 60; // Đặt FPS mục tiêu
         Input.multiTouchEnabled = false;
         onstartfirsttime();
-        //ChangeState(GameState.MainMenu);
         UIManager.Ins.OpenUI<MainMenu_UI>();
     }
     void Start()

@@ -42,6 +42,10 @@ public class CupGroup : MonoBehaviour
             cupType.gameObject.SetActive(item_Type == cupType.item_Type);
         }
     }
+    private void OnDisable()
+    {
+        item_Type = Item_type.Cup;
+    }
     private void OnDestroy()
     {
         Observer.RemoveObserver(ListAction.SetUpCupTypes,SetActiveObjects);
