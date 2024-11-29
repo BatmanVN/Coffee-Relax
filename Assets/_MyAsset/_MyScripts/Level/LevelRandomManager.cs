@@ -7,7 +7,8 @@ public class LevelRandomManager : Singleton<LevelRandomManager>
 {
     //public List<GameObject> listLevel;
     public LevelsDatas levelsDatas;
-    public List<Transform> spawnLevels;
+    //public List<Transform> spawnLevels;
+    public Transform spawnLevel;
     public int levelIndex;
     //public Transform finish;
     private void OnEnable()
@@ -15,13 +16,13 @@ public class LevelRandomManager : Singleton<LevelRandomManager>
         Observer.AddObserver(ListAction.NextLevel, SelectLevel);
     }
 
-    private void Start()
-    {
-        foreach (Transform child in transform)
-        {
-            spawnLevels.Add(child);
-        }
-    }
+    //private void Start()
+    //{
+    //    foreach (Transform child in transform)
+    //    {
+    //        spawnLevels.Add(child);
+    //    }
+    //}
 
     protected void SelectLevel(object[] datas)
     {
@@ -40,9 +41,10 @@ public class LevelRandomManager : Singleton<LevelRandomManager>
             }
             Debug.Log("level < " + totalLevel);
         }
-        GameObject level = Instantiate(levelsDatas.levels[levelIndex - 1].levelPrefab, spawnLevels[levelIndex - 1].transform.position, spawnLevels[levelIndex - 1].transform.rotation);
-        level.transform.SetParent(spawnLevels[levelIndex - 1].transform);
-        
+        GameObject level = Instantiate(levelsDatas.levels[levelIndex - 1].levelPrefab, spawnLevel.transform.position, spawnLevel.transform.rotation);
+        level.transform.SetParent(spawnLevel.transform);
+        level.transform.localPosition = levelsDatas.levels[levelIndex - 1].levelPrefab.transform.position;
+
         Debug.Log("Level: " +  levelIndex);
     }
     private void OnDestroy()

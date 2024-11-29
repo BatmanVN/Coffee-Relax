@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.01939314, y: -0.7391815, z: 0.6727685, w: 0.02484371}
   m_LocalPosition: {x: 0.001, y: 2.511, z: 0.012}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1791593771969097506}
@@ -117,7 +117,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.83
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -2391,8 +2391,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 3, z: 0.5}
-  m_Center: {x: 0, y: 0.92, z: 0}
+  m_Size: {x: 0.5, y: 4.3, z: 0.5}
+  m_Center: {x: 0, y: 0.11, z: 0}
 --- !u!54 &1791593772807963471
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2462,7 +2462,7 @@ Transform:
   m_GameObject: {fileID: 1791593771918749752}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071058, z: 0, w: 0.7071078}
-  m_LocalPosition: {x: 0, y: -0.02, z: 0.1}
+  m_LocalPosition: {x: 0, y: -1.32, z: 0.1}
   m_LocalScale: {x: 0.59322, y: 1, z: 0.80329}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3043,7 +3043,7 @@ Transform:
   m_GameObject: {fileID: 1791593771918756017}
   serializedVersion: 2
   m_LocalRotation: {x: -0.6727685, y: -0.02484152, z: 0.01939115, w: 0.7391816}
-  m_LocalPosition: {x: -0.01, y: -0.32, z: 3.41}
+  m_LocalPosition: {x: -0.02, y: -0.41, z: 4.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

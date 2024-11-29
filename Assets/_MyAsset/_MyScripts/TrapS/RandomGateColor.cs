@@ -18,7 +18,7 @@ public class RandomGateColor : MonoBehaviour
         {
             int random = Random.Range(0, materials.Count);
             meshRenderer.material = materials[random];
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
         }
     }
     private void OnDestroy()

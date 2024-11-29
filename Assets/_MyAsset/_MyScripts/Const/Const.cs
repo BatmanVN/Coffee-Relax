@@ -1,4 +1,6 @@
 
+using System.Collections.Generic;
+
 public class Const
 {
     //String player Anim
@@ -11,7 +13,7 @@ public class Const
     public const string walkModelAnim = "WalkModel";
     public const string flyIdleAnim = "FlyIdle";
     public const string reiAnim = "Rei";
-    public const string thinkAnim = "Think"; 
+    public const string thinkAnim = "Think";
     public const string cuteAnim = "Cute";
     public const string angryAnim = "Angry";
     public const string cryAnim = "Cry";
@@ -37,4 +39,28 @@ public class Const
     //Layer Camera
     public const string canSee = "Obstacle";
     public const string cantSee = "IgnoreCamera";
+}
+
+public class ConstDanceAnim
+{
+    public const string waveHiphop = "WaveHH";
+    public const string danceAnim = "Dance";
+    public const string hiphopDance = "HHDance";
+    public const string dance1Anim = "Dance1";
+    public const string snakeDance = "SnakeDance";
+    public const string swingDance = "SwingDance";
+    public const string maraschinoDance = "Maraschino";
+    public const string twerkAnim = "Victory";
+
+    public static readonly List<string> DanceList = new List<string>
+    {
+        waveHiphop,
+        danceAnim,
+        hiphopDance,
+        dance1Anim,
+        snakeDance,
+        swingDance,
+        maraschinoDance,
+        twerkAnim
+    };
 }

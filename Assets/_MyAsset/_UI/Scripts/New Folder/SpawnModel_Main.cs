@@ -8,7 +8,6 @@ public class SpawnModel_Main : MonoBehaviour
     public GameObject model;
     public int skinID;
     private float changeInterval = 5f;
-    private string[] animationStates = { Const.idleAnim, Const.thinkAnim, Const.byeAnim, Const.cuteAnim, Const.walkModelAnim, Const.reiAnim, Const.flyIdleAnim };
 
     public Button touchCharacter;
     public bool isTouch;
@@ -57,13 +56,23 @@ public class SpawnModel_Main : MonoBehaviour
 
     private IEnumerator ChangeAnimationRoutine()
     {
-        model.GetComponent<Animator>().SetTrigger(Const.byeAnim);
+        var modleAnim = model.GetComponent<Animator>();
+        modleAnim.SetTrigger(Const.byeAnim);
         yield return new WaitForSeconds(changeInterval);
 
         while (!isTouch)
         {
-            string randomAnimation = animationStates[Random.Range(0, animationStates.Length)];
-            model.GetComponent<Animator>().SetTrigger(randomAnimation);
+            int randomAnim = Random.Range(0, ConstDanceAnim.DanceList.Count);
+            string randomAnimation = ConstDanceAnim.DanceList[randomAnim];
+
+            modleAnim.SetTrigger(randomAnimation);
+
+            AnimatorStateInfo stateInfo = modleAnim.GetCurrentAnimatorStateInfo(0);
+            while (stateInfo.IsName(randomAnimation) && stateInfo.normalizedTime < 1)
+            {
+                yield return null;
+                stateInfo = modleAnim.GetCurrentAnimatorStateInfo(0);
+            }
             yield return new WaitForSeconds(changeInterval);
         }
     }
