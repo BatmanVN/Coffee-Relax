@@ -6,8 +6,8 @@ public enum Item_type
     LidCoffee,
     ice7Color,
     Milk,
-    LidMilk
-    //LidCream
+    LidMilk,
+    Cake
 }
 
 public enum WheelAction

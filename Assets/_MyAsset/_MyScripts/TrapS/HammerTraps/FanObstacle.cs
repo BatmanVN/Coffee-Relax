@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class FanObstacle : BaseHammerTrap
 {
-
+    [SerializeField] private float timeCount = 0f;
+    private Coroutine impact;
     private void OnTriggerEnter(Collider hammer)
     {
         if (hammer.CompareTag(Const.cupTag))
@@ -28,6 +30,7 @@ public class FanObstacle : BaseHammerTrap
 
                 Vector3 forceDirection = (hammer.transform.position - transform.position).normalized;
                 ThrownOffCup(fb, forceDirection, fb.GetComponent<Rigidbody>());
+                impact = StartCoroutine(CatchImpactAgain());
             }
         }
         if (hammer.CompareTag(Const.playerTag))
@@ -36,5 +39,16 @@ public class FanObstacle : BaseHammerTrap
             Observer.Notify(ActionInGame.PushBack, 15f);
             isImpact = false;
         }
+    }
+
+    private IEnumerator CatchImpactAgain()
+    {
+        while (timeCount <= 10f)
+        {
+            timeCount += Time.deltaTime;
+            yield return new WaitForSeconds(1f);
+            isImpact = false;
+        }
+        StopCoroutine(impact);
     }
 }

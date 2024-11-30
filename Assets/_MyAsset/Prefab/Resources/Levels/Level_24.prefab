@@ -9137,6 +9137,7 @@ Transform:
   m_Children:
   - {fileID: 1756092257768323255}
   - {fileID: 1238520619308866124}
+  - {fileID: 6773310691091415384}
   - {fileID: 6638604477379631165}
   - {fileID: 680404047793000126}
   - {fileID: 6004398973206594770}
@@ -16443,6 +16444,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6640053558651118604, guid: 473cc0d5c7dadab428e43372d8e9dbdc,
     type: 3}
   m_PrefabInstance: {fileID: 4933923315441982651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4981727914238775349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6563125918503124151}
+    m_Modifications:
+    - target: {fileID: 1791593771918756589, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_Name
+      value: CheeseCakeDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 158.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 290add0f238f43a1b79a00ef5b72d9fa, type: 3}
+--- !u!4 &6773310691091415384 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1791593771969122669, guid: 290add0f238f43a1b79a00ef5b72d9fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 4981727914238775349}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5241856406867581182
 PrefabInstance:

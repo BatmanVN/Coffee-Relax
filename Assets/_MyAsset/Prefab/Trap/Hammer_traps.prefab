@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3224683951575711680}
   - component: {fileID: 3161716867670156781}
   - component: {fileID: 2771656021234560280}
-  - component: {fileID: 5395502468857979291}
   - component: {fileID: 6607909768122267711}
   - component: {fileID: 2594935939633560465}
+  - component: {fileID: 2169645084721381137}
   m_Layer: 0
   m_Name: Hammer_traps
   m_TagString: Untagged
@@ -87,20 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5395502468857979291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996482296413901472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7f30e4f813e124f9db8c097358c7a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationAxis: 1
-  rotationSpeed: 350
 --- !u!136 &6607909768122267711
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -139,3 +125,19 @@ MonoBehaviour:
   cupFB: {fileID: 0}
   hitForce: 10
   CupId_Use: 0
+  isImpact: 0
+--- !u!114 &2169645084721381137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996482296413901472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36a2252101141e4b8ac93501c1cea49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: 1
+  rotationSpeed: 350
+  duration: 5
