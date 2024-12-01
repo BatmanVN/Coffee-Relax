@@ -32,12 +32,24 @@ public class LidCup : MonoBehaviour
                     Observer.Notify(ListAction.SetUpCupTypes);
                     cupGroup.animate_group_item();
                 }
+                UpCash(cupGroup);
             }
         }
         if (other.CompareTag(Const.playerTag))
         {
             turnOff = StartCoroutine(TurnOff());
             Debug.Log("IGNORE");
+        }
+    }
+
+    private void UpCash(CupGroup cupGroup)
+    {
+        foreach (CupType type in cupGroup.cupTypes)
+        {
+            if (type != null && type.item_Type != Item_type.Cup && type.gameObject.activeSelf)
+            {
+                type.money += 10;
+            }
         }
     }
     IEnumerator TurnOff()

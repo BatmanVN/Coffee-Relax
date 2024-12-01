@@ -79,19 +79,23 @@ public class InGame_UI : UICanvas
         GameControllManager.Ins.setcoin(GameControllManager.Ins.getcoin() + nbr);
         txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
         txt_mmoney.color = Color.yellow;
-        UpEffect(true);
-        effect = StartCoroutine(TurnOffUpEffect());
+        //UpEffect(true);
+        //effect = StartCoroutine(TurnOffUpEffect());
     }
 
     public void Decrease_money(object[] datas)
     {
         if (datas == null || datas.Length < 1 || !(datas[0] is int nbr)) return;
-        GameControllManager.Ins.setcoin(GameControllManager.Ins.getcoin() - nbr);
+        GameControllManager.Ins.setcoin(GameControllManager.Ins.getcoin() + nbr);
         txt_mmoney.text = GameControllManager.Ins.getcoin().ToString();
         txt_mmoney.color = Color.red;
-        Debug.Log(GameControllManager.Ins.getcoin());
-        DownEffect(true);
-        effect = StartCoroutine(TurnOffDownEffect());
+        if (GameControllManager.Ins.getcoin() < 0)
+        {
+            txt_mmoney.text = 0.ToString();
+            GameControllManager.Ins.setcoin(0);
+        }
+        //DownEffect(true);
+        //effect = StartCoroutine(TurnOffDownEffect());
     }
     public IEnumerator TurnOffUpEffect()
     {

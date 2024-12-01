@@ -71,7 +71,8 @@ public class SellGate: MonoBehaviour
         if (other.CompareTag(Const.cupTag))
         {
             CupGroup br = other.GetComponent<CupGroup>();
-            br.item_Type = Item_type.Cup;
+            if(br.gameObject.activeSelf)
+                br.item_Type = Item_type.Cup;
         }
     }
     private void GetGameObjectValue(Item_type cupType, FabricaBox fb)

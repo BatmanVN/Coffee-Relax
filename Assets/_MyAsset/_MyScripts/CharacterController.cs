@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour
     public Animator anim;
     [SerializeField] private float sensitivity;
     [SerializeField] private float timeRotateStart;
+    [SerializeField] private float minX, maxX;
     protected Rigidbody rb;
     public bool game_run, is_finish;
     public float speed_player, horizontal_speed;
@@ -71,7 +72,7 @@ public class CharacterController : MonoBehaviour
                     float xdiff = (currentHandPoint.x - firstClick.x) * Time.smoothDeltaTime * horizontal_speed * sensitivity;
                     // Tính toán vị trí mới
                     targetX.x += xdiff;
-                    targetX.x = Mathf.Clamp(targetX.x, -3f, 3f); // Giới hạn phạm vi di chuyển
+                    targetX.x = Mathf.Clamp(targetX.x, minX, maxX); // Giới hạn phạm vi di chuyển
                     // Sử dụng DoTween để di chuyển mượt mà
                     /*transform.DOKill();*/ // Dừng tất cả tween trước đó nếu có
                     transform.DOLocalMoveX(targetX.x, time);/*.SetEase(Ease.InOutQuad);*/ // Di chuyển nhân vật đến vị trí targetX trong time giây

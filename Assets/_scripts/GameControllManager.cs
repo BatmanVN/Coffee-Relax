@@ -140,6 +140,11 @@ public class GameControllManager : Singleton<GameControllManager>
     }
     public void setcoin(int nbr)
     {
+        coinCurrent = getcoin();
+        if (coinCurrent <= 0)
+        {
+            PlayerPrefs.SetInt("coin",0);
+        }
         PlayerPrefs.SetInt("coin", nbr);
     }
     private float deltaTime = 0.0f;

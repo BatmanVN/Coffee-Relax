@@ -45,6 +45,11 @@ public class FinishLevel : Singleton<FinishLevel>
                         Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupType.money);
                     }
+                    else
+                    {
+                        if (GameControllManager.Ins.getcoin() <= 0) return;
+                        Observer.Notify(ListAction.DecreaseMoney, cupType.money);
+                    }
                 }
                 if (br.item_Type == Item_type.Cup)
                 {
@@ -58,7 +63,7 @@ public class FinishLevel : Singleton<FinishLevel>
 
     IEnumerator show_win_panel()
     {
-        yield return new WaitForSeconds(12f);
+        yield return new WaitForSeconds(15f);
 
         UIManager.Ins.OpenUI<Win_UI>();
         UIManager.Ins.CloseUI<InGame_UI>();

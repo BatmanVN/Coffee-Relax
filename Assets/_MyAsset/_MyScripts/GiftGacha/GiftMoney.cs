@@ -7,11 +7,10 @@ public class GiftMoney : BaseGift
     [SerializeField] private int currentCoin;
     private void OnEnable()
     {
-        
+        currentCoin = GameControllManager.Ins.getcoin();
     }
     public override void GetPrize()
     {
-        currentCoin = GameControllManager.Ins.getcoin();
         int total = currentCoin + moneyGift;
         GameControllManager.Ins.setcoin(total);
         Debug.Log(prizeSegment + 1);

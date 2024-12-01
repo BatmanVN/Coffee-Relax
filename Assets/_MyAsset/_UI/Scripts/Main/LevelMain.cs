@@ -10,7 +10,6 @@ public class LevelMain : MonoBehaviour
 
     private void OnEnable()
     {
-        levelIndex = GetComponentInChildren<Text>();
         level = GameControllManager.Ins.getlevel() + 1;
         levelIndex.text = level.ToString();
     }

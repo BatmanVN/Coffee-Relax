@@ -8,7 +8,7 @@ public class RandomCash : BaseRandomGate
 {
     private List<int> listCash = new List<int>()
         {
-            0, 10, 20, 40, 60, 80, 100, 150, 200, -10, -20, -40, -60, -80, -100,-150,-200
+            0, 10, 20, 30, 40, 50, 60, 80, 100, -10, -20, -30, -15, -25, -35,-50
         };
 
     [SerializeField] private TextMeshProUGUI textRandom;
@@ -42,9 +42,7 @@ public class RandomCash : BaseRandomGate
     {
         foreach (CupType cupType in cupGroup.cupTypes)
         {
-            if (cupGroup.item_Type == cupType.item_Type &&
-                cupType.gameObject.activeSelf &&
-                cupType.item_Type != Item_type.Cup)
+            if (cupType.item_Type != Item_type.Cup)
             {
                 cupType.money = listCash[randomIndex];
                 cupGroup.animate_group_item();
@@ -63,7 +61,7 @@ public class RandomCash : BaseRandomGate
 
     protected IEnumerator JokePlayer()
     {
-        yield return new WaitForSeconds(1.6f);
+        yield return new WaitForSeconds(1f);
         Time.timeScale = 1f;
         if (listCash[randomIndex] <= 0)
         {
