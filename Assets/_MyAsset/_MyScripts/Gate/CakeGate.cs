@@ -24,6 +24,7 @@ public class CakeGate : BaseMachine
                 cupGroup.item_Type = machineType;
                 Observer.Notify(ListAction.SetUpCupTypes);
                 cupGroup.animate_group_item();
+                PlaySoundGate();
             }
         }
         if (other.CompareTag(Const.playerTag))

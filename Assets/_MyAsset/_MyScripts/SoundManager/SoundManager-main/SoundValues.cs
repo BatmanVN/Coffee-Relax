@@ -11,5 +11,6 @@
         TouchModel,
         PickUp,
         Used,
-        DropCup
-    }
+        DropCup,
+        Gate
+}

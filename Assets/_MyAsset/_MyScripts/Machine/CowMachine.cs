@@ -16,6 +16,7 @@ public class CowMachine : BaseMachine
                 cupGroup.item_Type = machineType;
                 Observer.Notify(ListAction.SetUpCupTypes);
                 cupGroup.animate_group_item();
+
             }
         }
         if (other.CompareTag(Const.playerTag))
