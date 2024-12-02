@@ -12,6 +12,7 @@ public class ButtonShop : MonoBehaviour
     }
     public void ShopButton()
     {
+        SoundManager.PlaySound(SoundType.ClickButton);
         UIManager.Ins.CloseAll();
         //UIManager.Ins.CloseUI<MainMenu_UI>();
         UIManager.Ins.OpenUI<ShopUI>();

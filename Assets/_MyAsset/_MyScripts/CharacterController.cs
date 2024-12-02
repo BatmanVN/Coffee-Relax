@@ -126,7 +126,7 @@ public class CharacterController : MonoBehaviour
         transform.SetParent(MoneyTower.inst.gameObject.transform);
         transform.position = MoneyTower.inst.posPlayer.transform.position;
         transform.localRotation = Quaternion.Euler(0, 0, 0);
-        anim.SetTrigger(Const.cuteAnim);
+        anim.SetTrigger(Const.byeAnim);
         money = StartCoroutine(MoneyUp());
         speed_player = 0f;
     }

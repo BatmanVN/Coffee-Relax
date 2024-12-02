@@ -18,21 +18,21 @@ public class Win_UI : UICanvas
         adsButton.onClick?.AddListener(AdsButton);
     }
 
-    public void AdsButton()
+    protected virtual void AdsButton()
     {
         
     }
 
-    public void btn_next()
+    protected virtual void btn_next()
     {
         GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
         Observer.Notify(ListAction.NextLevel);
-        Observer.Notify(ActionInGame.DisableRoad);
+        //Observer.Notify(ActionInGame.DisableRoad);
         Close(0);
         UIManager.Ins.OpenUI<Loading>();
         Observer.Notify(UiAction.WinLoading);
     }
-    public void show_multiplication(object[] datas)
+    protected virtual void show_multiplication(object[] datas)
     {
         if(datas == null || datas.Length < 1 || !(datas[0] is int nbr)) return;
         txt_multi.text = nbr + " ×";

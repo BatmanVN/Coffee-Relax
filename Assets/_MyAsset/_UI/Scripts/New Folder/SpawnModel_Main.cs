@@ -45,6 +45,7 @@ public class SpawnModel_Main : MonoBehaviour
         model.GetComponent<Animator>().SetTrigger(Const.angryAnim);
         isTouch = true;
         turnOff = StartCoroutine(TurnOffTouch());
+        SoundManager.PlaySound(SoundType.TouchModel);
     }
     private IEnumerator TurnOffTouch()
     {

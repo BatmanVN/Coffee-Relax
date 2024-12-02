@@ -29,7 +29,8 @@ public class RandomCash : BaseRandomGate
             Observer.Notify(ListAction.Vibrate);
 
             CupGroup cupGroup = randomGate.GetComponent<CupGroup>();
-            if (cupGroup == null) return;
+            if (cupGroup == null || cupGroup.passRandomGate) return;
+            cupGroup.passRandomCash = true;
             SetRandomCash(cupGroup);
             isSetted = true;
             StopCoroutine(randomCash);

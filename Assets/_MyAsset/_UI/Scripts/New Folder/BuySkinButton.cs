@@ -77,6 +77,7 @@ public class BuySkinButton : BaseDownButton
 
                 // Cập nhật thông tin về skin đang được sử dụng cho các đối tượng Observer
                 Observer.Notify(UiAction.UpdateUsedObject, idSkin);
+                SoundManager.PlaySound(SoundType.Used);
             }
             else
             {
@@ -96,6 +97,7 @@ public class BuySkinButton : BaseDownButton
             int used = GameControllManager.Ins.GetIDSkinUse();
             ViewCharacter.Ins.SetStatusTextNoti(true, ("SKIN " + ViewCharacter.Ins.baseSkins[used].skinName + " HAS BEEN USED"));
             turnOff = StartCoroutine(TurnOffText());
+            SoundManager.PlaySound(SoundType.Used);
         }
         Debug.Log("Used: " + active);
     }
@@ -128,6 +130,8 @@ public class BuySkinButton : BaseDownButton
 
                 // Cập nhật trạng thái về skin đã sử dụng (nếu cần thiết)
                 Observer.Notify(UiAction.StatusUsed);
+
+                SoundManager.PlaySound(SoundType.BuySuccess);
             }
             else
             {

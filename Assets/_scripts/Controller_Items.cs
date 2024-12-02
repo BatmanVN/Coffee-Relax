@@ -79,6 +79,7 @@ public class Controller_Items : Singleton<Controller_Items>
         }
         //    //animate group
         list_item[count_items].GetComponent<CupGroup>().animate_group_item();
+        SoundManager.PlaySound(SoundType.PickUp);
     }
 
     public void decrease_item()
@@ -87,6 +88,7 @@ public class Controller_Items : Singleton<Controller_Items>
         {
             list_item[count_items].gameObject.SetActive(false);
             count_items--;
+            SoundManager.PlaySound(SoundType.DropCup);
         }
         //total_items--;
     }

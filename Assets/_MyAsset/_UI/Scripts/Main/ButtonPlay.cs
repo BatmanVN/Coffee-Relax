@@ -25,5 +25,6 @@ public class ButtonPlay : MonoBehaviour, IPointerDownHandler
         Observer.Notify(ActionInGame.SpawnRoad);
         Observer.Notify(ListAction.GetPrefabCupID);
         Observer.Notify(UiAction.MenuLoading);
+        SoundManager.PlaySound(SoundType.PlayButton);
     }
 }

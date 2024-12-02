@@ -51,6 +51,7 @@ public class ConstDanceAnim
     public const string swingDance = "SwingDance";
     public const string maraschinoDance = "Maraschino";
     public const string twerkAnim = "Victory";
+    public const string gangNamStyle = "GangNam";
 
     public static readonly List<string> DanceList = new List<string>
     {
@@ -61,6 +62,7 @@ public class ConstDanceAnim
         snakeDance,
         swingDance,
         maraschinoDance,
-        twerkAnim
+        twerkAnim,
+        gangNamStyle
     };
 }

@@ -8,6 +8,7 @@ public class CloseSetting : MonoBehaviour
 {
     public Button back;
     public ButtonSetting buttonSetting;
+    public int clipIndex = 1;
 
     private void Start()
     {
@@ -18,5 +19,7 @@ public class CloseSetting : MonoBehaviour
     private void BackMenu()
     {
         buttonSetting.settingBar.gameObject.SetActive(false);
+        SoundManager.PlayIntSound(SoundType.StatusUI, clipIndex);
+
     }
 }

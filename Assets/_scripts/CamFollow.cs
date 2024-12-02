@@ -47,7 +47,6 @@ public class CamFollow : Singleton<CamFollow>
         if (target != null)
         {
             tween = transform.DOMove(ofsset, speed_cam).SetEase(ease).SetAutoKill(false);
-
             is_active = true;
         }
     }

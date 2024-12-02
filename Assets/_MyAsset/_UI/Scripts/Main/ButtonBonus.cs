@@ -13,6 +13,6 @@ public class ButtonBonus : MonoBehaviour
     }
     private void BonusButton()
     {
-
+        SoundManager.PlaySound(SoundType.ClickButton);
     }
 }

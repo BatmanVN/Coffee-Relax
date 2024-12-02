@@ -34,15 +34,15 @@ public class MoneyTower : MonoBehaviour
         if (datas == null || datas.Length < 1 || !(datas[0] is Animator anim)) return;
         int targetIndex = Mathf.Clamp(Controller_Items.Ins.total_items, 0, posFinish.listPos.Count - 1);
         float targetY = posFinish.listPos[targetIndex].transform.position.y;
-
         transform.DOLocalMoveY(targetY, 6f)
                     .SetEase(Ease.OutExpo) // Hiệu ứng easing "tăng nhanh, giảm dần"
                     .OnComplete(() =>
                     {
-                        CamFollow.Ins.ofsset = new Vector3(3.9f, 8.5f, -3.5f);
+                        CamFollow.Ins.ofsset = new Vector3(3.8f, 8f, -4f);
                         if (Controller_Items.Ins.total_items > 1)
                         {
                             anim.SetTrigger(Const.victoryAnim);
+                            SoundManager.PlaySound(SoundType.Victory);
                         }
                         if (Controller_Items.Ins.total_items <= 1)
                         {

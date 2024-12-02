@@ -13,8 +13,8 @@ public class RandomGate : BaseRandomGate
             Observer.Notify(ListAction.Vibrate);
 
             CupGroup cupGroup = randomGate.GetComponent<CupGroup>();
-            if (cupGroup == null) return;
-
+            if (cupGroup == null || cupGroup.passRandomGate) return;
+            cupGroup.passRandomGate = true;
             Array itemTypes = System.Enum.GetValues(typeof(Item_type));
             SetRandomType(cupGroup, itemTypes);
         }

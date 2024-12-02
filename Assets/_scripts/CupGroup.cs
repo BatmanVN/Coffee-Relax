@@ -12,6 +12,9 @@ public class CupGroup : MonoBehaviour
     public List<CupType> cupTypes;
     public Item_type item_Type;
     public Animator anim;
+    [field: SerializeField] public bool passRandomGate;
+    [field: SerializeField] public bool passRandomCash;
+
     private void OnValidate() => anim = GetComponent<Animator>();
     private void OnEnable()
     {

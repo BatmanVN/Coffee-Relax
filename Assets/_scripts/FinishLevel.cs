@@ -44,11 +44,13 @@ public class FinishLevel : Singleton<FinishLevel>
                     { 
                         Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupType.money);
+                        Debug.Log(GameControllManager.Ins.getcoin());
                     }
-                    else
+                    if(cupType.money < 0)
                     {
                         if (GameControllManager.Ins.getcoin() <= 0) return;
                         Observer.Notify(ListAction.DecreaseMoney, cupType.money);
+                        Debug.Log(GameControllManager.Ins.getcoin());
                     }
                 }
                 if (br.item_Type == Item_type.Cup)
