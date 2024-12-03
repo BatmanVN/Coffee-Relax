@@ -39,7 +39,7 @@ public class MoneyTower : MonoBehaviour
                         CamFollow.Ins.ofsset = new Vector3(3.8f, 8f, -4f);
                         if (Controller_Items.Ins.total_items > 1)
                         {
-                            anim.SetTrigger(Const.victoryAnim);
+                            Observer.Notify(ListAction.ChangeAnim, Const.victoryAnim);
                             SoundManager.PlaySound(SoundType.Victory);
                         }
                         if (Controller_Items.Ins.total_items <= 1)
