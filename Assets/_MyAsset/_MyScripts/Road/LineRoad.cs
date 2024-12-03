@@ -29,28 +29,28 @@ public class LineRoad : Singleton<LineRoad>
         playerFly = GameObject.FindGameObjectWithTag(Const.playerTag).GetComponent<PlayerFly>();
     }
 
-    private void OnTriggerEnter(Collider line)
-    {
-        if (line.CompareTag(Const.playerTag))
-        {
-            if (!isFly)
-            {
-                Observer.Notify(ActionInGame.ControlHook, path, duration, path_type, path_mode);
-                isFly = true;
-                character.enabled = false;
-                playerFly.enabled = true;
-                character.anim.SetTrigger(Const.flyAnim);
-                character.gameObject.transform.DOPath(path, duration, path_type, path_mode, 10, Color.red).OnComplete(() =>
-                {
-                    character.anim.SetTrigger(Const.runAnim);
-                    character.enabled = true;
-                    playerFly.enabled = false;
-                    character.gameObject.transform.DORotate(new Vector3(0, 0, 0), 0.1f);
-                    this.enabled = false;
-                });
-            }
-        }
-    }
+    //private void OnTriggerEnter(Collider line)
+    //{
+    //    if (line.CompareTag(Const.playerTag))
+    //    {
+    //        if (!isFly)
+    //        {
+    //            Observer.Notify(ActionInGame.ControlHook, path, duration, path_type, path_mode);
+    //            isFly = true;
+    //            //character.enabled = false;
+    //            //playerFly.enabled = true;
+    //            character.anim.SetTrigger(Const.flyAnim);
+    //            character.gameObject.transform.DOPath(path, duration, path_type, path_mode, 10, Color.red).OnComplete(() =>
+    //            {
+    //                character.anim.SetTrigger(Const.runAnim);
+    //                //character.enabled = true;
+    //                //playerFly.enabled = false;
+    //                character.gameObject.transform.DORotate(new Vector3(0, 0, 0), 0.1f);
+    //                this.enabled = false;
+    //            });
+    //        }
+    //    }
+    //}
 
     void convert_transform_to_vectors()
     {

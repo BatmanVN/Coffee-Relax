@@ -12,5 +12,16 @@
         PickUp,
         Used,
         DropCup,
-        Gate
+        Gate,
+        Swipe_Button,
+        DecreaseCup,
+        Pour,
+        TrapsSound,
+        ClapCheer,
+        LidClose,
+        RandomCash,
+        RandomGate,
+        AnimeGirl,
+        WinUiSound,
+        ShowUpADS
 }

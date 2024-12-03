@@ -18,6 +18,8 @@ public class LidCup : MonoBehaviour
             CupGroup cupGroup = other.GetComponent<CupGroup>();
             if (cupGroup != null)
             {
+                if(cupGroup.item_Type == Item_type.Cup) return;
+                SoundManager.PlaySound(SoundType.LidClose);
                 if (cupGroup.item_Type == Item_type.Coffee)
                 {
                     type = Item_type.LidCoffee;

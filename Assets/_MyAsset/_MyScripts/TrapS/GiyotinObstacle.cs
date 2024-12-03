@@ -31,6 +31,7 @@ public class GiyotinObstacle : MonoBehaviour
             Rigidbody rb = cupObj.GetComponent<Rigidbody>();
             if (cupObj != null)
             {
+                SoundManager.PlayIntSound(SoundType.TrapsSound, 0);
                 rb.isKinematic = false;
                 rb.AddForce(new Vector3(
                     Random.Range(-1.5f, 2f),// Lực ngẫu nhiên trên trục X

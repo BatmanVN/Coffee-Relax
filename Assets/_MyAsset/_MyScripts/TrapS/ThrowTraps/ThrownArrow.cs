@@ -13,6 +13,7 @@ public class ThrownArrow : BaseThrownTrap
         {
             if (!isThrowed)
             {
+                SoundManager.PlayIntSound(SoundType.TrapsSound,3);
                 Observer.Notify(ListAction.Vibrate);
 
                 Observer.Notify(ActionInGame.PlayerFly, path, duration, path_type, path_mode);

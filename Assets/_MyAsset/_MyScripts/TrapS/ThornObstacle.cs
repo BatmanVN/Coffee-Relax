@@ -20,6 +20,8 @@ public class ThornObstacle : MonoBehaviour
         {
             Observer.Notify(ListAction.Vibrate);
 
+            SoundManager.PlayIntSound(SoundType.TrapsSound, 10);
+
             Controller_Items.Ins.decrease_item();
 
             GameObject smoke = Instantiate(smoke_pref, other.transform.position, other.transform.rotation);

@@ -156,7 +156,7 @@ public class BuySkinButton : BaseDownButton
     }
     private void AdsButton()
     {
-
+        SoundManager.PlaySound(SoundType.ShowUpADS);
     }
     private void OnDestroy()
     {

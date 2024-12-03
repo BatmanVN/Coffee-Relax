@@ -14,5 +14,6 @@ public class ButtonGacha : MonoBehaviour
     public void WheelButton()
     {
         UIManager.Ins.OpenUI<LuckWheel>();
+        SoundManager.PlaySound(SoundType.ClickButton);
     }
 }

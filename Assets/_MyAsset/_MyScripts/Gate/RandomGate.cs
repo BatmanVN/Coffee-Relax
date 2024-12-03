@@ -11,7 +11,7 @@ public class RandomGate : BaseRandomGate
         if (randomGate.CompareTag(Const.cupTag))
         {
             Observer.Notify(ListAction.Vibrate);
-
+            SoundManager.PlaySound(SoundType.RandomGate);
             CupGroup cupGroup = randomGate.GetComponent<CupGroup>();
             if (cupGroup == null || cupGroup.passRandomGate) return;
             cupGroup.passRandomGate = true;

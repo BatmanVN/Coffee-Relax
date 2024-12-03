@@ -9,13 +9,8 @@ public class Const
     public const string runAnim = "Run";
     public const string flyAnim = "Fly";
     public const string victoryAnim = "Victory";
-    public const string byeAnim = "Bye";
     public const string walkModelAnim = "WalkModel";
     public const string flyIdleAnim = "FlyIdle";
-    public const string reiAnim = "Rei";
-    public const string thinkAnim = "Think";
-    public const string cuteAnim = "Cute";
-    public const string angryAnim = "Angry";
     public const string cryAnim = "Cry";
     public const string stunAnim = "Stun";
 
@@ -52,6 +47,11 @@ public class ConstDanceAnim
     public const string maraschinoDance = "Maraschino";
     public const string twerkAnim = "Victory";
     public const string gangNamStyle = "GangNam";
+    public const string reiAnim = "Rei";
+    public const string thinkAnim = "Think";
+    public const string cuteAnim = "Cute";
+    public const string angryAnim = "Angry";
+    public const string byeAnim = "Bye";
 
     public static readonly List<string> DanceList = new List<string>
     {
@@ -63,6 +63,11 @@ public class ConstDanceAnim
         swingDance,
         maraschinoDance,
         twerkAnim,
-        gangNamStyle
+        gangNamStyle,
+        cuteAnim,
+        angryAnim,
+        byeAnim,
+        reiAnim,
+        thinkAnim,
     };
 }

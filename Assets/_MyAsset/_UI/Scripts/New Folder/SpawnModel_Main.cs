@@ -15,6 +15,8 @@ public class SpawnModel_Main : MonoBehaviour
 
     private Coroutine anim;
     private Coroutine turnOff;
+    private Coroutine voice;
+
     private void OnEnable()
     {
         SpawnModel();
@@ -22,6 +24,7 @@ public class SpawnModel_Main : MonoBehaviour
     private void Start()
     {
         touchCharacter.onClick?.AddListener(TouchPlayer);
+
     }
     public void SpawnModel()
     {
@@ -42,10 +45,10 @@ public class SpawnModel_Main : MonoBehaviour
     private void TouchPlayer()
     {
         if (model == null) return;
-        model.GetComponent<Animator>().SetTrigger(Const.angryAnim);
+        model.GetComponent<Animator>().SetTrigger(ConstDanceAnim.angryAnim);
         isTouch = true;
+        SoundManager.PlayIntSound(SoundType.AnimeGirl, 4);
         turnOff = StartCoroutine(TurnOffTouch());
-        SoundManager.PlaySound(SoundType.TouchModel);
     }
     private IEnumerator TurnOffTouch()
     {
@@ -54,11 +57,10 @@ public class SpawnModel_Main : MonoBehaviour
         anim = StartCoroutine(ChangeAnimationRoutine());
         StopCoroutine(turnOff);
     }
-
     private IEnumerator ChangeAnimationRoutine()
     {
         var modleAnim = model.GetComponent<Animator>();
-        modleAnim.SetTrigger(Const.byeAnim);
+        modleAnim.SetTrigger(ConstDanceAnim.byeAnim);
         yield return new WaitForSeconds(changeInterval);
 
         while (!isTouch)

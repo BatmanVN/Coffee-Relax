@@ -142,7 +142,7 @@ public class BuySkinCupButton : BaseDownButton
     }
     private void AdsButton()
     {
-
+        SoundManager.PlaySound(SoundType.ShowUpADS);
     }
     private void OnDestroy()
     {

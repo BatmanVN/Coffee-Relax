@@ -11,6 +11,7 @@ public class Swipe_Button : MonoBehaviour, IPointerDownHandler
     }
     public void hide_swipe_panel()
     {
+        SoundManager.PlaySound(SoundType.Swipe_Button);
         Observer.Notify(ListAction.SetAimmator);
         Observer.Notify(ListAction.ChangeAnim, Const.runAnim);
         Observer.Notify(ListAction.GameRun, true);

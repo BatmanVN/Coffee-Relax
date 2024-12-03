@@ -592,7 +592,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1769282425349618330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingBar: {fileID: 6237864290546417559}
   buttonSetting: {fileID: 60743337027349796}
+  clipIndex: 0
 --- !u!1 &1402668131112801554
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,6 +854,7 @@ GameObject:
   - component: {fileID: 7181470871692614023}
   - component: {fileID: 224928807488759033}
   - component: {fileID: 2933177695114741922}
+  - component: {fileID: 3312728863585285138}
   m_Layer: 5
   m_Name: Button-ADS
   m_TagString: Untagged
@@ -962,6 +964,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3312728863585285138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676438572926568256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58043e432788524d931e2575f95ddf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adsButton: {fileID: 0}
 --- !u!1 &1698327875163398189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,8 +2117,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4164, y: 9.2066}
-  m_SizeDelta: {x: 131.672, y: 377.0174}
+  m_AnchoredPosition: {x: 4.7833, y: -64.20001}
+  m_SizeDelta: {x: 249.0703, y: 523.8306}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6836152556103062188
 CanvasRenderer:
@@ -2773,6 +2788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   back: {fileID: 5804671436558943597}
   buttonSetting: {fileID: 3560089937134695044}
+  clipIndex: 1
 --- !u!1 &5035359907988414901
 GameObject:
   m_ObjectHideFlags: 0

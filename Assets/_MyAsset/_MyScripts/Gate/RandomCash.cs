@@ -27,7 +27,7 @@ public class RandomCash : BaseRandomGate
         if (randomGate.CompareTag(Const.cupTag))
         {
             Observer.Notify(ListAction.Vibrate);
-
+            SoundManager.PlaySound(SoundType.RandomGate);
             CupGroup cupGroup = randomGate.GetComponent<CupGroup>();
             if (cupGroup == null || cupGroup.passRandomGate) return;
             cupGroup.passRandomCash = true;
@@ -68,11 +68,13 @@ public class RandomCash : BaseRandomGate
         {
             textRandom.text = "HA HA HA";
             textRandom.color = Color.red;
+            SoundManager.PlayIntSound(SoundType.RandomCash, 0);
         }
         if (listCash[randomIndex] > 0)
         {
             textRandom.text = "NICE!";
             textRandom.color = Color.yellow;
+            SoundManager.PlayIntSound(SoundType.RandomCash, 1);
         }
         StopCoroutine(changeText);
     }

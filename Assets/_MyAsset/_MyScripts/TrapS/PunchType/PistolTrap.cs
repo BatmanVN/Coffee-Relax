@@ -9,6 +9,8 @@ public class PistolTrap : BasePunchTrap
     {
         if (other.CompareTag(Const.cupTag))
         {
+            SoundManager.PlayIntSound(SoundType.TrapsSound, 6);
+
             Observer.Notify(ListAction.Vibrate);
 
             FabricaBox fb = Instantiate(fabrica_pref, path[0], fabrica_pref.transform.rotation).GetComponent<FabricaBox>();

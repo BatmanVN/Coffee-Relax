@@ -7,6 +7,7 @@ public class FanObstacle : BaseHammerTrap
 {
     [SerializeField] private float timeCount = 0f;
     private Coroutine impact;
+    private bool playerImpact;
     private void OnTriggerEnter(Collider hammer)
     {
         if (hammer.CompareTag(Const.cupTag))
@@ -14,6 +15,9 @@ public class FanObstacle : BaseHammerTrap
             if (!isImpact)
             {
                 isImpact = true;
+
+                SoundManager.PlayIntSound(SoundType.TrapsSound, 9);
+
                 Observer.Notify(ListAction.Vibrate);
                 Controller_Items.Ins.decrease_item();
                 FabricaBox fb = Instantiate(cupFB, hammer.transform.position, hammer.transform.rotation).GetComponent<FabricaBox>();
@@ -35,9 +39,13 @@ public class FanObstacle : BaseHammerTrap
         }
         if (hammer.CompareTag(Const.playerTag))
         {
-            Observer.Notify(ListAction.Vibrate);
-            Observer.Notify(ActionInGame.PushBack, 15f);
-            isImpact = false;
+            if (!playerImpact)
+            {
+                Observer.Notify(ListAction.Vibrate);
+                Observer.Notify(ActionInGame.PushBack, 15f);
+                isImpact = false;
+                playerImpact = true;
+            }
         }
     }
 

@@ -9,7 +9,7 @@ public class ButtonPlayerShop : MonoBehaviour
     public ViewCharacter player;
     public Animator spawnPoint;
     private float changeInterval = 5f;
-    private string[] animationStates = { Const.idleAnim, Const.thinkAnim, Const.byeAnim, Const.cuteAnim, Const.walkModelAnim, Const.reiAnim, Const.flyIdleAnim };
+    private string[] animationStates = { Const.idleAnim, ConstDanceAnim.thinkAnim, ConstDanceAnim.byeAnim, ConstDanceAnim.cuteAnim, Const.walkModelAnim, ConstDanceAnim.reiAnim, Const.flyIdleAnim };
     public RectTransform spawnRect;
     public float timeTouch;
 
@@ -29,7 +29,7 @@ public class ButtonPlayerShop : MonoBehaviour
     }
     private IEnumerator ChangeAnimationRoutine()
     {
-        player.currentSkin.GetComponent<Animator>().SetTrigger(Const.byeAnim);
+        player.currentSkin.GetComponent<Animator>().SetTrigger(ConstDanceAnim.byeAnim);
         yield return new WaitForSeconds(changeInterval);
         while (!isTouch)
         {
@@ -45,7 +45,7 @@ public class ButtonPlayerShop : MonoBehaviour
     private void TouchPlayer()
     {
         if (player.currentSkin == null) return;
-        player.currentSkin.GetComponent<Animator>().SetTrigger(Const.angryAnim);
+        player.currentSkin.GetComponent<Animator>().SetTrigger(ConstDanceAnim.angryAnim);
         isTouch = true;
         turnOff = StartCoroutine(TurnOffTouch());
         spawnPoint.enabled = false;

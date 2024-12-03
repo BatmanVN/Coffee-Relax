@@ -5,32 +5,26 @@ using DG.Tweening;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 
-public class CharacterController : MonoBehaviour
+public class CharacterController : BaseCharacter
 {
-    public Animator anim;
-    [SerializeField] private float sensitivity;
     [SerializeField] private float timeRotateStart;
     [SerializeField] private float minX, maxX;
     protected Rigidbody rb;
-    public bool game_run, is_finish;
-    public float speed_player, horizontal_speed;
-    protected Vector2 firstClick, currentHandPoint, pressSlowMotion;
-    protected Vector3 mvm;
+    public bool is_finish;
+    public float speed_player;
     public float time;
-    public bool isFly;
+    //public bool isFly;
     private bool isRotate, isBlock;
     public string animName = Const.runAnim;
 
     private Coroutine money;
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
-        Observer.AddObserver(ListAction.SetAimmator, SetAnimator);
+        base.OnEnable();
         Observer.AddObserver(ListAction.ChangeAnim, ChangeStatusAnim);
-        Observer.AddObserver(ListAction.GameRun, StatusGame);
         Observer.AddObserver(ListAction.FinishGame, RotateWin);
         Observer.AddObserver(ListAction.FinishMove, move_player_to_center_finish_level);
-        Observer.AddObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
         Observer.AddObserver(ActionInGame.RotateStart, RotateStartGame);
         Observer.AddObserver(ActionInGame.PushBack, MoveBack);
     }
@@ -47,17 +41,17 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
-        player_movements2();
+        //player_movements2();
     }
 
-    protected void player_movements2()
+    public virtual void player_movements2()
     {
         if (game_run && !isRotate && !isBlock)
         {
             // Player move forward
 
             transform.Translate(transform.forward * speed_player * Time.deltaTime);
-            if (!is_finish && !isFly)
+            if (!is_finish)
             {
                 // Player move right & left
                 if (Input.GetMouseButtonDown(0))
@@ -126,7 +120,7 @@ public class CharacterController : MonoBehaviour
         transform.SetParent(MoneyTower.inst.gameObject.transform);
         transform.position = MoneyTower.inst.posPlayer.transform.position;
         transform.localRotation = Quaternion.Euler(0, 0, 0);
-        anim.SetTrigger(Const.byeAnim);
+        anim.SetTrigger(ConstDanceAnim.byeAnim);
         money = StartCoroutine(MoneyUp());
         speed_player = 0f;
     }
@@ -137,12 +131,6 @@ public class CharacterController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Observer.Notify(ActionInGame.MoneyTower, anim);
         StopCoroutine(money);
-    }
-
-    public void SetAnimator(object[] datas)
-    {
-        if (datas == null || datas.Length < 1 || !(datas[0] is Animator animPlayer)) return;
-        anim = animPlayer;
     }
 
     public void ChangeStatusAnim(object[] datas)
@@ -165,51 +153,13 @@ public class CharacterController : MonoBehaviour
         transform.DOLocalMoveX(-.2f, .1f);
     }
 
-    public void Move_player_to_center_fly(object[] datas)
+
+    protected override void OnDestroy()
     {
-        if (datas == null || datas.Length < 4) return;
-
-        // Khởi tạo các biến
-        float duration = 0f;
-        PathMode path_mode = PathMode.Full3D;
-        PathType path_type = PathType.CatmullRom;
-
-        // Kiểm tra và gán giá trị từ mảng datas
-        if (!(datas[0] is Vector3[] paths)) return;
-        if (datas[1] is float dur) duration = dur;
-        if (datas[2] is PathMode mode) path_mode = mode;
-        if (datas[3] is PathType type) path_type = type;
-
-        // Nếu bất kỳ biến nào không được gán đúng, dừng lại
-        if (paths == null || duration <= 0f) return;
-
-        // Logic di chuyển
-        isFly = true;
-        anim.SetTrigger(Const.flyAnim);
-        //speed_player = 5f;
-        transform.DOKill();
-        transform.DOPath(paths, duration, path_type, path_mode, 10, Color.red)
-           .OnComplete(() =>
-           {
-               anim.SetTrigger(Const.runAnim);
-               isFly = false;
-           });
-        Debug.Log("Fly");
-    }
-
-    public void StatusGame(object[] datas)
-    {
-        if (datas == null || datas.Length < 1 || !(datas[0] is bool active)) return;
-        game_run = active;
-    }
-    public void OnDestroy()
-    {
+        base.OnDestroy();
         Observer.RemoveObserver(ListAction.FinishMove, move_player_to_center_finish_level);
-        Observer.RemoveObserver(ListAction.SetAimmator, SetAnimator);
         Observer.RemoveObserver(ListAction.ChangeAnim, ChangeStatusAnim);
-        Observer.RemoveObserver(ListAction.GameRun, StatusGame);
         Observer.RemoveObserver(ListAction.GameRun, RotateWin);
-        Observer.RemoveObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
         Observer.RemoveObserver(ActionInGame.RotateStart, RotateStartGame);
         Observer.RemoveObserver(ActionInGame.PushBack,MoveBack);
     }

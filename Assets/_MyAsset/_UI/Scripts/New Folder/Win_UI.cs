@@ -11,6 +11,7 @@ public class Win_UI : UICanvas
     {
         Observer.AddObserver(ListAction.FinishGame,show_multiplication);
         coinTextConner.text = GameControllManager.Ins.getcoin().ToString();
+
     }
     public void Start()
     {
@@ -20,14 +21,15 @@ public class Win_UI : UICanvas
 
     protected virtual void AdsButton()
     {
-        
+        SoundManager.PlaySound(SoundType.ShowUpADS);   
     }
 
     protected virtual void btn_next()
     {
+        SoundManager.PlaySound(SoundType.ClickButton);
         GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
         Observer.Notify(ListAction.NextLevel);
-        //Observer.Notify(ActionInGame.DisableRoad);
+        GameControllManager.Ins.bgMusic.Play();
         Close(0);
         UIManager.Ins.OpenUI<Loading>();
         Observer.Notify(UiAction.WinLoading);

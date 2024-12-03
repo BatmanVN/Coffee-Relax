@@ -2,32 +2,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
-public class PlayerFly : MonoBehaviour
+
+public class PlayerFly : BaseCharacter
 {
-    [SerializeField] private float sensitivity;
-    //[SerializeField] private float minX, maxX;
-    public float horizontal_speed;
-    protected Vector2 firstClick, currentHandPoint, pressSlowMotion;
-    protected Vector3 mvm;
     public float time;
-    // Start is called before the first frame update
+    public bool isFly;
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        Observer.AddObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
+    }
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        MovementOnRail();
+        //MovementOnRail();
     }
+    public void Move_player_to_center_fly(object[] datas)
+    {
+        if (datas == null || datas.Length < 4) return;
 
-    private void MovementOnRail()
+        // Khởi tạo các biến
+        float duration = 0f;
+        PathMode path_mode = PathMode.Full3D;
+        PathType path_type = PathType.CatmullRom;
+
+        // Kiểm tra và gán giá trị từ mảng datas
+        if (!(datas[0] is Vector3[] paths)) return;
+        if (datas[1] is float dur) duration = dur;
+        if (datas[2] is PathMode mode) path_mode = mode;
+        if (datas[3] is PathType type) path_type = type;
+
+        // Nếu bất kỳ biến nào không được gán đúng, dừng lại
+        if (paths == null || duration <= 0f) return;
+
+        // Logic di chuyển
+        isFly = true;
+        anim.SetTrigger(Const.flyAnim);
+        //speed_player = 5f;
+        transform.DOKill();
+        transform.DOPath(paths, duration, path_type, path_mode, 10, Color.red)
+           .OnComplete(() =>
+           {
+               anim.SetTrigger(Const.runAnim);
+              transform.DORotate(new Vector3(0, 0, 0), 0.1f).OnComplete(() => isFly = false);
+           });
+    }
+    public virtual void MovementOnRail()
     {
         if (!LineRoad.Ins.isFly) return;
 
-        // Player move right & left
         if (Input.GetMouseButtonDown(0))
         {
             firstClick = Input.mousePosition;
@@ -53,5 +82,9 @@ public class PlayerFly : MonoBehaviour
             mvm = Vector3.zero;
         }
     }
-
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        Observer.RemoveObserver(ActionInGame.PlayerFly, Move_player_to_center_fly);
+    }
 }

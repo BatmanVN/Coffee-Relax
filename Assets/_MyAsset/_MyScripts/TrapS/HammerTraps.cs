@@ -6,6 +6,7 @@ public class HammerTraps : BaseHammerTrap
 {
     [SerializeField] private float timeCount = 0f;
     private Coroutine impact;
+    private bool playerImpact;
 
     private void OnTriggerEnter(Collider hammer)
     {
@@ -13,6 +14,8 @@ public class HammerTraps : BaseHammerTrap
         {
             if (!isImpact)
             {
+                SoundManager.PlayIntSound(SoundType.TrapsSound, 8);
+
                 isImpact = true;
                 Observer.Notify(ListAction.Vibrate);
                 Controller_Items.Ins.decrease_item();
@@ -34,9 +37,13 @@ public class HammerTraps : BaseHammerTrap
         }
         if (hammer.CompareTag(Const.playerTag))
         {
-            Observer.Notify(ListAction.Vibrate);
-            Observer.Notify(ActionInGame.PushBack, 15f);
-            isImpact = false;
+            if (!playerImpact)
+            {
+                Observer.Notify(ListAction.Vibrate);
+                Observer.Notify(ActionInGame.PushBack, 15f);
+                isImpact = false;
+                playerImpact = true;
+            }
         }
     }
 

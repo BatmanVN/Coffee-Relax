@@ -31,6 +31,7 @@ public class CrashTrap : MonoBehaviour
             Rigidbody rb = cupObj.GetComponent<Rigidbody>();
             if (cupObj != null)
             {
+                SoundManager.PlayIntSound(SoundType.TrapsSound, 1);
                 rb.isKinematic = false;
                 rb.AddForce(new Vector3(
                     Random.Range(-1.5f, 2.5f), // Lực ngẫu nhiên trên trục X

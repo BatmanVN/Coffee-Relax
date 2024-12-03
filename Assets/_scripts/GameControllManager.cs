@@ -12,6 +12,7 @@ public class GameControllManager : Singleton<GameControllManager>
     public int skinidCupUse;
     public SkinCharacterData characterData;
     public SkinCupData cupData;
+    public AudioSource bgMusic;
     protected override void Awake()
     {
         base.Awake();

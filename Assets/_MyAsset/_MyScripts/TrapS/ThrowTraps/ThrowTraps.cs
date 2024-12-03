@@ -29,6 +29,7 @@ public class ThrowTraps : BaseThrownTrap
             {
                 anim.SetTrigger(Const.throwTrapAnim);
                 Observer.Notify(ListAction.Vibrate);
+                SoundManager.PlayIntSound(SoundType.TrapsSound, 2);
 
                 FabricaBox fb = Instantiate(fabrica_pref, path[0], fabrica_pref.transform.rotation).GetComponent<FabricaBox>();
 

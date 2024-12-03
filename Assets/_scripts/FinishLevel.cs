@@ -41,7 +41,8 @@ public class FinishLevel : Singleton<FinishLevel>
                 if (cupType != null)
                 {
                     if (cupType.money > 0)
-                    { 
+                    {
+                        SoundManager.PlaySound(SoundType.TakeMoney);
                         Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupType.money);
                         Debug.Log(GameControllManager.Ins.getcoin());
@@ -50,13 +51,9 @@ public class FinishLevel : Singleton<FinishLevel>
                     {
                         if (GameControllManager.Ins.getcoin() <= 0) return;
                         Observer.Notify(ListAction.DecreaseMoney, cupType.money);
-                        Debug.Log(GameControllManager.Ins.getcoin());
+                        Debug.Log(cupType.money);
+                        SoundManager.PlaySound(SoundType.DecreaseCup);
                     }
-                }
-                if (br.item_Type == Item_type.Cup)
-                {
-                    Observer.Notify(ListAction.DecreaseMoney, -50);
-                    Debug.Log("decrese Money");
                 }
             }
         }
@@ -72,12 +69,18 @@ public class FinishLevel : Singleton<FinishLevel>
         if (Controller_Items.Ins != null)
         {
             Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
+            if (Controller_Items.Ins.total_items > 0)
+            {
+                SoundManager.PlayIntSound(SoundType.WinUiSound, 0);
+            }
+            else
+                SoundManager.PlayIntSound(SoundType.WinUiSound, 1);
         }
         else
         {
             Debug.LogError("Controller_Items.Ins is null!");
         }
-        //Observer.Notify(ListAction.FinishGame, Controller_Items.Ins.total_items);
+
         moneyAfterWin = GameControllManager.Ins.getcoin();
         totalCoin = moneyAfterWin - currentMoney;
 

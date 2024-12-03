@@ -11,6 +11,8 @@ public class ThrownPlayer : BaseThrownTrap
         {
             if (!isThrowed)
             {
+                SoundManager.PlayIntSound(SoundType.TrapsSound, 3);
+
                 anim.SetTrigger(Const.throwTrapAnim);
                 Observer.Notify(ListAction.Vibrate);
 

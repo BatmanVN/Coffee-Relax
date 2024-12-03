@@ -43,6 +43,8 @@ public class Obstacle : MonoBehaviour
         {
             Observer.Notify(ListAction.Vibrate);
 
+            SoundManager.PlayIntSound(SoundType.TrapsSound, 7);
+
             Controller_Items.Ins.decrease_item();
 
             Vector3 tmp = transform.position;

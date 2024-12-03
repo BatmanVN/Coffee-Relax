@@ -43,8 +43,6 @@ public class SoundManager : MonoBehaviour
         SoundList soundList = instance.SO.sounds[(int)sound];
         AudioClip[] clips = soundList.sounds;
         AudioClip randomClip = clips[clipIndex];
-        Debug.Log(clipIndex);
-        Debug.Log(clips[clipIndex].name);
         if (source)
         {
             source.outputAudioMixerGroup = soundList.mixer;

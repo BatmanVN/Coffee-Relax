@@ -16,7 +16,7 @@ public class CowMachine : BaseMachine
                 cupGroup.item_Type = machineType;
                 Observer.Notify(ListAction.SetUpCupTypes);
                 cupGroup.animate_group_item();
-
+                SoundManager.PlayIntSound(SoundType.Pour,1);
             }
         }
         if (other.CompareTag(Const.playerTag))
