@@ -44,7 +44,8 @@ public class MoneyTower : MonoBehaviour
                         }
                         if (Controller_Items.Ins.total_items <= 1)
                         {
-                            anim.SetTrigger(Const.cryAnim);
+                            //anim.SetTrigger(Const.cryAnim);
+                            Observer.Notify(ListAction.ChangeAnim, Const.cryAnim);
                         }
                     });
     }

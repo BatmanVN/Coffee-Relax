@@ -7,7 +7,7 @@ public class SpawnModel_Main : MonoBehaviour
 {
     public GameObject model;
     public int skinID;
-    private float changeInterval = 5f;
+    private float changeInterval = 8f;
 
     public Button touchCharacter;
     public bool isTouch;
@@ -50,7 +50,7 @@ public class SpawnModel_Main : MonoBehaviour
         if (model == null) return;
         model.GetComponent<Animator>().SetTrigger(ConstDanceAnim.angryAnim);
         isTouch = true;
-        SoundManager.PlayIntSound(SoundType.AnimeGirl, 4);
+        //SoundManager.PlayIntSound(SoundType.AnimeGirl, 4);
         turnOff = StartCoroutine(TurnOffTouch());
     }
     private IEnumerator TurnOffTouch()

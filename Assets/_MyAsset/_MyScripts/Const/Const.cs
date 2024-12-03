@@ -13,6 +13,7 @@ public class Const
     public const string flyIdleAnim = "FlyIdle";
     public const string cryAnim = "Cry";
     public const string stunAnim = "Stun";
+    public const string arigatoAnim = "Agirato";
 
     //String trap anim
     public const string throwTrapAnim = "Disable";
@@ -45,7 +46,6 @@ public class ConstDanceAnim
     public const string snakeDance = "SnakeDance";
     public const string swingDance = "SwingDance";
     public const string maraschinoDance = "Maraschino";
-    public const string twerkAnim = "Victory";
     public const string gangNamStyle = "GangNam";
     public const string reiAnim = "Rei";
     public const string thinkAnim = "Think";
@@ -62,10 +62,8 @@ public class ConstDanceAnim
         snakeDance,
         swingDance,
         maraschinoDance,
-        twerkAnim,
         gangNamStyle,
         cuteAnim,
-        angryAnim,
         reiAnim,
         thinkAnim,
     };

@@ -120,8 +120,11 @@ public class CharacterController : BaseCharacter
         transform.SetParent(MoneyTower.inst.gameObject.transform);
         transform.position = MoneyTower.inst.posPlayer.transform.position;
         transform.localRotation = Quaternion.Euler(0, 0, 0);
-        anim.SetTrigger(ConstDanceAnim.reiAnim);
-        money = StartCoroutine(MoneyUp());
+        anim.SetTrigger(Const.arigatoAnim);
+        if (Controller_Items.Ins.total_items > 0)
+        {
+            money = StartCoroutine(MoneyUp());
+        }
         speed_player = 0f;
     }
 
