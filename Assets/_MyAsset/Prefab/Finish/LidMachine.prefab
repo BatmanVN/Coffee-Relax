@@ -96,6 +96,8 @@ Transform:
   - {fileID: 1791593771969091755}
   - {fileID: 1791593771969091293}
   - {fileID: 1791593771969092657}
+  - {fileID: 1791593775660096500}
+  - {fileID: 1791593775660095965}
   m_Father: {fileID: 1791593771969094070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1791593771918748160
@@ -155,16 +157,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791593771918748225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.776}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1791593771969094071}
+  m_Father: {fileID: 1791593771969089820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.185, y: 4.446}
+  m_AnchoredPosition: {x: -0.185, y: 4.346}
   m_SizeDelta: {x: 1.5, y: 1.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1791593772287865569
@@ -672,8 +674,6 @@ Transform:
   m_Children:
   - {fileID: 1791593771969095155}
   - {fileID: 1791593771969093723}
-  - {fileID: 1791593775660096500}
-  - {fileID: 1791593775660095965}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1791593772992513247
@@ -1101,16 +1101,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791593771918755272}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1791593771969094071}
+  m_Father: {fileID: 1791593771969089820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.82, y: 4.446}
+  m_AnchoredPosition: {x: -2.82, y: 4.346}
   m_SizeDelta: {x: 1.5, y: 1.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1791593772287866528
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   _SortingLayerID: 0
   _SortingOrder: 0
   m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1791593772287865569}
+  m_renderer: {fileID: 1791593772287866528}
   m_maskType: 0
 --- !u!1 &1791593771918755639
 GameObject:

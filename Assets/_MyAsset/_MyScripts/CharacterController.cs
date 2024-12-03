@@ -120,7 +120,7 @@ public class CharacterController : BaseCharacter
         transform.SetParent(MoneyTower.inst.gameObject.transform);
         transform.position = MoneyTower.inst.posPlayer.transform.position;
         transform.localRotation = Quaternion.Euler(0, 0, 0);
-        anim.SetTrigger(ConstDanceAnim.byeAnim);
+        anim.SetTrigger(ConstDanceAnim.reiAnim);
         money = StartCoroutine(MoneyUp());
         speed_player = 0f;
     }

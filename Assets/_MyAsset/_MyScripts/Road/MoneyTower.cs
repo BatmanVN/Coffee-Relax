@@ -16,8 +16,6 @@ public class MoneyTower : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
-        // Gán instance hiện tại và đảm bảo không bị phá hủy.
         inst = this;
     }
     private void OnEnable()

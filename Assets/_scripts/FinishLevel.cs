@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FinishLevel : Singleton<FinishLevel>
 {
+    [SerializeField] private GameObject bonusMoney;
     private Coroutine showWin;
     private int currentMoney;
     private int moneyAfterWin;
@@ -59,11 +60,10 @@ public class FinishLevel : Singleton<FinishLevel>
         }
     }
 
-
     IEnumerator show_win_panel()
     {
         yield return new WaitForSeconds(15f);
-
+        bonusMoney.SetActive(false);
         UIManager.Ins.OpenUI<Win_UI>();
         UIManager.Ins.CloseUI<InGame_UI>();
         if (Controller_Items.Ins != null)

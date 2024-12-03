@@ -24,7 +24,10 @@ public class SpawnModel_Main : MonoBehaviour
     private void Start()
     {
         touchCharacter.onClick?.AddListener(TouchPlayer);
-
+        if (model != null)
+        {
+            model.GetComponent<Animator>().SetTrigger(ConstDanceAnim.byeAnim);
+        }
     }
     public void SpawnModel()
     {
@@ -60,7 +63,6 @@ public class SpawnModel_Main : MonoBehaviour
     private IEnumerator ChangeAnimationRoutine()
     {
         var modleAnim = model.GetComponent<Animator>();
-        modleAnim.SetTrigger(ConstDanceAnim.byeAnim);
         yield return new WaitForSeconds(changeInterval);
 
         while (!isTouch)

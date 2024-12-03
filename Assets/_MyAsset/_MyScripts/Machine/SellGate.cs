@@ -52,15 +52,15 @@ public class SellGate: MonoBehaviour
                     {
                         Controller_Items.Ins.total_items++;
                         Observer.Notify(ListAction.IncreaseMoney, cupInsType.money);
+                        SoundManager.PlaySound(SoundType.TakeMoney);
+                        GameObject moneyBlast = Instantiate(money_stash, money_stash_pos.transform.position, money_stash_pos.transform.rotation);
+                        Destroy(moneyBlast, 0.3f);
                     }
-                    GameObject moneyBlast = Instantiate(money_stash,money_stash_pos.transform.position, money_stash_pos.transform.rotation);
                     cupInsType.gameObject.SetActive(false);
-                    SoundManager.PlaySound(SoundType.TakeMoney);
                 }
             }
             fb.transform.DOPath(path, duration, path_type, path_mode, 10, Color.red)
                 .OnComplete(() => Destroy(fb.gameObject));
-            Destroy(money_stash, 0.3f);
             Controller_Items.Ins.decrease_item();
         }
     }

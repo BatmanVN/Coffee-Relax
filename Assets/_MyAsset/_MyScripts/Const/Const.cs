@@ -66,7 +66,6 @@ public class ConstDanceAnim
         gangNamStyle,
         cuteAnim,
         angryAnim,
-        byeAnim,
         reiAnim,
         thinkAnim,
     };

@@ -29,7 +29,7 @@ public class Win_UI : UICanvas
         SoundManager.PlaySound(SoundType.ClickButton);
         GameControllManager.Ins.setLevel(GameControllManager.Ins.getlevel() + 1);
         Observer.Notify(ListAction.NextLevel);
-        GameControllManager.Ins.bgMusic.Play();
+        //GameControllManager.Ins.bgMusic.Play();
         Close(0);
         UIManager.Ins.OpenUI<Loading>();
         Observer.Notify(UiAction.WinLoading);
