@@ -7,6 +7,6 @@ public class PlaySoundEnter : StateMachineBehaviour
     [SerializeField] private int index;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        SoundManager.PlayIntSound(sound,index, null, volume);
+        SoundManager.PlayIntSound(sound,index,volume);
     }
 }

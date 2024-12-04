@@ -30,7 +30,7 @@ public class ShopUI : UICanvas
         SetViewPort(0);
         UpdateCoinText(GameControllManager.Ins?.getcoin() ?? 0);
 
-        // Đăng ký Observer
+        BGMusic.PlayRandomSound(MusicType.Shop);
         Observer.AddObserver(UiAction.ChangeTextCoin, ChangeTextCoin);
     }
 

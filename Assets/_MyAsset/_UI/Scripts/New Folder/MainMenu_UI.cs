@@ -10,17 +10,18 @@ public class MainMenu_UI : UICanvas
     public SkinCharacterData skinDatas;
     private void Awake()
     {
-        //foreach (Transform button in transform)
-        //{
-        //    buttons.Add(button.GetComponent<Button>());
-        //}
+
     }
     private void OnEnable()
     {
         Observer.Notify(UiAction.SpawnModel);
+        if (BGMusic.instance != null)
+        {
+            BGMusic.PlayRandomSound(MusicType.MainMenu);
+        }
     }
     private void Start()
     {
-        
+        BGMusic.PlayRandomSound(MusicType.MainMenu);
     }
 }

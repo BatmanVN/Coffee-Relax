@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_Type: 0
-  money: 0
+  money: -50
 --- !u!114 &6859394533960187326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,6 +1106,8 @@ MonoBehaviour:
   cupTypes: []
   item_Type: 0
   anim: {fileID: 2574532726578316315}
+  passRandomGate: 0
+  passRandomCash: 0
 --- !u!64 &781859954555915608
 MeshCollider:
   m_ObjectHideFlags: 0

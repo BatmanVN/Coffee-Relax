@@ -22,6 +22,7 @@ public class CutterTraps : MonoBehaviour
                 GameObject slash = Instantiate(smoke, cutter.transform.position, cutter.transform.rotation);
                 Destroy(slash, 1f);
                 setTrap = StartCoroutine(SetTrapAgain());
+                isDecreased = true;
             }
         }
     }
@@ -32,6 +33,7 @@ public class CutterTraps : MonoBehaviour
     }
     private void OnDestroy()
     {
-        StopCoroutine(setTrap);
+        if(setTrap != null) 
+            StopCoroutine(setTrap);
     }
 }

@@ -49,6 +49,7 @@ public class ButtonSpin : MonoBehaviour
     {
         if (!isSpin)
         {
+            SoundManager.PlaySound(SoundType.SpinWheel);
             isSpin = true;
             // Tính góc mỗi ô
             float segmentAngle = 360f / numberOfSegments;

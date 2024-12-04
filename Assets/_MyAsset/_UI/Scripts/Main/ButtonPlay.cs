@@ -8,10 +8,6 @@ public class ButtonPlay : MonoBehaviour, IPointerDownHandler
 {
     public Button playButton;
 
-    //void Start()
-    //{
-    //    playButton.onClick?.AddListener(PlayButton);
-    //}
     public void OnPointerDown(PointerEventData eventData)
     {
         PlayButton();

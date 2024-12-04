@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.Collections.AllocatorManager;
+using UnityEngine.XR;
 
 public class SpawnModel_Main : MonoBehaviour
 {
     public GameObject model;
     public int skinID;
-    private float changeInterval = 8f;
+    private float changeInterval = 6f;
 
     public Button touchCharacter;
     public bool isTouch;
@@ -16,10 +18,17 @@ public class SpawnModel_Main : MonoBehaviour
     private Coroutine anim;
     private Coroutine turnOff;
     private Coroutine voice;
+    private Coroutine click;
+
+    public GameObject hand;
+    private float time;
+    [SerializeField] private float maxTime;
+
 
     private void OnEnable()
     {
         SpawnModel();
+        //anim = StartCoroutine(ChangeAnimationRoutine());
     }
     private void Start()
     {
@@ -28,6 +37,7 @@ public class SpawnModel_Main : MonoBehaviour
         {
             model.GetComponent<Animator>().SetTrigger(ConstDanceAnim.byeAnim);
         }
+        click = StartCoroutine(EnableHandTouch());
     }
     public void SpawnModel()
     {
@@ -50,7 +60,9 @@ public class SpawnModel_Main : MonoBehaviour
         if (model == null) return;
         model.GetComponent<Animator>().SetTrigger(ConstDanceAnim.angryAnim);
         isTouch = true;
-        //SoundManager.PlayIntSound(SoundType.AnimeGirl, 4);
+        time = 0;
+        hand.SetActive(false);
+        click = StartCoroutine(EnableHandTouch());
         turnOff = StartCoroutine(TurnOffTouch());
     }
     private IEnumerator TurnOffTouch()
@@ -63,7 +75,7 @@ public class SpawnModel_Main : MonoBehaviour
     private IEnumerator ChangeAnimationRoutine()
     {
         var modleAnim = model.GetComponent<Animator>();
-        yield return new WaitForSeconds(changeInterval);
+        yield return new WaitForSeconds(2);
 
         while (!isTouch)
         {
@@ -82,10 +94,31 @@ public class SpawnModel_Main : MonoBehaviour
         }
     }
 
+    IEnumerator EnableHandTouch()
+    {
+        while (true)
+        {
+            if (!isTouch)
+            {
+                time += Time.deltaTime;
+                //Debug.Log(time);
+            }
+            if (time >= maxTime)
+            {
+                hand.SetActive(true);
+                time = 0;
+            }
+
+            yield return null;
+        }
+    }
+
     private void OnDisable()
     {
+        isTouch = false;
         StopCoroutine(anim);
-        if(model != null)
+        StopCoroutine(click);
+        if (model != null)
             Destroy(model);
     }
     private void OnDestroy()

@@ -13,6 +13,7 @@ public class BlockTraps : MonoBehaviour
             blockEffect.SetActive(true);
             Observer.Notify(ActionInGame.PushBack,distance);
             Controller_Items.Ins.decrease_item();
+            SoundManager.PlayIntSound(SoundType.GirlVoiceE, 5);
         }
     }
 }

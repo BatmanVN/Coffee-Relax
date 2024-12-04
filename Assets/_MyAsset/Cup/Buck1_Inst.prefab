@@ -113,6 +113,8 @@ MonoBehaviour:
   cupTypes: []
   item_Type: 0
   anim: {fileID: 5424892178455640881}
+  passRandomGate: 0
+  passRandomCash: 0
 --- !u!95 &5424892178455640881
 Animator:
   serializedVersion: 5
@@ -196,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_Type: 0
-  money: 0
+  money: -50
 --- !u!1 &880879696232728022
 GameObject:
   m_ObjectHideFlags: 0

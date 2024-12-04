@@ -13,10 +13,8 @@ public class CharacterController : BaseCharacter
     public bool is_finish;
     public float speed_player;
     public float time;
-    //public bool isFly;
     private bool isRotate, isBlock;
     public string animName = Const.runAnim;
-
     private Coroutine money;
 
     protected override void OnEnable()
@@ -36,12 +34,6 @@ public class CharacterController : BaseCharacter
         speed_player = 5f;
 #endif
         rb = GetComponent<Rigidbody>();
-    }
-    // Thêm biến để điều chỉnh độ nhạy
-
-    private void Update()
-    {
-        //player_movements2();
     }
 
     public virtual void player_movements2()
@@ -86,6 +78,11 @@ public class CharacterController : BaseCharacter
         }
     }
 
+    //protected IEnumerator RandomAnim()
+    //{
+        
+    //}
+
     protected void MoveBack(object[] datas)
     {
         if (datas == null || datas.Length < 1 || !(datas[0] is float distance)) return;
@@ -126,6 +123,7 @@ public class CharacterController : BaseCharacter
             money = StartCoroutine(MoneyUp());
         }
         speed_player = 0f;
+        Debug.Log("RotateWin");
     }
 
 
@@ -151,7 +149,7 @@ public class CharacterController : BaseCharacter
     {
         is_finish = true;
         anim.SetTrigger(Const.walkAnim);
-        speed_player = 5f;
+        speed_player = 2f;
         transform.DOKill();
         transform.DOLocalMoveX(-.2f, .1f);
     }
@@ -162,7 +160,7 @@ public class CharacterController : BaseCharacter
         base.OnDestroy();
         Observer.RemoveObserver(ListAction.FinishMove, move_player_to_center_finish_level);
         Observer.RemoveObserver(ListAction.ChangeAnim, ChangeStatusAnim);
-        Observer.RemoveObserver(ListAction.GameRun, RotateWin);
+        Observer.RemoveObserver(ListAction.FinishGame, RotateWin);
         Observer.RemoveObserver(ActionInGame.RotateStart, RotateStartGame);
         Observer.RemoveObserver(ActionInGame.PushBack,MoveBack);
     }

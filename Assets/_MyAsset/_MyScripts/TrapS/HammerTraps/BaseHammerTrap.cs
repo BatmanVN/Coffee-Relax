@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class BaseHammerTrap : MonoBehaviour
+public abstract class BaseHammerTrap : MonoBehaviour
 {
     [SerializeField] protected GameObject cupFB;
     [SerializeField] protected float hitForce;
-
+    protected Coroutine impact;
+    protected bool playerImpact;
     public int CupId_Use;
 
     public bool isImpact;
@@ -41,4 +42,42 @@ public class BaseHammerTrap : MonoBehaviour
                 typeFb.gameObject.SetActive(true);
         }
     }
+
+    protected virtual void HandleCupImpact(Collider hammer)
+    {
+        if (!isImpact)
+        {
+            SoundManager.PlayIntSound(SoundType.TrapsSound, 8);
+
+            isImpact = true;
+            Observer.Notify(ListAction.Vibrate);
+            Controller_Items.Ins.decrease_item();
+            FabricaBox fb = Instantiate(cupFB, hammer.transform.position, hammer.transform.rotation).GetComponent<FabricaBox>();
+            CupGroup cupIns = hammer.GetComponent<CupGroup>();
+            if (cupIns != null)
+            {
+                CupType cupType = cupIns.cupTypes.Find(type => type != null && type.gameObject.activeSelf);
+                if (cupType != null)
+                {
+                    GetGameObjectValue(cupType.item_Type, fb);
+                }
+            }
+
+            Vector3 forceDirection = (hammer.transform.position - transform.position).normalized;
+            ThrownOffCup(fb, forceDirection, fb.GetComponent<Rigidbody>());
+        }
+    }
+
+    protected virtual void HandlePlayerImpact()
+    {
+        if (!playerImpact)
+        {
+            Observer.Notify(ListAction.Vibrate);
+            Observer.Notify(ActionInGame.PushBack, 8f);
+            isImpact = false;
+            playerImpact = true;
+            SoundManager.PlayIntSound(SoundType.GirlVoiceE, 5);
+        }
+    }
+
 }

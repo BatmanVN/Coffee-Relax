@@ -8,6 +8,7 @@ public class MoneyTower : MonoBehaviour
     public static MoneyTower inst;
     public ListPosFinish posFinish;
     public Transform posPlayer;
+    public GameObject moneyEffects;
 
     private void Awake()
     {
@@ -41,10 +42,10 @@ public class MoneyTower : MonoBehaviour
                         {
                             Observer.Notify(ListAction.ChangeAnim, Const.victoryAnim);
                             SoundManager.PlaySound(SoundType.Victory);
+                            Debug.Log("Run");
                         }
                         if (Controller_Items.Ins.total_items <= 1)
                         {
-                            //anim.SetTrigger(Const.cryAnim);
                             Observer.Notify(ListAction.ChangeAnim, Const.cryAnim);
                         }
                     });

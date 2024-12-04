@@ -44,7 +44,6 @@ public class PlayerFly : BaseCharacter
         // Logic di chuyển
         isFly = true;
         anim.SetTrigger(Const.flyAnim);
-        //speed_player = 5f;
         transform.DOKill();
         transform.DOPath(paths, duration, path_type, path_mode, 10, Color.red)
            .OnComplete(() =>
