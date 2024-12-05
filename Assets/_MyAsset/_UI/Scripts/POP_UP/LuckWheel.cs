@@ -15,5 +15,6 @@ public class LuckWheel : UICanvas
     {
         UIManager.Ins.OpenUI<MainMenu_UI>();
         UIManager.Ins.CloseUI<LuckWheel>();
+        SoundManager.PlaySound(SoundType.ClickButton);
     }
 }
