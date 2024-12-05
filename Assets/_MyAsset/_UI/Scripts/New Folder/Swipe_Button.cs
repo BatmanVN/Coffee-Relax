@@ -41,7 +41,6 @@ public class Swipe_Button : MonoBehaviour, IPointerDownHandler
             if (!isClick)
             {
                 time += Time.deltaTime;
-                Debug.Log(time);
             }
             if (time >= 5f)
             {

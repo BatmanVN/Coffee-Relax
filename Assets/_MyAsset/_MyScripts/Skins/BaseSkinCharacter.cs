@@ -79,6 +79,7 @@ public class BaseSkinCharacter : MonoBehaviour
         ViewCharacter.Ins.buttonDown.SetActive(true);
         ViewCharacter.Ins.currentSkin = character;
         UpdateBuyStatusUI(currentID);
+        SoundManager.PlaySound(SoundType.ClickButton);
     }
 
     // Cập nhật trạng thái hiển thị nút sử dụng hoặc mua

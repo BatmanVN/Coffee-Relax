@@ -14,7 +14,7 @@ public class CamFollow : Singleton<CamFollow>
 
     private void OnEnable()
     {
-        Observer.AddObserver(ListAction.SetCamFollow, start_follow);
+        //Observer.AddObserver(ListAction.SetCamFollow, start_follow);
     }
     void Start()
     {
@@ -52,6 +52,6 @@ public class CamFollow : Singleton<CamFollow>
     }
     private void OnDestroy()
     {
-        Observer.RemoveObserver(ListAction.SetCamFollow, start_follow);
+        //Observer.RemoveObserver(ListAction.SetCamFollow, start_follow);
     }
 }

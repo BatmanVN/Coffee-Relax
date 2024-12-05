@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GiftManager : Singleton<GiftManager>
 {
-    [field: SerializeField] public List<BaseGift> gifts { get; set; }
+    [field: SerializeField] public List<BaseGift> gifts { get; private set; }
 
     private void OnEnable()
     {

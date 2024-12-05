@@ -4,11 +4,13 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
+using UnityEngine.TextCore.Text;
 
 public class CharacterController : BaseCharacter
 {
     [SerializeField] private float timeRotateStart;
     [SerializeField] private float minX, maxX;
+    [SerializeField] private float finishPosX;
     protected Rigidbody rb;
     public bool is_finish;
     public float speed_player;
@@ -80,7 +82,7 @@ public class CharacterController : BaseCharacter
 
     //protected IEnumerator RandomAnim()
     //{
-        
+
     //}
 
     protected void MoveBack(object[] datas)
@@ -109,6 +111,8 @@ public class CharacterController : BaseCharacter
             isRotate = false;
             Time.timeScale = 1f;
             Observer.Notify(ListAction.SpawnCupIns);
+            Cinema.Ins.SetCamWin(new Vector3(0, 3, 5f));
+            Cinema.Ins.SetcamStart(anim.gameObject.transform);
         });
     }
 
@@ -117,13 +121,10 @@ public class CharacterController : BaseCharacter
         transform.SetParent(MoneyTower.inst.gameObject.transform);
         transform.position = MoneyTower.inst.posPlayer.transform.position;
         transform.localRotation = Quaternion.Euler(0, 0, 0);
+        Cinema.Ins.SetCamWin(new Vector3(0, 1.5f, -6));
         anim.SetTrigger(Const.arigatoAnim);
-        if (Controller_Items.Ins.total_items > 0)
-        {
-            money = StartCoroutine(MoneyUp());
-        }
+        money = StartCoroutine(MoneyUp());
         speed_player = 0f;
-        Debug.Log("RotateWin");
     }
 
 
@@ -149,9 +150,9 @@ public class CharacterController : BaseCharacter
     {
         is_finish = true;
         anim.SetTrigger(Const.walkAnim);
-        speed_player = 2f;
+        speed_player = 3f;
         transform.DOKill();
-        transform.DOLocalMoveX(-.2f, .1f);
+        transform.DOLocalMoveX(finishPosX, .1f);
     }
 
 
@@ -162,6 +163,6 @@ public class CharacterController : BaseCharacter
         Observer.RemoveObserver(ListAction.ChangeAnim, ChangeStatusAnim);
         Observer.RemoveObserver(ListAction.FinishGame, RotateWin);
         Observer.RemoveObserver(ActionInGame.RotateStart, RotateStartGame);
-        Observer.RemoveObserver(ActionInGame.PushBack,MoveBack);
+        Observer.RemoveObserver(ActionInGame.PushBack, MoveBack);
     }
 }

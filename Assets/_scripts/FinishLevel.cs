@@ -8,6 +8,8 @@ public class FinishLevel : Singleton<FinishLevel>
     [SerializeField] private GameObject dollarBlastPre;
     [SerializeField] private GameObject dislikePre;
     [SerializeField] private Transform dollarTrans;
+    public float timeShow;
+
     private Coroutine showWin;
     private int currentMoney;
     private int moneyAfterWin;
@@ -26,8 +28,6 @@ public class FinishLevel : Singleton<FinishLevel>
     {
         if (finish.CompareTag(Const.playerTag))
         {
-            //active = false;
-
             showWin = StartCoroutine(show_win_panel());
 
             Observer.Notify(ListAction.FinishGame);
@@ -43,10 +43,6 @@ public class FinishLevel : Singleton<FinishLevel>
                 if (br.item_Type == Item_type.Cup)
                 {
                     Observer.Notify(ListAction.DecreaseMoney, -50);
-                    SoundManager.PlaySound(SoundType.DecreaseCup);
-                    GameObject dislike = Instantiate(dislikePre, dollarTrans.position, dollarTrans.rotation);
-                    dislike.transform.SetParent(dollarTrans);
-                    Destroy(dislike, 0.1f);
                 }
             }
         }
@@ -64,16 +60,16 @@ public class FinishLevel : Singleton<FinishLevel>
                 Observer.Notify(ListAction.IncreaseMoney, cupType.money);
                 GameObject dollarEffect = Instantiate(dollarBlastPre, dollarTrans.position, dollarTrans.rotation);
                 dollarEffect.transform.SetParent(dollarTrans);
-                Destroy(dollarEffect, 0.1f);
+                Destroy(dollarEffect, 1f);
             }
-            if (cupType.money <= 0)
+            else if (cupType.money < 0)
             {
                 Observer.Notify(ListAction.DecreaseMoney, cupType.money);
                 Debug.Log(cupType.money);
                 SoundManager.PlaySound(SoundType.DecreaseCup);
                 GameObject dislike = Instantiate(dislikePre, dollarTrans.position, dollarTrans.rotation);
                 dislike.transform.SetParent(dollarTrans);
-                Destroy(dislike, 0.1f);
+                Destroy(dislike, 0.3f);
             }
         }
     }
@@ -81,7 +77,15 @@ public class FinishLevel : Singleton<FinishLevel>
 
     IEnumerator show_win_panel()
     {
-        yield return new WaitForSeconds(15f);
+        if (Controller_Items.Ins.total_items > 0)
+        {
+            timeShow = MoneyTower.inst.timeMoveUp + 5f;
+        }
+        if (Controller_Items.Ins.total_items < 1)
+        {
+            timeShow = MoneyTower.inst.timeStand + 5f;
+        }
+        yield return new WaitForSeconds(timeShow);
         bonusMoney.SetActive(false);
         UIManager.Ins.OpenUI<Win_UI>();
         UIManager.Ins.CloseUI<InGame_UI>();
@@ -95,14 +99,10 @@ public class FinishLevel : Singleton<FinishLevel>
             else
                 SoundManager.PlayIntSound(SoundType.WinUiSound, 1);
         }
-        else
-        {
-            Debug.LogError("Controller_Items.Ins is null!");
-        }
-
         moneyAfterWin = GameControllManager.Ins.getcoin();
         totalCoin = moneyAfterWin - currentMoney;
 
         //Advertisements.Instance.ShowInterstitial();
+        StopCoroutine(showWin);
     }
 }

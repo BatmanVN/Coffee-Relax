@@ -25,7 +25,8 @@ public class SpawnPlayer : MonoBehaviour
                 skinID = i;
                 character = Instantiate(listSkinDatas[skinID].character_pref, transform.position, transform.rotation);
                 character.transform.SetParent(transform);
-                Observer.Notify(ListAction.SetCamFollow, character.transform);
+                Cinema.Ins.SetCamWin(new Vector3(0, 2, -4));
+                //Observer.Notify(ListAction.SetCamFollow, character.transform);
                 Observer.Notify(ListAction.SetAimmator,character.GetComponent<Animator>());
             }
         }

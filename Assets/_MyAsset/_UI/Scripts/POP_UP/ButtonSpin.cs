@@ -12,7 +12,8 @@ public class ButtonSpin : MonoBehaviour
     [SerializeField] private int numberOfSegments = 8; // Số ô trên vòng quay
     [SerializeField] private GameObject spinObject;
     [SerializeField] private GameObject timeCD;
-
+    [field: SerializeField] public int idGift {  get; private set; }    
+    
     public float timeHours;
     public Text timerText; // Text UI để hiển thị thời gian
     private DateTime targetTime; // Thời gian kết thúc
@@ -80,10 +81,11 @@ public class ButtonSpin : MonoBehaviour
                     {
                         if (gift.prizeSegment == randomSegment)
                         {
+                            RewardUIManager.Ins.rewardItem.SetActive(gift.typeGift == TypeGift.CupGift ||  gift.typeGift == TypeGift.CharacterGift);
+                            RewardUIManager.Ins.rewardMoney.SetActive(gift.typeGift == TypeGift.LoseGift || gift.typeGift == TypeGift.MoneyGift);
                             gift.GetPrize();
                         }
                     }
-                    Debug.Log($"Dừng tại góc: {randomAngle} độ, ô: {randomSegment + 1}");
                 });
         }
     }

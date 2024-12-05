@@ -12,7 +12,10 @@ public enum Item_type
 
 public enum WheelAction
 {
-    UpdateCashCoiner
+    UpdateCashCoiner,
+    RewardItem,
+    UsedItemRW,
+    RewardMoney
 }
 
 public enum ActionInGame

@@ -77,6 +77,7 @@ public class BaseSkinCup : MonoBehaviour
         ViewSkinCup.Ins.buttonDown.SetActive(true);
         ViewSkinCup.Ins.currentSkin = cup;
         UpdateBuyStatusUI(currentID);
+        SoundManager.PlaySound(SoundType.ClickButton);
     }
 
     // Cập nhật trạng thái hiển thị nút sử dụng hoặc mua

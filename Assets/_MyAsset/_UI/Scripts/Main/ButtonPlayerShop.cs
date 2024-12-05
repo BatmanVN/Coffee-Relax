@@ -1,66 +1,63 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ButtonPlayerShop : MonoBehaviour
 {
-    public Button touchCharacter;
     public ViewCharacter player;
     public Animator spawnPoint;
     private float changeInterval = 5f;
-    private string[] animationStates = { Const.idleAnim, ConstDanceAnim.thinkAnim, ConstDanceAnim.byeAnim, ConstDanceAnim.cuteAnim, Const.walkModelAnim, ConstDanceAnim.reiAnim, Const.flyIdleAnim };
+    private string[] animationStates = { Const.idleAnim, ConstDanceAnim.thinkAnim, ConstDanceAnim.byeAnim, ConstDanceAnim.cuteAnim, Const.walkModelAnim, ConstDanceAnim.reiAnim};
     public RectTransform spawnRect;
-    public float timeTouch;
+    //public float timeTouch;
 
     public bool isTouch;
-
-    private Coroutine turnOff;
     private Coroutine anim;
 
-    private void OnEnable()
+    private void OnValidate()
     {
         spawnRect = GetComponent<RectTransform>();
+        spawnPoint = GetComponent<Animator>();
     }
+
     private void Start()
     {
         anim = StartCoroutine(ChangeAnimationRoutine());
-        touchCharacter.onClick?.AddListener(TouchPlayer);
-    }
-    private IEnumerator ChangeAnimationRoutine()
-    {
-        player.currentSkin.GetComponent<Animator>().SetTrigger(ConstDanceAnim.byeAnim);
-        yield return new WaitForSeconds(changeInterval);
-        while (!isTouch)
-        {
-            string randomAnimation = animationStates[Random.Range(0, animationStates.Length)];
-            if (player.currentSkin != null)
-            {
-                player.currentSkin.GetComponent<Animator>().SetTrigger(randomAnimation);
-            }
-            yield return new WaitForSeconds(changeInterval);
-        }
     }
 
-    private void TouchPlayer()
+    private IEnumerator ChangeAnimationRoutine()
     {
-        if (player.currentSkin == null) return;
-        player.currentSkin.GetComponent<Animator>().SetTrigger(ConstDanceAnim.angryAnim);
-        isTouch = true;
-        turnOff = StartCoroutine(TurnOffTouch());
-        spawnPoint.enabled = false;
-        spawnRect.localRotation = Quaternion.Euler(12, 180, 0f);
-    }
-    IEnumerator TurnOffTouch()
-    {
-        yield return new WaitForSeconds(timeTouch);
-        isTouch = false;
-        spawnPoint.enabled = true;
-        anim = StartCoroutine(ChangeAnimationRoutine());
-        StopCoroutine(turnOff);
+        if (player.currentSkin == null) yield break;
+
+        player.currentSkin.GetComponent<Animator>().SetTrigger(ConstDanceAnim.byeAnim);
+        yield return new WaitForSeconds(changeInterval);
+        while (true)
+        {
+            if (isTouch)
+            {
+                yield return new WaitForSeconds(2f);
+                continue;
+            }
+            if (!isTouch)
+            {
+                string randomAnimation = animationStates[Random.Range(0, animationStates.Length)];
+                if (player.currentSkin != null)
+                {
+                    player.currentSkin.GetComponent<Animator>().SetTrigger(randomAnimation);
+                }
+                yield return new WaitForSeconds(changeInterval);
+            }
+
+        }
     }
     private void OnDisable()
     {
-        StopCoroutine(anim);
+        if (anim != null)
+        {
+            StopCoroutine(anim);
+            anim = null;
+        }
     }
 }

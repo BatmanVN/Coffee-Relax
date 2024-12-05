@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class GiftSkinCup : BaseGift
 {
+
     [SerializeField] private int currentCoin;
+    [field: SerializeField] public int skinCupID { get; private set; }
     public override void GetPrize()
     {
-        int random = Random.Range(1, GameControllManager.Ins.cupData.skinDatas.Count);
-        if (GameControllManager.Ins.GetStatusBuySkin(GameControllManager.Ins.cupData.skinDatas[random].NameCup))
+        skinCupID = Random.Range(1, GameControllManager.Ins.cupData.skinDatas.Count);
+        var cupDatas = GameControllManager.Ins.cupData.skinDatas[skinCupID];
+        if (GameControllManager.Ins.GetStatusBuySkin(cupDatas.NameCup))
         {
             currentCoin = GameControllManager.Ins.getcoin();
             int total = currentCoin + moneyGift;
             GameControllManager.Ins.setcoin(total);
             Observer.Notify(WheelAction.UpdateCashCoiner, total);
+            Observer.Notify(WheelAction.UsedItemRW, moneyGift, cupDatas.NameCup);
         }
-        GameControllManager.Ins.SetStatusBuySkin(GameControllManager.Ins.cupData.skinDatas[random].NameCup, true);
+        else
+        {
+            GameControllManager.Ins.SetStatusBuySkin(cupDatas.NameCup, true);
+            Observer.Notify(WheelAction.RewardItem, cupDatas.sprite, cupDatas.NameCup);
+        }
+
         Debug.Log(prizeSegment);
     }
 }

@@ -23,7 +23,7 @@ public class StatusSound : MonoBehaviour
         {
             statusButton[1].SetActive(false);
             statusButton[0].SetActive(true);
-            music.Play();
+            music.gameObject.SetActive(true);
         }
     }
     protected void TurnOff(bool active)
@@ -32,7 +32,7 @@ public class StatusSound : MonoBehaviour
         {
             statusButton[0].SetActive(false);
             statusButton[1].SetActive(true);
-            music.Pause();
+            music.gameObject.SetActive(false);
         }
     }
 }

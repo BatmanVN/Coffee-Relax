@@ -724,7 +724,6 @@ Transform:
   - {fileID: 4938518000177972}
   - {fileID: 4944448017725878}
   - {fileID: 4595021686314622}
-  - {fileID: 4453849492296640}
   m_Father: {fileID: 4854484260202250}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1090707931986184
@@ -2463,37 +2462,6 @@ Transform:
   - {fileID: 4693291132324054}
   m_Father: {fileID: 4371644055412640}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1326917145537394
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4815818547539596}
-  m_Layer: 0
-  m_Name: KunaiA
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4815818547539596
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326917145537394}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4453849492296640}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1332543921987316
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,61 +3120,6 @@ Transform:
   - {fileID: 4114259877684258}
   m_Father: {fileID: 4450975418127206}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1403231583326350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4453849492296640}
-  - component: {fileID: 95164828940719904}
-  m_Layer: 0
-  m_Name: Kunai
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4453849492296640
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403231583326350}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.35341296, y: 0.62584156, z: 0.47228053, w: -0.5102674}
-  m_LocalPosition: {x: -0.06000417, y: 0.028699055, z: -0.01670181}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4499506861338024}
-  - {fileID: 4815818547539596}
-  m_Father: {fileID: 4480001097596156}
-  m_LocalEulerAnglesHint: {x: -107.85899, y: 83.79299, z: 172.577}
---- !u!95 &95164828940719904
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403231583326350}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6fae3c6ab2fdafe4a846d44259bb3ff3, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1406220402117716
 GameObject:
   m_ObjectHideFlags: 0
@@ -6695,13 +6608,13 @@ Animator:
   m_StabilizeFeet: 0
   m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
     are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Jaw_M'\n\tTransform 'Jaw_M'\n\tTransform 'Eye1_R'\n\tTransform
-    'Eye1_L'\n\tTransform 'Eye1_R'\n\tTransform 'Eye1_L'\n\tTransform 'Jaw_M'\n\tTransform
-    'Eye1_R'\n\tTransform 'Eye1_L'\n\tFrom animation clip 'Cry_wing'\n\tFrom animation
-    clip 'Damage_wing'\n\tFrom animation clip 'DieA_wing'\n\tFrom animation clip
-    'Angpose_wing'\n\tFrom animation clip 'IdleB_wing'\n\tFrom animation clip 'Idle_A_wing'\n\tFrom
-    animation clip 'Run_L_wing'\n\tFrom animation clip 'Run_R_wing'\n\tFrom animation
-    clip 'Run_wing'\n\tFrom animation clip 'DieB_wing'\n\tand more ..."
+    by Humanoid clips.\n\tTransform 'Jaw_M'\n\tTransform 'Eye1_R'\n\tTransform 'Eye1_L'\n\tTransform
+    'Jaw_M'\n\tTransform 'Eye1_R'\n\tTransform 'Eye1_L'\n\tTransform 'Jaw_M'\n\tTransform
+    'Eye1_R'\n\tTransform 'Eye1_L'\n\tFrom animation clip 'Run_wing'\n\tFrom animation
+    clip 'Walk_wing'\n\tFrom animation clip 'Bye_wing'\n\tFrom animation clip 'Fly_speedup_wing'\n\tFrom
+    animation clip 'Cry_wing'\n\tFrom animation clip 'Cutepose_wing'\n\tFrom animation
+    clip 'Thinking_wing'\n\tFrom animation clip 'Rei_wing'\n\tFrom animation clip
+    'Fly_idle_wing'\n\tFrom animation clip 'Angpose_wing'\n\tand more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -7858,92 +7771,6 @@ Transform:
   - {fileID: 4488210482204362}
   m_Father: {fileID: 4543784837181120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1875362962882418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4499506861338024}
-  - component: {fileID: 137221007748231478}
-  m_Layer: 0
-  m_Name: Kunai
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4499506861338024
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875362962882418}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4453849492296640}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &137221007748231478
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875362962882418}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 928d996dda188de45bb2126a4509e75f, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: 6fae3c6ab2fdafe4a846d44259bb3ff3, type: 3}
-  m_Bones:
-  - {fileID: 4815818547539596}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 4815818547539596}
-  m_AABB:
-    m_Center: {x: 0, y: 0, z: 0.11109021}
-    m_Extent: {x: 0.013889198, y: 0.107854106, z: 0.2559111}
-  m_DirtyAABB: 0
 --- !u!1 &1881844375961518
 GameObject:
   m_ObjectHideFlags: 0

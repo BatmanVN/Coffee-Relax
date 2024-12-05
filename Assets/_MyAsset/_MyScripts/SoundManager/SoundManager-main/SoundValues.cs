@@ -24,5 +24,6 @@ public enum SoundType
     AnimeGirl,
     WinUiSound,
     ShowUpADS,
-    SpinWheel
+    SpinWheel,
+    EarnRewardSpin
 }

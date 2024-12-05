@@ -112,10 +112,6 @@ public class GameControllManager : Singleton<GameControllManager>
     {
         return PlayerPrefs.GetInt(nameSkin + "Purchased", 0) == 1;
     }
-    public bool GetStatusUseSkin(string nameSkin)
-    {
-        return PlayerPrefs.GetInt(nameSkin + "Active", 0) == 1;
-    }
 
     //Cup Skin Data
     public void SetStatusBuySkinCup(string nameSkin, bool isBuy)

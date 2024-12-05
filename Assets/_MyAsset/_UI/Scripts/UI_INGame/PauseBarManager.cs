@@ -9,5 +9,6 @@ public class PauseBarManager : MonoBehaviour
     private void OnValidate()
     {
         barManager = GetComponent<PauseBarManager>();
+        
     }
 }

@@ -6,6 +6,8 @@ using UnityEngine;
 public class MoneyTower : MonoBehaviour
 {
     public static MoneyTower inst;
+    public float timeMoveUp = 6f;
+    public float timeStand = 3f;
     public ListPosFinish posFinish;
     public Transform posPlayer;
     public GameObject moneyEffects;
@@ -25,7 +27,7 @@ public class MoneyTower : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     public void UpBonusMoney(object[] datas)
@@ -33,25 +35,28 @@ public class MoneyTower : MonoBehaviour
         if (datas == null || datas.Length < 1 || !(datas[0] is Animator anim)) return;
         int targetIndex = Mathf.Clamp(Controller_Items.Ins.total_items, 0, posFinish.listPos.Count - 1);
         float targetY = posFinish.listPos[targetIndex].transform.position.y;
-        transform.DOLocalMoveY(targetY, 6f)
+        if (Controller_Items.Ins.total_items >= 1)
+        {
+            transform.DOLocalMoveY(targetY, timeMoveUp)
                     .SetEase(Ease.OutExpo) // Hiệu ứng easing "tăng nhanh, giảm dần"
                     .OnComplete(() =>
                     {
-                        CamFollow.Ins.ofsset = new Vector3(3.8f, 8f, -4f);
-                        if (Controller_Items.Ins.total_items > 1)
-                        {
-                            Observer.Notify(ListAction.ChangeAnim, Const.victoryAnim);
-                            SoundManager.PlaySound(SoundType.Victory);
-                            Debug.Log("Run");
-                        }
-                        if (Controller_Items.Ins.total_items <= 1)
-                        {
-                            Observer.Notify(ListAction.ChangeAnim, Const.cryAnim);
-                        }
+                        Observer.Notify(ListAction.ChangeAnim, Const.victoryAnim);
+                        SoundManager.PlaySound(SoundType.Victory);
                     });
+        }
+        if (Controller_Items.Ins.total_items < 1)
+        {
+            transform.DOLocalMoveY(targetY, timeStand)
+                .SetEase(Ease.OutExpo) // Hiệu ứng easing "tăng nhanh, giảm dần"
+                .OnComplete(() =>
+            {
+                Observer.Notify(ListAction.ChangeAnim, Const.cryAnim);
+            });
+        }
     }
     private void OnDestroy()
     {
-        Observer.RemoveObserver(ActionInGame.MoneyTower,UpBonusMoney);
+        Observer.RemoveObserver(ActionInGame.MoneyTower, UpBonusMoney);
     }
 }
